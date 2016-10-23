@@ -120,12 +120,7 @@ padding-top: 5px;
 .navbar-inverse .navbar-nav > li > a {
 color: #FFFFFF;
 }
-.navbar-inverse {
-border-color: #424242;
-}
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-border-color: #424242;
-}
+
 /*=======================================
     HOME SECTION STYLES
 ==================================================*/
