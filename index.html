@@ -407,5 +407,22 @@
     <script src="assets/plugins/jquery.prettyPhoto.js"></script>
     <!-- CUSTOM SCRIPTS -->
  <!--   <script src="assets/js/custom.js"></script>-->
+
+     <script>
+          var images = [
+            "https://angeloferrando.github.io/website/assets/img/20170427162550_Liverpool-University-wide.jpg",
+            "https://angeloferrando.github.io/website/assets/img/liv_background.jpg",
+          ]     
+          var imageHead = document.getElementById("home-sec");
+          var i = 0;
+          setInterval(function() {
+               imageHead.style.backgroundImage = "url(" + images[i] + ")";
+               i = i + 1;
+               if (i == images.length) {
+                 i =  0;
+               }
+          }, 1000);
+     </script>
+
 </body>
 </html>
