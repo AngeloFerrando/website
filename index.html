@@ -414,14 +414,16 @@
             "https://angeloferrando.github.io/website/assets/img/liv_background.jpg",
           ]    
           var i = 0;
-          $('#home-sec').fadeTo('slow', 0.3, function()
-          {
-              $(this).css('background-image', 'url(' + images[i] + ')');
-               i = i + 1;
-               if (i == images.length) {
-                 i =  0;
-               }
-          }).delay(5000).fadeTo('slow', 1);
+          setInterval(function(){  
+               $('#home-sec').fadeTo('slow', 0.3, function()
+               {
+                   $(this).css('background-image', 'url(' + images[i] + ')');
+                    i = i + 1;
+                    if (i == images.length) {
+                      i =  0;
+                    }
+               }).delay(1000).fadeTo('slow', 1);
+          }, 5000);
      </script>
 
 </body>
