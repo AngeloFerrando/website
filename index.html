@@ -419,10 +419,11 @@
             "https://angeloferrando.github.io/website/assets/img/20170427162550_Liverpool-University-wide.jpg",
             "https://angeloferrando.github.io/website/assets/img/liv_background.jpg",
           ]    
-          var i = 1;
+          
           setInterval(function(){  
                $('#home-sec').fadeTo('fast', 0.5, function()
                {
+                   var i = (Math.random() * 19) | 0;
                    $(this).css('background', 'url("https://angeloferrando.github.io/website/assets/img/slideshow/' + i + '.jpg") no-repeat 50% 50%');
                    $(this).css('background-attachment', 'fixed');
                    $(this).css('-webkit-background-size', 'cover');
@@ -435,11 +436,6 @@
                    $(this).css('padding-top', '190px');
                    $(this).css('padding-bottom', '300px');
                    $(this).css('color', '#000');
-                    
-                    i = i + 1;
-                    if (i == 14) {
-                      i =  1;
-                    }
                }).fadeTo('fast', 1);
           }, 10000);
      </script>
