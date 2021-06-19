@@ -11,7 +11,7 @@
 
 html {
 	height:auto;
-	scroll-padding-top: 100px; 
+	scroll-padding-top: 100px;
 }
 
 body {
@@ -97,7 +97,7 @@ i::before {
 
 #about .list-group-item {
 	text-align: center;
-	
+
 }
 
 #about p a {
@@ -276,7 +276,7 @@ footer {
 
 
 /***Media queries***/
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px) {
 	html {
 		scroll-padding-top: 330px;
 	}
@@ -284,4 +284,8 @@ footer {
 	#about .profile {
 		margin-top: 100px;
 	}
+}
+
+#bibbase_header {
+	display: none;
 }
