@@ -271,7 +271,11 @@ ul.timeline > li:before {
 	display: none;
 }
 
-.bibbase-icon-text {
+.bibbase_icon_text {
+	color: #f45d48;
+}
+
+.bibbase.bibtex.link {
 	color: #f45d48;
 }
 
