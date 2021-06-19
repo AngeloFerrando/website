@@ -271,6 +271,10 @@ ul.timeline > li:before {
 	display: none;
 }
 
+.bibbase-icon-text {
+	color: #f45d48;
+}
+
 /***Footer***/
 footer {
 	clear: both;
