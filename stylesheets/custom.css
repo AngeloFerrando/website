@@ -305,4 +305,8 @@ footer {
 	#about .profile {
 		margin-top: 100px;
 	}
+
+	#about .list-group {
+		width: 100%;
+	}
 }
