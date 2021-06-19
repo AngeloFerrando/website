@@ -258,6 +258,10 @@ ul.timeline > li:before {
 	color: #f45d48;
 }
 
+/***Publications***/
+#bibbase_header {
+	display: none;
+}
 
 /***Footer***/
 footer {
@@ -284,8 +288,4 @@ footer {
 	#about .profile {
 		margin-top: 100px;
 	}
-}
-
-#bibbase_header {
-	display: none;
 }
