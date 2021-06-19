@@ -275,6 +275,10 @@ ul.timeline > li:before {
 	color: #f45d48;
 }
 
+.bibbase_group {
+	background: #e3f6f5;
+}
+
 /***Footer***/
 footer {
 	clear: both;
