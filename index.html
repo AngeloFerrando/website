@@ -427,17 +427,23 @@
     <h3 class="text-right mt-2"><i class="bi bi-journals me-2"></i>Publications</h3>
     <div class="card">
       <div class="card-body" id="biblio">
-        <script src="https://bibbase.org/show?bib=https://dblp.org/pid/134/9527.bib&jsonp=1&fullnames=1&filter=authors:Ferrando"></script>
+        <script>
+          $.get("http://bibbase.org/show?bib=https://dblp.org/pid/134/9527.bib&jsonp=1&fullnames=1&filter=authors:Ferrando", function( data ) {
+            console.log(data);
+            data.replace("document.write(bibbase_data.data);", "");
+            var JS= document.createElement('script');
+            JS.text= code;
+            document.body.appendChild(JS);
+          });
+          // $(document).ready(function() {
+          //     $.getScript("https://bibbase.org/show?bib=https://dblp.org/pid/134/9527.bib&jsonp=1&fullnames=1&filter=authors:Ferrando");
+          // });
+        </script>
       </div>
     </div>
   </div>
 </section>
 
-<!-- <script>
-  $(document).ready(function() {
-      $("#biblio").html($.getScript("https://bibbase.org/show?bib=https://dblp.org/pid/134/9527.bib&jsonp=1&fullnames=1&filter=authors:Ferrando"));
-  });
-</script> -->
 </main>
 
 <!--Footer-->
