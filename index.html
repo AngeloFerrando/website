@@ -428,7 +428,7 @@
     <div class="card">
       <div class="card-body" id="biblio">
         <script>
-          $.get("http://bibbase.org/show?bib=https://dblp.org/pid/134/9527.bib&jsonp=1&fullnames=1&filter=authors:Ferrando", function( data ) {
+          $.get("https://bibbase.org/show?bib=https://dblp.org/pid/134/9527.bib&jsonp=1&fullnames=1&filter=authors:Ferrando", function( data ) {
             console.log(data);
             data.replace("document.write(bibbase_data.data);", "");
             var JS= document.createElement('script');
