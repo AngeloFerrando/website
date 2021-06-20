@@ -222,6 +222,10 @@ ul.timeline > li:before {
 	background-color: #078080;
 }
 
+#skills-sec .progress-bar-five {
+	background-color: #b783f2;
+}
+
 #skills-sec .nav-link:hover {
 	color: #f45d48;
 }
@@ -272,6 +276,10 @@ ul.timeline > li:before {
 }
 
 #teach-sec a:hover {
+	color: #f45d48;
+}
+
+#teach-sec .nav-link:hover {
 	color: #f45d48;
 }
 
