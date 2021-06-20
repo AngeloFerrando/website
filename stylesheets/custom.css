@@ -165,6 +165,12 @@ ul.timeline > li:before {
 	animation: fade-to-right 5s .3s forwards ease-in;
 }
 
+#experience {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+
 @keyframes fade-to-right {
 	0% {
 		opacity: 0;
