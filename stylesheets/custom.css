@@ -69,49 +69,49 @@ i::before {
 
 
 /***About***/
-#about {
+#about-sec {
 	color: #272343;
 }
 
-#about img {
+#about-sec img {
 	width: 150px;
 }
 
-#about .btn a {
+#about-sec .btn a {
 	border-color: #f45d48;
 	color: #f45d48;
 }
 
-#about .btn:hover {
+#about-sec .btn:hover {
 	border-color: #f45d48;
 	background: #f45d48;
 	transform: scale(1.5);
 }
 
-#about .btn a:hover {
+#about-sec .btn a:hover {
 	color: #fffffe;
 }
 
-#about .btn {
+#about-sec .btn {
 	border-color: #f45d48;
 	color: #f45d48;
 }
 
-#about .active {
+#about-sec .active {
 	background: #e3f6f5;
 	border-color: #e3f6f5;
 	color: #272343;
 }
 
-#about .list-group-item {
+#about-sec .list-group-item {
 	text-align: center;
 }
 
-#about p a {
+#about-sec p a {
 	color: #272343;
 }
 
-#about p a:hover {
+#about-sec p a:hover {
 	color: #f45d48;
 }
 
@@ -147,23 +147,23 @@ ul.timeline > li:before {
     z-index: 400;
 }
 
-#experience a {
+#experience-sec a {
 	color: #272343;
 }
 
-#experience a:hover{
+#experience-sec a:hover{
 	color: #f45d48;
 }
 
-#experience .bi-download:hover{
+#experience-sec .bi-download:hover{
 	color: #f45d48;
 }
 
-/* #experience .fade-to-right {
+/* #experience-sec .fade-to-right {
 	animation: fade-to-right 5s .3s forwards ease-in;
 } */
 
-/* #experience {
+/* #experience-sec {
   width: 100%;
   float: left;
   overflow: hidden;
@@ -180,7 +180,7 @@ ul.timeline > li:before {
 	}
 }
 
-#experience .fade-to-left {
+#experience-sec .fade-to-left {
 	animation: fade-to-left 5s .3s forwards ease-in;
 } */
 
@@ -196,82 +196,82 @@ ul.timeline > li:before {
 } */
 
 /***Skills***/
-#skills .progress {
+#skills-sec .progress {
 	height:  1.5rem;
 }
 
-#skills .progress-bar {
+#skills-sec .progress-bar {
 	color: #272343;
 	font-weight: bold;
 	font-size: 0.8rem;
 }
 
-#skills .progress-bar-one {
+#skills-sec .progress-bar-one {
 	background-color: #f45d48;
 }
 
-#skills .progress-bar-two {
+#skills-sec .progress-bar-two {
 	background-color: #bae8e8;
 }
 
-#skills .progress-bar-three {
+#skills-sec .progress-bar-three {
 	background-color: #ffd803;
 }
 
-#skills .progress-bar-four {
+#skills-sec .progress-bar-four {
 	background-color: #078080;
 }
 
-#skills .nav-link:hover {
+#skills-sec .nav-link:hover {
 	color: #f45d48;
 }
 
 
 /***Projects***/
-#projects .btn{
+#projects-sec .btn{
 	background: #e3f6f5;
 	color: #272343;
 	border: 1px solid #272343;
 }
 
-#projects a {
+#projects-sec a {
 	color: #272343;
 }
 
-#projects a:hover {
+#projects-sec a:hover {
 	color: #f45d48;
 }
 
-#projects .tooltip {
+#projects-sec .tooltip {
 	transition: .25s all ease;
 }
 
 /***Research community***/
-#community .nav-link:hover {
+#community-sec .nav-link:hover {
 	color: #f45d48;
 }
 
-#community a {
+#community-sec a {
 	text-decoration: none;
 	color: #272343;
 }
 
-#community a:hover {
+#community-sec a:hover {
 	color: #f45d48;
 }
 
-#community .tab-pane {
+#community-sec .tab-pane {
 	height: 400px;
 	overflow: scroll;
 }
 
 /***University***/
-#teach a {
+#teach-sec a {
 	text-decoration: none;
 	color: #272343;
 }
 
-#teach a:hover {
+#teach-sec a:hover {
 	color: #f45d48;
 }
 
@@ -315,7 +315,7 @@ footer {
 		scroll-padding-top: 0px;
 	}
 
-	#about .profile {
+	#about-sec .profile {
 		margin-top: 100px;
 	}
 
