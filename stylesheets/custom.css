@@ -260,6 +260,11 @@ ul.timeline > li:before {
 	color: #f45d48;
 }
 
+#community .tab-pane {
+	height: 400px;
+	overflow: scroll;
+}
+
 /***University***/
 #teach a {
 	text-decoration: none;
