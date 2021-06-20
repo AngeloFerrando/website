@@ -105,11 +105,9 @@ i::before {
 
 #about .list-group-item {
 	text-align: center;
-
 }
 
 #about p a {
-	text-decoration: none;
 	color: #272343;
 }
 
