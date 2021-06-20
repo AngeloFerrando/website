@@ -159,17 +159,17 @@ ul.timeline > li:before {
 	color: #f45d48;
 }
 
-#experience .fade-to-right {
+/* #experience .fade-to-right {
 	animation: fade-to-right 5s .3s forwards ease-in;
-}
+} */
 
-#experience {
+/* #experience {
   width: 100%;
   float: left;
   overflow: hidden;
-}
+} */
 
-@keyframes fade-to-right {
+/* @keyframes fade-to-right {
 	0% {
 		opacity: 0;
 		transform: translateX(-50px);
@@ -182,9 +182,9 @@ ul.timeline > li:before {
 
 #experience .fade-to-left {
 	animation: fade-to-left 5s .3s forwards ease-in;
-}
+} */
 
-@keyframes fade-to-left {
+/* @keyframes fade-to-left {
 	0% {
 		opacity: 0;
 		transform: translateX(50px);
@@ -193,7 +193,7 @@ ul.timeline > li:before {
 		opacity: 1;
 		transform: translateX(0px);
 	}
-}
+} */
 
 /***Skills***/
 #skills .progress {
