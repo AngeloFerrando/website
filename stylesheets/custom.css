@@ -312,7 +312,7 @@ footer {
 /***Media queries***/
 @media only screen and (max-width: 767.98px) {
 	html {
-		scroll-padding-top: 330px;
+		scroll-padding-top: 0px;
 	}
 
 	#about .profile {
