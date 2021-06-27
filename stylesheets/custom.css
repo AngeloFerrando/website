@@ -40,7 +40,12 @@ body {
 i::before {
 	font-size: 1.5rem;
 	color: #272343;
-	}
+}
+
+i:hover::before {
+	transform: scale(1.5);
+	color: #f45d48;
+}
 
 .navbar-toggler {
   color: #272343;
