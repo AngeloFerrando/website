@@ -19,6 +19,7 @@ body {
 	background: #fffffe;
 	color: #272343;
 	font-size: 18px;
+	position: relative;
 }
 
 
@@ -44,6 +45,10 @@ i::before {
 .navbar-toggler {
   color: #272343;
   border: dotted 1px rgba(39, 35, 67, .5);
+}
+
+.nav-link.active {
+	color: #f45d48;
 }
 
 .navbar-toggler-icon {
@@ -324,7 +329,7 @@ footer {
 	}
 
 	#about-sec .profile {
-		margin-top: 100px;
+		margin-top: 25px;
 	}
 
 	.navbar {

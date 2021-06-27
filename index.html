@@ -24,11 +24,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navId">
 
   <header>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg">
+    <nav id="navId" class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
           <img src="images/logo.png" alt="" width="70" height="70">
@@ -136,147 +136,147 @@
 <!--About-->
 <section id="about"></section>
 <section id="about-sec" data-aos="zoom-in"> <!--data-aos="flip-left"
-data-aos-easing="ease-out-cubic"
-data-aos-duration="3000">-->
-<div class="container">
-  <div class="profile d-flex justify-content-evenly align-items-center">
-    <img src="images/profile.jpg" class="mt-2 rounded-circle" alt="Angelo Ferrando">
-    <button type="button" class="btn"><a class="text-decoration-none" href="mailto:angeloferrando42@gmail.com">Contact</a></button>
-  </div>
-  <br>
-  <p class="text-justify mx-auto"><b>Angelo Ferrando</b> is a Research Fellow at the <a href="https://www.dibris.unige.it/">University of Genova</a> (IT) and an Honorary Research Associate at the <a href="https://www.liverpool.ac.uk/computer-science/">University of Liverpool</a> (UK).<br>
-    Since 2021, he is the coordinator of the <a href="https://www.consorzio-cini.it/index.php/it/laboratori-nazionali/smart-cities">CINI</a> "Smart Cities & Communities" node of the University of Genova.<br>
-    Previously he was a Postdoctoral Research Associate at the <a href="https://www.cs.manchester.ac.uk/">University of Manchester</a> (UK) from July 2020 to February 2021, and Postdoctoral Research Associate at the University of Liverpool (UK) from 2018 to 2020. He was part of the <a href="https://autonomy-and-verification.github.io/">Autonomy and Verification Network</a> at University of Manchester, where he worked on applying RV in the <a href="https://rainhub.org.uk/">RAIN</a> and <a href="https://orcahub.org/">ORCA</a> research hubs founded by <a href="https://www.ukri.org/">UKRI</a>.
-    <br>His main research interests are Formal Methods, Software Engineering, Multi-Agent Systems and Runtime Verification; the latter especially when applied to improve the reliability of intelligent systems.<br>He is a member of the program committee in several international conferences such as PRIMA, AAMAS and IJCAI.</p>
-    <ul class="list-group w-75 mx-auto">
-      <li class="list-group-item active">MAIN INTERESTS:</li>
-      <li class="list-group-item">Runtime Verification (RV)</li>
-      <li class="list-group-item">Multi-Agent Systems (MASs)</li>
-      <li class="list-group-item">Static Verification (e.g. Model Checking)</li>
-      <li class="list-group-item">Programming and Learning new programming languages</li>
-    </ul>
-  </div>
-</section>
-<br>
-
-<!--Experience-->
-<section id="experience"></section>
-<section id="experience-sec" data-aos="zoom-in">
-  <div class="container mb-4">
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <div class="card h-100">
-          <h3 class="text-center mt-2"><i class="bi bi-briefcase me-2"></i>Work</h3>
-          <ul class="timeline">
-            <li>
-              <h5>Research Fellow</h5>
-              <p>March 2021 - present | University of Genova</p>
-            </li>
-            <li>
-              <h5>Postdoctoral Research Associate</h5>
-              <p>July 2020 - February 2021 | University of Manchester (UK)</p>
-            </li>
-            <li>
-              <h5>Postdoctoral Research Associate</h5>
-              <p>December 2018 - July 2020 | University of Liverpool (UK)</p>
-            </li>
-            <li>
-              <h5>Software Developer</h5>
-              <p>October 2012 - May 2014 | Simulation Team, Savona</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6">
-        <div class="card h-100">
-          <h3 class="text-center mt-2"><i class="bi bi-book me-2"></i>Education</h3>
-          <ul class="timeline">
-            <li>
-              <h5>PHD in COMPUTER SCIENCE</h5>
-              <p>A.A 2018-2019 | University of Genova</p>
-              <a class="text-decoration-none" href="https://angeloferrando.github.io/website/assets/template.pdf"><i class="bi bi-download me-2"></i>Ph.D. Thesis</a>
-            </li>
-            <li>
-              <h5>MS IN COMPUTER SCIENCE with honors</h5>
-              <p>A.A 2014-2015 | University of Genova</p>
-              <a class="text-decoration-none" href="https://angeloferrando.github.io/website/assets/master_thesis.pdf"><i class="bi bi-download me-2"></i>Master's Thesis</a>
-            </li>
-            <li>
-              <h5>BS in COMPUTE SCIENCE with honors</h5>
-              <p>A.A 2012-2013 | University of Genova</p>
-            </li>
-            <li>
-              <h5>First certificate in English (LEVEL B2)</h5>
-              <p>2012</p>
-            </li>
-          </ul>
-        </div>
-      </div>
+  data-aos-easing="ease-out-cubic"
+  data-aos-duration="3000">-->
+  <div class="container">
+    <div class="profile d-flex justify-content-evenly align-items-center">
+      <img src="images/profile.jpg" class="mt-2 rounded-circle" alt="Angelo Ferrando">
+      <button type="button" class="btn"><a class="text-decoration-none" href="mailto:angeloferrando42@gmail.com">Contact</a></button>
+    </div>
+    <br>
+    <p class="text-justify mx-auto"><b>Angelo Ferrando</b> is a Research Fellow at the <a href="https://www.dibris.unige.it/">University of Genova</a> (IT) and an Honorary Research Associate at the <a href="https://www.liverpool.ac.uk/computer-science/">University of Liverpool</a> (UK).<br>
+      Since 2021, he is the coordinator of the <a href="https://www.consorzio-cini.it/index.php/it/laboratori-nazionali/smart-cities">CINI</a> "Smart Cities & Communities" node of the University of Genova.<br>
+      Previously he was a Postdoctoral Research Associate at the <a href="https://www.cs.manchester.ac.uk/">University of Manchester</a> (UK) from July 2020 to February 2021, and Postdoctoral Research Associate at the University of Liverpool (UK) from 2018 to 2020. He was part of the <a href="https://autonomy-and-verification.github.io/">Autonomy and Verification Network</a> at University of Manchester, where he worked on applying RV in the <a href="https://rainhub.org.uk/">RAIN</a> and <a href="https://orcahub.org/">ORCA</a> research hubs founded by <a href="https://www.ukri.org/">UKRI</a>.
+      <br>His main research interests are Formal Methods, Software Engineering, Multi-Agent Systems and Runtime Verification; the latter especially when applied to improve the reliability of intelligent systems.<br>He is a member of the program committee in several international conferences such as PRIMA, AAMAS and IJCAI.</p>
+      <ul class="list-group w-75 mx-auto">
+        <li class="list-group-item active">MAIN INTERESTS:</li>
+        <li class="list-group-item">Runtime Verification (RV)</li>
+        <li class="list-group-item">Multi-Agent Systems (MASs)</li>
+        <li class="list-group-item">Static Verification (e.g. Model Checking)</li>
+        <li class="list-group-item">Programming and Learning new programming languages</li>
+      </ul>
     </div>
   </section>
+  <br>
 
-  <!--Skills-->
-  <section id="skills"></section>
-  <section id="skills-sec" data-aos="zoom-in">
-    <div class="container">
-      <h3 class="text-right mt-2"><i class="bi bi-gear me-2"></i>Technical skills</h3>
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="pl-tab" data-bs-toggle="tab" data-bs-target="#pl" type="button" role="tab" aria-controls="pl" aria-selected="true">Programming Languages</button>
-        </li>
-        <!-- <li class="nav-item" role="presentation">
-        <button class="nav-link" id="more-tab" data-bs-toggle="tab" data-bs-target="#more" type="button" role="tab" aria-controls="more" aria-selected="false">Programming languages (and more) I know</button>
-      </li> -->
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="frameworks-tab" data-bs-toggle="tab" data-bs-target="#frameworks" type="button" role="tab" aria-controls="frameworks" aria-selected="false">Frameworks and Libraries</button>
-      </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="pl" role="tabpanel" aria-labelledby="pl-tab">
-        <div class="progress mt-3">
-          <div class="progress-bar progress-bar-two progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Python / C# / Java / LaTeX</div>
+  <!--Experience-->
+  <section id="experience"></section>
+  <section id="experience-sec" data-aos="zoom-in">
+    <div class="container mb-4">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="card h-100">
+            <h3 class="text-center mt-2"><i class="bi bi-briefcase me-2"></i>Work</h3>
+            <ul class="timeline">
+              <li>
+                <h5>Research Fellow</h5>
+                <p>March 2021 - present | University of Genova</p>
+              </li>
+              <li>
+                <h5>Postdoctoral Research Associate</h5>
+                <p>July 2020 - February 2021 | University of Manchester (UK)</p>
+              </li>
+              <li>
+                <h5>Postdoctoral Research Associate</h5>
+                <p>December 2018 - July 2020 | University of Liverpool (UK)</p>
+              </li>
+              <li>
+                <h5>Software Developer</h5>
+                <p>October 2012 - May 2014 | Simulation Team, Savona</p>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="progress mt-3">
-          <div class="progress-bar progress-bar-one progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Prolog</div>
-        </div>
-        <div class="progress mt-3">
-          <div class="progress-bar progress-bar-three progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">C / C++ / SQL </div>
-        </div>
-        <div class="progress mt-3">
-          <div class="progress-bar progress-bar-four progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">HTML / CSS / JavaScript / PHP</div>
-        </div>
-        <div class="progress mt-3">
-          <div class="progress-bar progress-bar-five progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Haskell</div>
+
+        <div class="col-12 col-md-6">
+          <div class="card h-100">
+            <h3 class="text-center mt-2"><i class="bi bi-book me-2"></i>Education</h3>
+            <ul class="timeline">
+              <li>
+                <h5>PHD in COMPUTER SCIENCE</h5>
+                <p>A.A 2018-2019 | University of Genova</p>
+                <a class="text-decoration-none" href="https://angeloferrando.github.io/website/assets/template.pdf"><i class="bi bi-download me-2"></i>Ph.D. Thesis</a>
+              </li>
+              <li>
+                <h5>MS IN COMPUTER SCIENCE with honors</h5>
+                <p>A.A 2014-2015 | University of Genova</p>
+                <a class="text-decoration-none" href="https://angeloferrando.github.io/website/assets/master_thesis.pdf"><i class="bi bi-download me-2"></i>Master's Thesis</a>
+              </li>
+              <li>
+                <h5>BS in COMPUTE SCIENCE with honors</h5>
+                <p>A.A 2012-2013 | University of Genova</p>
+              </li>
+              <li>
+                <h5>First certificate in English (LEVEL B2)</h5>
+                <p>2012</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <!-- <div class="tab-pane fade" id="more" role="tabpanel" aria-labelledby="more-tab">
-      <ul class="list-unstyled mt-3">
-      <ul>
-      <li>Haskell</li>
-      <li>LATEX</li>
-      <li>MySQL</li>
-    </ul>
-  </ul></div> -->
+    </section>
 
-  <div class="tab-pane fade" id="frameworks" role="tabpanel" aria-labelledby="frameworks-tab">
-    <div class="progress mt-3">
-      <div class="progress-bar progress-bar-two progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Jason / JaCaMo</div>
-    </div>
-    <div class="progress mt-3">
-      <div class="progress-bar progress-bar-one progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Spark Java</div>
-    </div>
-    <div class="progress mt-3">
-      <div class="progress-bar progress-bar-three progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">JADE</div>
-    </div>
-    <div class="progress mt-3">
-      <div class="progress-bar progress-bar-four progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">NetLogo / ROS</div>
-    </div>
-    <div class="progress mt-3">
-      <div class="progress-bar progress-bar-five progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Matlab / R / DialogFlow</div>
+    <!--Skills-->
+    <section id="skills"></section>
+    <section id="skills-sec" data-aos="zoom-in">
+      <div class="container">
+        <h3 class="text-right mt-2"><i class="bi bi-gear me-2"></i>Technical skills</h3>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pl-tab" data-bs-toggle="tab" data-bs-target="#pl" type="button" role="tab" aria-controls="pl" aria-selected="true">Programming Languages</button>
+          </li>
+          <!-- <li class="nav-item" role="presentation">
+          <button class="nav-link" id="more-tab" data-bs-toggle="tab" data-bs-target="#more" type="button" role="tab" aria-controls="more" aria-selected="false">Programming languages (and more) I know</button>
+        </li> -->
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="frameworks-tab" data-bs-toggle="tab" data-bs-target="#frameworks" type="button" role="tab" aria-controls="frameworks" aria-selected="false">Frameworks and Libraries</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="pl" role="tabpanel" aria-labelledby="pl-tab">
+          <div class="progress mt-3">
+            <div class="progress-bar progress-bar-two progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Python / C# / Java / LaTeX</div>
+          </div>
+          <div class="progress mt-3">
+            <div class="progress-bar progress-bar-one progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Prolog</div>
+          </div>
+          <div class="progress mt-3">
+            <div class="progress-bar progress-bar-three progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">C / C++ / SQL </div>
+          </div>
+          <div class="progress mt-3">
+            <div class="progress-bar progress-bar-four progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">HTML / CSS / JavaScript / PHP</div>
+          </div>
+          <div class="progress mt-3">
+            <div class="progress-bar progress-bar-five progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Haskell</div>
+          </div>
+        </div>
+        <!-- <div class="tab-pane fade" id="more" role="tabpanel" aria-labelledby="more-tab">
+        <ul class="list-unstyled mt-3">
+        <ul>
+        <li>Haskell</li>
+        <li>LATEX</li>
+        <li>MySQL</li>
+      </ul>
+    </ul></div> -->
+
+    <div class="tab-pane fade" id="frameworks" role="tabpanel" aria-labelledby="frameworks-tab">
+      <div class="progress mt-3">
+        <div class="progress-bar progress-bar-two progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Jason / JaCaMo</div>
+      </div>
+      <div class="progress mt-3">
+        <div class="progress-bar progress-bar-one progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Spark Java</div>
+      </div>
+      <div class="progress mt-3">
+        <div class="progress-bar progress-bar-three progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">JADE</div>
+      </div>
+      <div class="progress mt-3">
+        <div class="progress-bar progress-bar-four progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">NetLogo / ROS</div>
+      </div>
+      <div class="progress mt-3">
+        <div class="progress-bar progress-bar-five progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Matlab / R / DialogFlow</div>
+      </div>
     </div>
   </div>
-</div>
 </section>
 
 <!--Teaching-->
@@ -286,21 +286,21 @@ data-aos-duration="3000">-->
     <h3 class="text-right mt-2"><i class="bi bi-share me-2"></i>Teaching</h3>
     <ul class="nav nav-tabs" id="myTab2" role="tablist">
       <!-- <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="teach-2021-2022-tab" data-bs-toggle="tab" data-bs-target="#teach-2021-2022" type="button" role="tab" aria-controls="teach-2021-2022" aria-selected="true">A.Y. 2021/2022</button>
-      </li> -->
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="teach-2020-2021-tab" data-bs-toggle="tab" data-bs-target="#teach-2020-2021" type="button" role="tab" aria-controls="teach-2020-2021" aria-selected="false">A.Y. 2020/2021</button>
-      </li>
-    </ul>
-    <div class="tab-content" id="myTabContent2">
-      <!-- <div class="tab-pane fade show active" id="teach-2021-2022" role="tabpanel" aria-labelledby="teach-2021-2022-tab">
-        Co-Lecturer for the course "Programmazione Concorrente e Algoritmi Distribuiti"
-      </div> -->
-      <div class="tab-pane fade show active" id="teach-2020-2021" role="tabpanel" aria-labelledby="teach-2020-2021-tab">
-        Co-Lecturer for the course "Programmazione Concorrente e Algoritmi Distribuiti"
-      </div>
-    </div>
+      <button class="nav-link active" id="teach-2021-2022-tab" data-bs-toggle="tab" data-bs-target="#teach-2021-2022" type="button" role="tab" aria-controls="teach-2021-2022" aria-selected="true">A.Y. 2021/2022</button>
+    </li> -->
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="teach-2020-2021-tab" data-bs-toggle="tab" data-bs-target="#teach-2020-2021" type="button" role="tab" aria-controls="teach-2020-2021" aria-selected="false">A.Y. 2020/2021</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent2">
+    <!-- <div class="tab-pane fade show active" id="teach-2021-2022" role="tabpanel" aria-labelledby="teach-2021-2022-tab">
+    Co-Lecturer for the course "Programmazione Concorrente e Algoritmi Distribuiti"
+  </div> -->
+  <div class="tab-pane fade show active" id="teach-2020-2021" role="tabpanel" aria-labelledby="teach-2020-2021-tab">
+    Co-Lecturer for the course "Programmazione Concorrente e Algoritmi Distribuiti"
   </div>
+</div>
+</div>
 </section>
 
 <section id="projects"></section>
@@ -454,7 +454,6 @@ data-aos-duration="3000">-->
                     </div>
                   </div>
                 </section>
-
               </main>
 
               <!--Footer-->
