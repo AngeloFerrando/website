@@ -1,0 +1,7 @@
+To run the example as in the paper:
+
+```bash
+java -jar 3vLTL.jar -ltl "X a" -alphabet "a" -outcome uu
+```
+
+Then, you can try with any other LTL property. Remember to update the alphabet and the outcome consequently.
