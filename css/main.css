@@ -137,5 +137,15 @@ ul.timeline > li:before {
   box-shadow: none;
 }
 
-
+.btn-primary {
+    background-color: #000;
+    border-color: #000;
+    color: #e5e5e5;
+   }
+   
+.btn-primary:hover{
+    background-color:#fa4344;
+    border-color: #fa4344;
+    color: #e5e5e5;
+}
 
