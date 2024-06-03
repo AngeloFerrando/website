@@ -65,16 +65,53 @@
         </div>
       </section>
 
-        <section id="guidelines" class=" text-center mt-5">
-          <p> bla bla </p>
+        <section id="guidelines" class="mt-5">
+          <div class="container">
+          <p>Here you will discover a compilation of currently available Bachelor and Master thesis opportunities, as well as internships. Additionally, there might be fresh projects to explore, so feel free to inquire if any catch your interest.</p>
+          <h2>Guidelines for Pursuing an Internship or Thesis Collaboration</h2>
+          <ol>
+              <li>
+                  <strong>Time Management:</strong> crafting a quality bachelor thesis typically demands approximately three months, while a Master's thesis can extend to six months or more. Feel free to express interest in topics beforehand, even if your exams aren't yet completed. If any topics listed here intrigue you, don't hesitate to mention it upfront.
+              </li>
+              <li>
+                  <strong>Communication Efficiency:</strong> when updating on your progress, sending only one email per month is insufficient, while sending one email per day is excessive. Strive for efficiency in both the content and frequency of your communications.
+              </li>
+              <li>
+                  <strong>Detailed Reporting:</strong> avoid the vague "it doesn't work" approach. Provide clear explanations of attempted solutions and the specific circumstances surrounding any encountered issues. Proactivity and clarity are key.
+              </li>
+              <li>
+                  <strong>Writing Standards:</strong> embrace LaTeX for document creation, a skill that may initially seem daunting but offers substantial benefits as you progress. Overleaf serves as an excellent platform for collaborative work.
+              </li>
+              <li>
+                  <strong>Personal Responsibility:</strong> the internship or thesis endeavor rests squarely on your shoulders. Remembering deadlines, paperwork, and administrative tasks falls within your domain; I won't issue reminders.
+              </li>
+          </ol>
+        </div>
         </section>  
-         
-        <section id="thesis" class="text-center">
+        
+        <div class="container">
+          <h2>Available Theses</h2>
+          <p>Note that the list is incomplete. If you are interested in any of the following topics, please contact me to discuss possible additional theses further:
+            <ul>
+              <li>Multi-Agent Systems (MAS)</li>
+              <li>Formal Verification</li>
+              <li>Robotics</li>
+              <li>Chatbots</li>
+              <li>Process Mining</li>
+              <li>Automated Planning</li>
+              <li>Reinforcement Learning</li>
+              <li>Agent-Based Modeling and Simulation</li>
+            </ul>
+          </p>
+        </div>
+
+        <section id="thesis">
           <div class="container">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Bachelor/Master</th>
+                <th scope="col">Title</th>
                 <th scope="col">Abstract</th>
                 <th scope="col">Partners</th>
                 <th scope="col">Topics</th>
@@ -82,22 +119,61 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>Bachelor/Master</td>
+                <td>Genetic Algorithms for learning properties</td>
+                <td>This thesis explores the application of genetic algorithms (GAs) in learning formal properties. It investigates how GAs can efficiently navigate complex search spaces to uncover and represent formal properties, offering insights into their effectiveness and limitations. The study aims to contribute to the understanding of utilizing GAs for learning formal properties, providing valuable implications for various domains, including artificial intelligence, optimization, and robotics.</td>
+                <td></td>
+                <td>Formal Verification / AI</td>
               </tr>
               <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td>Bachelor/Master</td>
+                <td>Securing Robot-Collected Digital Evidence</td>
+                <td>Robots are involved in military operations and rescue missions which frequently involve evidence collection. As such, robots may be carrying sensitive information which need to be protected for privacy, while strictly maintaining a chain of custody such that the evidence is admissible in a court of law. Focusing on the first part, this project explores how an RV-TEE [1] can be adopted to protect sensitive data while it is in the robot’s custody: RV-TEE is an architecture which prescribes a combination of software and hardware to protect the execution of cryptographic operations and safely store the related keys. At its core, RV-TEE uses a hardware security module (HSM) to provide isolation and protection from a number of side-channel attacks. The software component is based on runtime verification techniques which monitor the interaction of the HSM with the rest of the robot components and environment. Acting as a gatekeeper, such monitoring ensures that the access to the HSM-hosted functionality strictly adheres to a limited sequence of operations, whose parameters are also vetted for further restriction of the attack surface. While the above concept is generic, this project explores an instantiation with the Robot Operating System (ROS, https://www.ros.org/) ecosystem, employing the SECube chip (https://www.secube.blu5group.com/) as an HSM, and ROSMonitoring [2] framework instantiated with Larva [3] as the RV component. [1] RV-TEE: Secure Cryptographic Protocol Execution based on Runtime Verification, Mark Vella, Christian Colombo, Robert Abela, and Peter Špaček, Journal of Computer Virology and Hacking Techniques, 2021. [2] ROSMonitoring: A Runtime Verification Framework for ROS, Angelo Ferrando, Rafael C. Cardoso, Michael Fisher, Davide Ancona, Luca Franceschini, Viviana Mascardi, in TAROS 2020, Nottingham, UK. [3] LARVA - Safer Monitoring of Real-Time Java Programs, Christian Colombo, Gordon J. Pace and Gerardo Schneider, in SEFM 2009, Hanoi, Vietnam.</td>
+                <td>Christian Colombo, University of Malta</td>
+                <td>Security</td>
               </tr>
               <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
+                <td>Bachelor/Master</td>
+                <td>SimJade: Simulating Jade Platform sas p2p nodes</td>
+                <td>A Multi-agent system (MAS) is a software where many autonomous and proactive entities (the agents) can collaborate to solve complex tasks. A MAS is a particular type of distributed system, where the involved entities are logically distributed, and often physically distributed too. Many MAS development frameworks exist, among them JADE is one of the mostly adopted in academia and in industry too: it is a Java based framework supporting the developers in creating the MAS, and offers support to make the agents communicate in a transparent way even if they are running on different physical machines. Anyway, two JADE platforms can communicate only if they know their IPs. When testing such logically and distributed MASs before the deployment, we should need many physical machines to replicate the final deployment, or being able to manage many virtual machines, and all the complexity related to the network management: this make this testing setup extremely expensive and usually unrealistic to be available, preventing the MAS to be concretely and extensively tested. The aim of this thesis is the refactoring, design and systematic testing of SimJADE, a prototype of a simulator able to run on a single machine many JADE Platforms, so that to support the testing of a JADE MAS in a simulated distributed scenario without any change in the original MAS’ code. SimJADE is currently developed starting from PeerSim (a p2p simulator) and JADE, but some important aspects of JADE still need to be integrated in it, and some important aspects of the simulation need to be studied and integrated in the tool. The student will be asked to study how these missing aspects can be modeled and implemented in SimJade, so that to improve the simulator. Then, a set of MASs need to be found in literature and used to extensively test the simulator, so that to verify its capabilities and limitations. The thesis integrates Software Engineering and MAS design skills and approaches, and foresees both a detailed design analysis and an implementation phase.</td>
+                <td>Daniela Briola, University of Insubria</td>
+                <td>Multi-Agent Systems</td>
               </tr>
+              <tr>
+                <td>Bachelor/Master</td>
+                <td>Runtime Verification in MESA</td>
+                <td>"Mesa is a well-adopted open source agent-based modeling (ABM) framework built in Python 3 and published under an Apache 2.0 license and the only agent-based modeling library that is NUMFOCUS affiliated. The goal of Mesa is to be easy to use, as well as easily integrated into the Python ecosystem. Mesa provides tools that allow parameter sweeps, in-browser visualizations, remote hosting, headless model runs, and an architecture that decouples design components. Mesa also integrates things like network analysis and geospatial modeling and allows for members of the ecosystem to build and contribute back libraries that extend the functionality of Mesa both generally as well as specifically to the domain in which the contributor is an expert. The aim of this thesis is to develop a Runtime Verification library to integrate in Mesa. The objective is to give the possibility to enhance the simulations with formal verification features. In particular, to let the developer add requirements and constraints to be met by the agent-based simulation. The student will be asked to develop such library and to validate its use on some existent simulation example."</td>
+                <td></td>
+                <td>Multi-Agent Systems / Agent-Based Modeling and Simulation</td>
+              </tr>
+              <tr>
+                <td>Bachelor/Master</td>
+                <td>Comparative Analysis of Symbolic and Sub-Symbolic Agents in Collaborative Multi-Agent Environments using Overcooked-AI</td>
+                <td>This thesis proposes a comparative analysis of symbolic and sub-symbolic agents using the Overcooked-AI environment, available at <a href="https://github.com/HumanCompatibleAI/overcooked_ai">Overcooked-AI GitHub</a>. The goal is to develop rule-based symbolic agents and benchmark their performance against deep learning-based sub-symbolic agents in collaborative cooking tasks. By leveraging the structured, interpretable nature of symbolic AI and the adaptive, data-driven capabilities of sub-symbolic AI, this study aims to uncover their respective strengths and weaknesses in complex, dynamic settings. The research will focus on key metrics such as task completion time, cooperation efficiency, and adaptability to changing scenarios. By conducting extensive experiments within the Overcooked-AI framework, we will analyze differences in strategy and behavior between the two types of agents. Additionally, the thesis will explore hybrid approaches that integrate symbolic reasoning into sub-symbolic frameworks, potentially combining the interpretability of symbolic methods with the adaptability of sub-symbolic techniques. The findings are expected to provide valuable insights into the design of AI agents for cooperative tasks, highlighting the potential for synergistic approaches that leverage the best of both paradigms.</td>
+                <td>Rafael C. Cardoso, University of Aberdeen</td>
+                <td>Multi-Agent Systems / Machine Learning</td>
+              </tr>
+              <tr>
+                <td>Bachelor/Master</td>
+                <td>Extending the Runtime Monitoring Language (RML) to Support Metric Time Specification</td>
+                <td>The Runtime Monitoring Language is a versatile formalism for representing complex rules but lacks support for precise temporal reasoning. This thesis proposes extending RML with metric time specifications, akin to those in Metric Temporal Logic (MTL), enabling the use of time intervals and windows within rules. This enhancement will make RML more suitable for applications requiring exact timing constraints, such as event scheduling and monitoring systems. More information on RML can be found at <a href="https://rmlatdibris.github.io/">RMLatDIBRIS</a>. The primary objectives are to integrate metric time intervals into RML, define formal semantics for these extensions, and develop a prototype system to demonstrate their practical utility. The methodology involves designing the syntax and semantics for the extended RML, implementing a prototype, and evaluating its performance using real-world scenarios. This evaluation will measure the system's expressiveness, computational efficiency, and practical applicability. The extended RML will offer enhanced expressiveness for temporal reasoning, supported by formal semantics and demonstrated through a prototype system. This research will provide empirical evidence of the benefits and limitations of incorporating metric time specifications into RML, potentially expanding its use in various domains requiring precise temporal logic.</td>
+                <td>Davide Ancona, University of Genova</td>
+                <td>Runtime Verification</td>
+              </tr>
+              <tr>
+                <td>Bachelor/Master</td>
+                <td>Formal Verification of Large Language Models: A Case Study on ChatGPT</td>
+                <td>Large Language Models (LLMs) like OpenAI's ChatGPT have revolutionized natural language processing, providing human-like text generation for various applications. Despite their impressive performance, ensuring their reliability, safety, and correctness remains a significant challenge. Formal verification, a method used to prove the correctness of systems through mathematical techniques, presents a potential solution. This thesis proposes to apply formal verification techniques to LLMs, specifically focusing on ChatGPT. The primary objectives are to define formal specifications for ChatGPT, develop verification techniques suitable for LLMs, and implement and evaluate verification tools. Initially, a thorough literature review will be conducted to understand existing formal verification techniques and their application to AI systems. This research is expected to contribute significantly to the field by providing a set of formal specifications for LLMs, developing novel verification algorithms, and creating practical verification tools. The case studies will offer valuable insights into the effectiveness of formal verification techniques in real-world applications of ChatGPT.</td>
+                <td></td>
+                <td>Formal Verification / Natural Language Processing</td>
+              </tr>      
+              <tr>
+                <td>Bachelor/Master</td>
+                <td>Extending and Applying ROSMonitoring Framework for Robotic Systems</td>
+                <td><a href="https://github.com/autonomy-and-verification-uol/ROSMonitoring/">ROSMonitoring</a> provides a robust framework for monitoring and verifying robotic systems. This thesis proposes to broaden its capabilities and apply it across various domains within robotics. The primary objectives are twofold: first, to enhance ROSMonitoring through the integration of new features that bolster its monitoring and verification functionalities, and second, to apply ROSMonitoring in diverse robotic domains to assess its efficacy and versatility. Extending and applying the ROSMonitoring framework holds promise for advancing monitoring and verification practices in robotics. By systematically enhancing the framework's capabilities and exploring its application in diverse contexts, this thesis aims to contribute significantly to the field of robotics research and development.</td>
+                <td></td>
+                <td>Runtime Verification / Robotics</td>
+              </tr>             
             </tbody>
           </table>
         </div>
@@ -115,7 +191,7 @@
          <div class="margin-footer container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
           <div class="col-md-4 d-flex align-items-center">
-            <span class="text-muted">&copy; 2021 AF & MC</span>
+            <span class="text-muted">&copy; 2024 AF & MC</span>
           </div>
           <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
             <div class="icons ms-auto">

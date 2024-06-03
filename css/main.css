@@ -138,14 +138,14 @@ ul.timeline > li:before {
 }
 
 .btn-primary {
-    background-color: #000;
-    border-color: #000;
-    color: #e5e5e5;
+    background-color: #000 !important;
+    border-color: #000 !important;
+    color: #e5e5e5 !important;
    }
    
 .btn-primary:hover{
-    background-color:#fa4344;
-    border-color: #fa4344;
-    color: #e5e5e5;
+    background-color:#fa4344 !important;
+    border-color: #fa4344 !important;
+    color: #e5e5e5 !important;
 }
 
