@@ -1,151 +1,464 @@
-/* Bootstrap  v5.3.3 [https://getbootstrap.com/]
-Copyright 2011-2024 The Bootstrap Authors
-Licensed under MIT [https://github.com/twbs/bootstrap/blob/main/LICENSE]
-*/
-
-html, body {
-	height: 100%;
-	font-family: 'Quicksand', sans-serif;
+/* ================================================================
+   GLOBAL
+   ================================================================ */
+body { 
+  margin: 0;
+  background: #1e1e1e;
+  font-family: "Fira Code", monospace;
+  color: #d4d4d4;
 }
 
-body {
-	background: #e5e5e5;
-	color: #000;
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #777; }
+
+/* ================================================================
+   TOPBAR
+   ================================================================ */
+.topbar {
+  background: #181818;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #3a3a3a;
+  color: #dcdcdc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-a:hover {
-	color: #fa4344;
+.window-controls {
+  display: flex;
+  gap: 6px;
 }
 
-p, li {
-	font-weight: 300; 
+.wc-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-h5 {
-	font-weight: 700;
+.wc-btn.close { background: #ff5f57; }
+.wc-btn.minimize { background: #febc2e; }
+.wc-btn.maximize { background: #28c840; }
+
+.topbar-title {
+  opacity: 0.9;
 }
 
-
-/*.nav-pills .nav-link.active {
-	color: #000;
-	background: #e5e5e5;
-}*/
-
-
-.navbar button:hover {
-	color: #fa4344;
+/* ================================================================
+   LAYOUT
+   ================================================================ */
+.layout {
+  display: flex;
+  height: calc(100vh - 48px);
 }
 
-
-a {
-	color: #000;
+/* ================================================================
+   SIDEBAR
+   ================================================================ */
+.sidebar {
+  width: 50px;
+  background: #202020;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  gap: 12px;
 }
 
-
-ul.timeline {
-    list-style-type: none;
-    position: relative;
-}
-ul.timeline:before {
-    content: ' ';
-    background: #000;
-    display: inline-block;
-    position: absolute;
-    left: 29px;
-    width: 2px;
-    height: 100%;
-    z-index: 400;
-}
-ul.timeline > li {
-    margin: 20px 0;
-    padding-left: 20px;
-}
-ul.timeline > li:before {
-    content: ' ';
-    background: white;
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    border: 3px solid #fa4344;
-    left: 20px;
-    width: 20px;
-    height: 20px;
-    z-index: 400;
+.sidebar-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  cursor: pointer;
+  font-size: 1.2rem;
 }
 
-.progress {
-	height:  1.5rem;
+.sidebar-icon:hover {
+  background: #2d2d2d;
+  color: #fff;
 }
 
-.progress-bar {
-	color: #000;
-	font-weight: bold;
-	font-size: 0.8rem;
+/* ================================================================
+   EDITOR AREA
+   ================================================================ */
+.editor-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.progress-bar-one {
-	background-color: #fa4344;
+/* ================================================================
+   TERMINAL
+   ================================================================ */
+.terminal {
+  background: #111;
+  border-bottom: 1px solid #333;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  height: 130px;
+  overflow-y: auto;
 }
 
-.progress-bar-two {
-	background-color: #7bb3cb;
+.terminal-output {
+  white-space: pre-wrap;
+  margin-bottom: 4px;
 }
 
-.progress-bar-three {
-	background-color: #fbb10d;
+.terminal-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.progress-bar-four {
-	background-color: #5ab6bc;
+.prompt {
+  color: #52a8ff;
 }
 
-.progress-bar-five {
-	background-color: #7474b8;
-}
-
-#sticker .btn-secondary {
-    color: #fff;
-    background-color: #fa4344;
-    border-color: #fa4344;
-}
-
-/***Publications***/
-#bibbase_header {
-	display: none;
-}
-
-.bibbase.bibtex.link {
-	color: #fa4344;
-}
-
-.bibbase_group {
-	background: #e5e5e5;
-	color: #272343;
-}
-
-.bibbase_icon_text {
-	color: #e5e5e5;
-}
-
-.margin-footer {
-	clear: both;
-  	width: 100%;
-}
-
-.btn:focus {
+.terminal-input {
   outline: none;
-  box-shadow: none;
+  white-space: pre;
+  min-width: 2px;
 }
 
-.btn-primary {
-    background-color: #000 !important;
-    border-color: #000 !important;
-    color: #e5e5e5 !important;
-   }
-   
-.btn-primary:hover{
-    background-color:#fa4344 !important;
-    border-color: #fa4344 !important;
-    color: #e5e5e5 !important;
+.cursor {
+  width: 6px;
+  height: 1rem;
+  background: #d4d4d4;
+  animation: blink 1s step-start infinite;
 }
 
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ================================================================
+   TABS
+   ================================================================ */
+.tabs {
+  display: flex;
+  background: #252526;
+  border-bottom: 1px solid #333;
+  overflow-x: auto;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.35);
+}
+
+.tabs::-webkit-scrollbar { display: none; }
+
+.tab {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #ccc;
+  border-right: 1px solid #333;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab:hover {
+  background: #333;
+  color: #fff;
+}
+
+.tab.active {
+  background: #1e1e1e;
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 2px solid #007acc;
+}
+
+/* ================================================================
+   EDITOR WINDOW + CONTENT
+   ================================================================ */
+.window {
+  flex: 1;
+  background: #1e1e1e;
+  overflow-y: auto;
+}
+
+.content {
+  padding: 8px 24px 24px 24px;
+  white-space: normal;     /* ← la vera fix */
+  line-height: 1.45;
+}
+
+/* CODE BLOCK */
+.code-block {
+  font-family: "Fira Code", monospace;
+  background: #1e1e1e;
+  padding: 12px 20px;
+  line-height: 1.35;
+  font-size: 0.95rem;
+  color: #d4d4d4;
+  position: relative;
+}
+
+/* Line numbers */
+.code-block.with-lines {
+  display: grid;
+  grid-template-columns: 50px auto;
+  column-gap: 16px;
+  padding: 16px 20px;
+  background: #1e1e1e;
+  line-height: 1.50;
+  font-size: 0.95rem;
+  font-family: "Fira Code", monospace;
+  column-gap: 14px;
+}
+
+.code-block.with-lines .line-number {
+  color: #5a5a5a;
+  text-align: right;
+  padding-right: 6px;
+  user-select: none;
+}
+
+.code-line {
+  color: #d4d4d4;
+  white-space: pre-wrap;
+}
+
+
+/* Syntax highlight */
+.syntax-comment { color: #6a9955; }
+.syntax-title   { color: #569CD6; }
+.syntax-list    { color: #d7ba7d; padding-right: 6px; }
+.syntax-symbol  { color: #9cdcfe; }
+.syntax-strong  { color: #d19a66; }
+.syntax-fn { color: #c586c0; }
+
+a { color: #9cdcfe; text-decoration: none;}
+a:hover { color: #9cdcfe;  text-decoration: underline;}
+
+/* LISTE STILE CODICE (desktop + mobile) */
+.syntax-list {
+  display: inline-block;
+  width: 12px;               /* spazio per il trattino */
+  padding-left: 2px;
+  margin-left: 0;
+}
+
+/* Il contenuto dopo il trattino si allinea bene */
+.syntax-list + span {
+  display: inline;
+  padding-left: 2px;
+}
+
+.code-line .indent {
+  display: inline-block;
+  padding-left: 35px;
+}
+
+.inline-call {
+  white-space: nowrap;
+}
+
+/* ================================================================
+   STATUS BAR
+   ================================================================ */
+.statusbar {
+  height: 26px;
+  background: #007acc;
+  color: #fff;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.status-left span,
+.status-right span {
+  margin-right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+
+
+/* ================================
+   MATRIX MODE
+   ================================ */
+
+
+
+.matrix-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #00ff00;
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  white-space: nowrap;
+  opacity: 0.9;
+  animation: matrix-fall linear infinite;
+}
+
+@keyframes matrix-fall {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 768px) {
+
+  /* layout verticale */
+  .layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 6px 0;
+    border-right: none;
+    border-bottom: 1px solid #333;
+  }
+
+  /* tabs più compatti */
+  .tab {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  /* codeblock: versione mobile-friendly */
+  .code-block.with-lines {
+    grid-template-columns: 32px auto;  /* più stretta la colonna numeri */
+    padding: 16px 16px;
+    column-gap: 10px;
+  }
+
+  .code-block.with-lines .line-number {
+    width: 28px;
+    font-size: 0.75rem;
+    padding-right: 4px;
+  }
+
+  .code-line {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+}
+
+@media (max-width:480px) {
+
+  /* Tabs più compatti */
+  .tab {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+  }
+
+  /* Contenuto meno distanziato a sinistra */
+  .content {
+    padding-top: 22px !important;
+    padding-left: 6px;       /* ← ridotto */
+    padding-right: 8px;      /* ← più naturale */
+    padding-bottom: 14px;
+  }
+
+  /* Codeblock più compatto e allineato */
+  .code-block {
+    padding-top: 18px !important;
+    padding-bottom: 8px;
+    padding-left: 6px !important;   /* ← ridotto */
+    padding-right: 8px !important;  /* ← ridotto */
+  }
+
+  /* Versione con numeri rimossi */
+  .code-block.with-lines {
+    display: block !important;
+    padding-top: 18px !important;
+    padding-left: 6px !important;   /* ← uguale agli altri */
+    padding-right: 8px !important;
+  }
+
+  /* Nascondi numeri */
+  .code-block.with-lines .line-number {
+    display: none !important;
+  }
+
+  /* Linee del codice */
+  .code-block.with-lines span {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.34;
+    margin-bottom: 3px;   /* ← ridotto */
+  }
+
+  /* Indentazione liste */
+  .syntax-list {
+    display: inline-block !important;
+    margin-right: 6px;
+  }
+
+  .syntax-list + span {
+    display: inline !important;
+    padding-left: 0 !important;
+  }
+
+  /* Righe vuote */
+  .code-block.with-lines span:empty {
+    height: 4px;          /* ← più compatta */
+  }
+
+  /* Titoli */
+  .code-block.with-lines .code-line .syntax-title {
+    display: inline-block;
+    margin-top: 12px;      /* ← era vuoto, ora corretto */
+  }
+
+  /* Primo titolo */
+  .code-block.with-lines .code-line:first-of-type .syntax-title {
+    margin-top: 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .terminal , .statusbar {
+    display: none;
+  }
+}
+
+
+
+.code-line.indent-hanging {
+  margin-left: 18px;
+}
+
+.tab .ext {
+  font-size: 0.75em;
+  opacity: 0.6;
+  margin-left: 4px;
+}
+
+.tab.external {
+  opacity: 0.85;
+}
+
+.tab.external:hover {
+  background: #2d2d2d;
+  color: #9cdcfe;
+}
+
+#snake-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1e1e1e;
+  z-index: 9999;
+}

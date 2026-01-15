@@ -1,614 +1,1132 @@
-  <!doctype html>
-  <html lang="en">
-    <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thesis Opportunities – Angelo Ferrando</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/main.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 
 
+  <style>
+    /* =========================================================
+   BASE
+========================================================= */
+body {
+  font-family: "Fira Code", monospace;
+  background: #ffffff;
+  color: #1b1f3b;
+}
 
-      <title>Angelo Ferrando</title>
-      <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="images/favicon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-    </head>
+a {
+  color: #569CD6;
+  text-decoration: none;
+}
 
-    <body>
-      <header>
-        <div class="container">
-        <nav class="navbar navbar-expand-lg ">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="" width="60" height="60">
-          </a>
-          
-          <div class="icons ms-auto">
-            <a href="mailto:angelo.ferrando42@gmail.com" class="text-decoration-none">
-              <i class="bi bi-envelope-fill"></i>
-            </a>
-          </div>
-        </div>
-  </nav>
+a:hover {
+  text-decoration: underline;
+}
+
+.thesis-item h6, .accordion-button {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+
+.thesis-item p {
+  font-family: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  font-weight: 400;
+}
+/* =========================================================
+   AREA BACKGROUNDS (PASTEL, DISTINCT, WCAG-SAFE)
+========================================================= */
+.area-fv       { background: #e8f1fb; }
+.area-mas      { background: #f1efff; }
+.area-nsai     { background: #fff1dc; }
+.area-agentic  { background: #e9f6ee; }
+.area-chatbot  { background: #fde8ea; }
+.area-security { background: #f1f3f6; }
+.area-robotics { background: #d8eef0; }
+.area-av       { background: #fff3d6; }
+
+/* =========================================================
+   ACCORDION CLEANUP & LAYOUT
+========================================================= */
+.accordion,
+.accordion-item {
+  border: none;
+  box-shadow: none;
+}
+
+.accordion-item {
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.accordion-header {
+  padding-left: 0.25rem;
+}
+
+.accordion-button {
+  background: transparent;
+  font-weight: 600;
+  color: #1b1f3b;
+  padding-left: 0.75rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.accordion-button:hover {
+  background: rgba(0, 0, 0, 0.025);
+}
+
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
+  background: transparent;
+  box-shadow: none;
+  color: #1b1f3b;
+}
+
+.accordion-button:focus-visible {
+  outline: 2px solid #569CD6;
+  outline-offset: 2px;
+}
+
+.accordion-body {
+  padding-left: 0;
+}
+
+.accordion-item {
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+
+/* micro-animazione elegante */
+.accordion-collapse {
+  transition: height 0.25s ease;
+}
+
+/* =========================================================
+   THESIS ITEMS
+========================================================= */
+.thesis-item {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+}
+
+.thesis-item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}body {
+  font-family: "Fira Code", monospace;
+  background: #ffffff;
+  color: #1b1f3b;
+}
+
+a {
+  color: #569CD6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.thesis-item h6, .accordion-button {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+
+.thesis-item p {
+  font-family: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.thesis-item p {
+  margin-bottom: 0;
+}
+
+/* meta info */
+.meta {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.4rem;
+  font-weight: 400;
+}
+
+/* =========================================================
+   THESIS BORDER COLORS (HIGH CONTRAST)
+========================================================= */
+.area-fv       .thesis-item { border-color: #2563eb; }
+.area-mas      .thesis-item { border-color: #6d28d9; }
+.area-nsai     .thesis-item { border-color: #ea580c; }
+.area-agentic  .thesis-item { border-color: #15803d; }
+.area-chatbot  .thesis-item { border-color: #dc2626; }
+.area-security .thesis-item { border-color: #4b5563; }
+.area-robotics .thesis-item { border-color: #0e7490; }
+.area-av       .thesis-item { border-color: #ca8a04; }
+
+/* =========================================================
+   FILTER INPUT
+========================================================= */
+#filterInput {
+  max-width: 520px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.form-control:focus {
+  border-color: #9aa4b2;
+  box-shadow: none;
+  outline: none;
+}
+
+/* clear (X) button */
+#clearFilter {
+  background: transparent;
+  border: 0;
+  color: #1b1f3b;
+  opacity: 0.6;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+#clearFilter:hover {
+  opacity: 0.9;
+}
+
+/* =========================================================
+   AREA COUNTER
+========================================================= */
+.area-count {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #555;
+  margin-left: 0.5rem;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #9aa4b2;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE ONLY OVERRIDES
+   (NON cambia desktop)
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+  /* container */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* titolo pagina */
+  h1 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  /* testo introduttivo */
+  .container > p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  /* ================= FILTER ================= */
+  #filterInput {
+    font-size: 0.95rem;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+  }
+
+  #clearFilter {
+    font-size: 0.9rem;
+  }
+
+  /* ================= ACCORDION ================= */
+  .accordion-item {
+    margin-bottom: 0.6rem;
+  }
+
+  .accordion-button {
+    font-size: 0.9rem;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+  }
+
+  .accordion-button::after {
+    transform: scale(0.85);
+  }
+
+  .accordion-body {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  /* ================= THESIS ITEMS ================= */
+  .thesis-item {
+    padding-left: 0.85rem;
+  }
+
+  .thesis-item h6 {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  .thesis-item p {
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+
+  .meta {
+    font-size: 0.75rem;
+  }
+
+  .thesis-item:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ================= HOW TO APPLY ================= */
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  ul li {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-body p,
+  .card-body li {
+    font-size: 0.85rem;
+  }
+
+  /* ================= FOOTER ================= */
+  footer {
+    font-size: 0.75rem;
+  }
+}
+
+/* ================= HOW TO APPLY ================= */
+
+.apply-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.apply-box {
+  background: #f9fafb;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+}
+
+.apply-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1b1f3b;
+}
+
+.apply-list {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.apply-list li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+
+.apply-list li strong {
+  font-weight: 600;
+}
+
+.apply-contact {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 767.98px) {
+  .apply-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apply-box {
+    padding: 1rem;
+  }
+
+  .apply-title {
+    font-size: 0.95rem;
+  }
+
+  .apply-list li,
+  .apply-contact {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-intro {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+<div class="container my-5">
+
+  <!-- Back -->
+  <a href="https://angeloferrando.github.io/website/" class="btn btn-outline-secondary btn-sm mb-4">
+    ← Back to main website
+  </a>
+
+  <!-- Title -->
+ <div class="page-intro mb-4">
+  <h1 class="mb-3">Thesis & Internship Opportunities</h1>
+  <p>
+    Available Bachelor and Master thesis opportunities, as well as internships.
+    <br>
+    The list is not exhaustive — feel free to get in touch if a topic sparks your interest.
+  </p>
+</div>
+
+<div class="border-start border-3 ps-3 mb-4 text-muted" style="font-size:0.75rem;">
+  <p class="mb-0">
+    <strong>Erasmus+</strong> opportunities are available for selected thesis and internship projects.
+    Active international collaborations with Télécom Paris (FR), The University of Manchester (UK),
+    University of Aberdeen (UK), Imperial College London (UK),
+    University of Malta (MT), and Maynooth University (IE).
+  </p>
+</div>
+
+
+  <!-- Filter -->
+  <div class="d-flex flex-column flex-md-row gap-2 mb-4">
+    <div class="position-relative flex-grow-1">
+      <input
+        type="search"
+        id="filterInput"
+        class="form-control pe-5"
+        placeholder="Search by topic, keyword, partner…"
+        autocomplete="off"
+      >
+      <button
+        type="button"
+        id="clearFilter"
+        class="btn btn-sm position-absolute top-50 end-0 translate-middle-y me-2"
+        style="display:none;"
+        aria-label="Clear search"
+      >✕</button>
+    </div>
   </div>
-      </header>
 
-      <main>
-        
-        <section id="thesis" class="text-center mb-5">
-        <div class="container">
-          <a class="text-decoration-none" href="thesis.html">
-            <h1 class="display-4">Thesis and Internships</h1>
-          </a>
-            
+  <!-- Accordion -->
+  <div class="accordion" id="thesisAccordion">
+
+   <!-- ================= FORMAL VERIFICATION ================= -->
+<div class="accordion-item area-fv" data-area="formal-verification">
+  <h2 class="accordion-header">
+    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fv">
+      Formal Verification & Runtime Verification
+      <span class="ms-2 text-muted fw-normal">
+        <span class="area-count"></span>
+      </span>
+    </button>
+  </h2>
+
+  <div id="fv" class="accordion-collapse collapse">
+    <div class="accordion-body">
+
+      <!-- 1 -->
+      <div class="thesis-item"
+           data-search="runtime verification nudging ai safety human decision">
+        <h6>Combination of Runtime Verification and Nudging</h6>
+        <div class="meta">
+          Runtime Verification / AI
         </div>
-      </section>
-
-        <section id="guidelines" class="mt-5">
-          <div class="container">
-          <p>Here you will discover a compilation of currently available Bachelor and Master thesis opportunities, as well as internships. Additionally, there might be fresh projects to explore, so feel free to inquire if any catch your interest.</p>
-          <h2>Guidelines for Pursuing an Internship or Thesis Collaboration</h2>
-          <ol>
-              <li>
-                  <strong>Time Management:</strong> crafting a quality bachelor thesis typically demands approximately three months, while a Master's thesis can extend to six months or more. Feel free to express interest in topics beforehand, even if your exams aren't yet completed. If any topics listed here intrigue you, don't hesitate to mention it upfront.
-              </li>
-              <li>
-                  <strong>Communication Efficiency:</strong> when updating on your progress, sending only one email per month is insufficient, while sending one email per day is excessive. Strive for efficiency in both the content and frequency of your communications.
-              </li>
-              <li>
-                  <strong>Detailed Reporting:</strong> avoid the vague "it doesn't work" approach. Provide clear explanations of attempted solutions and the specific circumstances surrounding any encountered issues. Proactivity and clarity are key.
-              </li>
-              <li>
-                  <strong>Writing Standards:</strong> embrace LaTeX for document creation, a skill that may initially seem daunting but offers substantial benefits as you progress. Overleaf serves as an excellent platform for collaborative work.
-              </li>
-              <li>
-                  <strong>Personal Responsibility:</strong> the internship or thesis endeavor rests squarely on your shoulders. Remembering deadlines, paperwork, and administrative tasks falls within your domain; I won't issue reminders.
-              </li>
-          </ol>
-        </div>
-        </section>  
-        
-        <div class="container">
-          <h2>Available Theses</h2>
-          <p>Note that the list is incomplete. If you are interested in any of the following topics, please contact me to discuss possible additional theses further:
-            <ul>
-              <li>Multi-Agent Systems (MAS)</li>
-              <li>Formal Verification</li>
-              <li>Robotics</li>
-              <li>Chatbots</li>
-              <li>Process Mining</li>
-              <li>Automated Planning</li>
-              <li>Reinforcement Learning</li>
-              <li>Agent-Based Modeling and Simulation</li>
-            </ul>
-          </p>
-        </div>
-
-        <section id="thesis">
-          <div class="container">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Bachelor/Master</th>
-                  <th scope="col">Title</th>
-                  <th scope="col">Abstract</th>
-                  <th scope="col">Partners</th>
-                  <th scope="col">Topics</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td colspan="5"><strong>Formal Verification</strong></td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Combination of Runtime Verification and Nudging</td>
-                  <td>The project focuses on integrating Runtime Verification (RV) with the concept of Nudging to enhance the reliability and user interaction of software systems. Runtime Verification is a method that monitors a system's execution in real-time to ensure it adheres to specific behaviors or properties. This technique is crucial in safety-critical systems, where any deviation from expected behavior can have serious consequences. However, while RV is effective in identifying these deviations, it does not typically influence the user's decisions or actions. Nudging, a concept from behavioral economics, subtly guides users towards making better decisions without restricting their freedom of choice. The goal of this thesis is to explore how these two approaches can be combined to create systems that not only monitor for correct behavior but also encourage users to make decisions that align with safety and performance goals. The project will involve designing and evaluating a framework that integrates Nudging into RV, with the potential to improve both system reliability and user experience. This research offers the opportunity to contribute to the development of more robust and user-friendly software systems.</td>
-                  <td></td>
-                  <td>Runtime Verification / AI</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>GUI support for formal verification tool VITAMIN</td>
-                  <td>The VITAMIN formal verification framework is a sophisticated tool used for ensuring the correctness of system models through rigorous formal methods. However, its current text-based interface poses a significant barrier to entry for users who are not well-versed in formal verification syntax and methodologies. This project aims to develop a graphical user interface (GUI) for VITAMIN, providing a more accessible and intuitive way for users to create and manipulate verification models. The proposed GUI will support drag-and-drop functionality, allowing users to visually construct and modify models without needing to write complex code. This approach not only lowers the learning curve but also enhances productivity by making the model creation process more straightforward and less error-prone. The development of this GUI will involve designing an interactive and visually appealing interface that integrates seamlessly with VITAMIN's underlying framework. By enabling users to draw models through simple drag-and-drop actions, the GUI will transform the user experience, making formal verification more approachable and efficient. The final deliverable will be a robust, user-friendly GUI that empowers users to leverage the full capabilities of VITAMIN without the need for extensive technical expertise in formal verification. This advancement is expected to broaden the adoption of formal verification practices and improve the overall quality and reliability of system models across various domains.</td>
-                  <td>Vadim Malvone, Telecom Paris</td>
-                  <td>Formal Verification / Software development</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Machine Learning for Optimal Metric Selection in LTL Runtime Verification</td>
-                  <td>
-                      Linear Temporal Logic (LTL) is crucial in runtime verification, where a monitor checks system properties against LTL specifications. Due to resource constraints, the monitor must selectively observe certain atoms (propositions) based on a metric that evaluates their potential payoff. Current metrics are often manually defined, which may not be optimal across varying scenarios.
-                      This thesis aims to apply machine learning (ML) techniques to learn the best metric for atom selection in runtime LTL verification. By analyzing example traces of system executions, the project will train an ML model to predict the most effective metric, optimizing the verification process under resource constraints.
-                      The project involves analyzing existing metrics, curating a dataset of system traces, and exploring ML algorithms to identify the most suitable approach. The developed model will be tested within a runtime verification framework to compare its performance against traditional methods.
-                      The expected outcome is a learned metric that enhances the accuracy and efficiency of runtime verification, particularly in resource-limited environments.
-                  </td>
-                  <td>Vadim Malvone, Telecom Paris</td>
-                  <td>Formal Verification / Machine Learning</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Genetic Algorithms for learning properties</td>
-                  <td>This thesis explores the application of genetic algorithms (GAs) in learning formal properties. It investigates how GAs can efficiently navigate complex search spaces to uncover and represent formal properties, offering insights into their effectiveness and limitations. The study aims to contribute to the understanding of utilizing GAs for learning formal properties, providing valuable implications for various domains, including artificial intelligence, optimization, and robotics.</td>
-                  <td></td>
-                  <td>Formal Verification / AI</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Formal Verification of Large Language Models: A Case Study on ChatGPT</td>
-                  <td>Large Language Models (LLMs) like OpenAI's ChatGPT have revolutionized natural language processing, providing human-like text generation for various applications. Despite their impressive performance, ensuring their reliability, safety, and correctness remains a significant challenge. Formal verification, a method used to prove the correctness of systems through mathematical techniques, presents a potential solution. This thesis proposes to apply formal verification techniques to LLMs, specifically focusing on ChatGPT. The primary objectives are to define formal specifications for ChatGPT, develop verification techniques suitable for LLMs, and implement and evaluate verification tools. Initially, a thorough literature review will be conducted to understand existing formal verification techniques and their application to AI systems. This research is expected to contribute significantly to the field by providing a set of formal specifications for LLMs, developing novel verification algorithms, and creating practical verification tools. The case studies will offer valuable insights into the effectiveness of formal verification techniques in real-world applications of ChatGPT.</td>
-                  <td></td>
-                  <td>Formal Verification / Natural Language Processing</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Extending the Runtime Monitoring Language (RML) to Support Metric Time Specification</td>
-                  <td>The Runtime Monitoring Language is a versatile formalism for representing complex rules but lacks support for precise temporal reasoning. This thesis proposes extending RML with metric time specifications, akin to those in Metric Temporal Logic (MTL), enabling the use of time intervals and windows within rules. This enhancement will make RML more suitable for applications requiring exact timing constraints, such as event scheduling and monitoring systems. More information on RML can be found at <a href="https://rmlatdibris.github.io/">RMLatDIBRIS</a>. The primary objectives are to integrate metric time intervals into RML, define formal semantics for these extensions, and develop a prototype system to demonstrate their practical utility. The methodology involves designing the syntax and semantics for the extended RML, implementing a prototype, and evaluating its performance using real-world scenarios. This evaluation will measure the system's expressiveness, computational efficiency, and practical applicability. The extended RML will offer enhanced expressiveness for temporal reasoning, supported by formal semantics and demonstrated through a prototype system. This research will provide empirical evidence of the benefits and limitations of incorporating metric time specifications into RML, potentially expanding its use in various domains requiring precise temporal logic.</td>
-                  <td>Davide Ancona, University of Genova</td>
-                  <td>Runtime Verification</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>A Study of State-of-the-Art Runtime Verification Techniques in AI</td>
-                  <td>The increasing complexity and autonomy of Artificial Intelligence (AI) systems, especially in critical applications such as healthcare, autonomous driving, and financial services, necessitates robust methods to ensure their reliability and safety. Runtime Verification (RV) has emerged as a promising technique to provide these assurances by continuously monitoring system behavior against formal specifications during execution. This thesis proposes to conduct a comprehensive study of the state-of-the-art RV techniques applied to AI systems, evaluating their effectiveness, scalability, and practicality. The primary objective of this research is to systematically review and classify existing RV techniques used in AI, highlighting their strengths, limitations, and areas for improvement. The study will cover various AI domains, including machine learning models, neural networks, and autonomous decision-making systems. We will analyze how current RV methods handle challenges such as non-deterministic behavior, high-dimensional data, and the dynamic nature of learning algorithms. Additionally, we will explore the integration of RV with AI development frameworks to enhance real-time monitoring and anomaly detection capabilities. This research will contribute to the field by providing a detailed taxonomy of RV techniques in AI, identifying gaps in current approaches, and proposing future research directions. By evaluating and comparing these techniques, we aim to offer valuable insights for researchers and practitioners seeking to implement effective runtime verification in AI systems, ultimately contributing to the development of safer and more reliable AI technologies.</td>
-                  <td>Christian Colombo, University of Malta</td>
-                  <td>Runtime Verification</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Runtime Monitoring of IoT Wearable Devices in Healthcare for Diabetes Management</td>
-                  <td>The growing use of wearable IoT devices in healthcare, particularly for managing chronic conditions such as diabetes, has introduced new opportunities for real-time health monitoring. Devices like continuous glucose monitors (CGMs) and smartwatches are used to track essential health metrics such as blood glucose levels and heart rate, providing critical data to patients and healthcare providers. These wearables are especially important for diabetic patients, as they offer real-time information to guide decisions regarding insulin administration, diet, and physical activity. However, the safety-critical nature of healthcare applications makes it essential to ensure that these devices behave as expected at all times. Any malfunction or inaccurate data can lead to serious health risks, such as hypoglycemia or hyperglycemia, which may result in life-threatening consequences. Despite the importance of these devices, there is currently a lack of robust systems for monitoring their real-time performance and ensuring their correct behavior during operation. This research proposes the development of a runtime monitoring framework specifically designed for wearable devices used in diabetes management. The goal is to continuously track the performance of these devices, detect anomalies or deviations from expected behavior, and ensure the accuracy and reliability of the data they produce. By monitoring these devices in real time, the system would be able to alert users and healthcare providers of any malfunctions, ensuring timely interventions and reducing the risk of adverse health events. The research will involve the analysis of real-world data from diabetic patients using wearables, the design and implementation of the monitoring framework, and the evaluation of its effectiveness in detecting device errors and improving reliability. The expected outcome is a reliable monitoring solution that enhances the safety of wearable healthcare devices, ensuring that patients can rely on the information they provide for managing their condition effectively.</td>
-                  <td></td>
-                  <td>Runtime Verification / IoT</td>
-                </tr>
-                <tr>
-                  <td colspan="5"><strong>Autonomous Agents and Multi-Agent Systems</strong></td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Multi-Agent Systems for Educational Robotics with Sphero Devices</td>
-                  <td>Multi-agent systems (MAS) represent a powerful paradigm for designing distributed, autonomous, and cooperative systems. In the context of educational robotics, integrating MAS principles with programmable robotic platforms like Sphero devices offers exciting opportunities for both research and pedagogical innovation. This project aims to explore the application of MAS in educational settings, leveraging Sphero robots to develop interactive and engaging learning experiences. The objective is to design a framework where multiple Sphero robots can collaborate, communicate, and exhibit intelligent behaviors, demonstrating fundamental concepts of multi-agent coordination, swarm intelligence, and autonomous decision-making. The project will focus on developing intuitive programming environments and visual tools that enable students to design and experiment with MAS-based behaviors in a hands-on manner. By utilizing Sphero's programmable API and integrating AI-driven agent behaviors, the proposed system will provide a tangible way for learners to understand complex MAS concepts through playful, interactive experiments. The final outcome will be an accessible, well-documented platform that fosters engagement in STEM education, helping students develop computational thinking, problem-solving skills, and a deeper understanding of distributed artificial intelligence principles.</td>
-                  <td>Manuela Montangero, UNIMORE</td>
-                  <td>Multi-Agent Systems / Educational Robotics / Artificial Intelligence</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Design and Development of Intelligent Agents and Virtual Environments Using the VEsNA Toolkit</td>
-                  <td>This thesis explores the use of the <a href="https://github.com/VEsNA-ToolKit">VEsNA Toolkit</a> to create intelligent, interactive virtual environments by integrating multi-agent systems with natural language interfaces. The project leverages components like ChatBDI for LLM-based dialogue, KQML-S for agent communication, and VEsNA-light for embodiment in virtual worlds built with Godot. The main objective is to enable natural, real-time interaction between users and agents through natural language, allowing for manipulation of objects, agent behavior, and environmental changes. The thesis will involve designing scenarios with embodied agents, developing custom behaviors, and analyzing the efficacy of language-based interaction. It aims to contribute novel insights into how cognitive agents can enhance immersion and usability in VR contexts, especially for educational and simulation-based applications. Results will be evaluated through user studies focusing on intuitiveness, responsiveness, and the perceived intelligence of the system.</td>
-                  <td></td>
-                  <td>Multi-Agent Systems / Human-Computer Interaction</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Integrating Runtime Verification into Jadescript for Multi-Agent Systems</td>
-                  <td>Runtime Verification (RV) is a lightweight formal verification technique used to monitor and ensure the correctness of system executions in real time. In the context of multi-agent systems (MAS), where agents operate autonomously and interact in complex environments, integrating RV can enhance reliability by detecting deviations from expected behaviors during execution. This project aims to incorporate Runtime Verification mechanisms into Jadescript, a high-level programming language designed for developing MAS based on the JADE framework. The proposed solution will enable developers to specify formal correctness properties within Jadescript and dynamically verify agent interactions as they occur. By embedding RV capabilities, the system will allow for early detection of protocol violations, unexpected behaviors, or security breaches in agent communication. The research will involve designing an efficient monitoring framework that seamlessly integrates with Jadescript's language constructs while minimizing overhead. This will include defining a formal specification syntax for expressing runtime properties, implementing a monitoring engine, and evaluating the approach on real-world MAS applications. The final deliverable will be an enhanced version of Jadescript with built-in Runtime Verification support, providing developers with powerful tools to create more robust and dependable multi-agent systems.</td>
-                  <td>Federico Bergenti, University of Parma</td>
-                  <td>Formal Verification / Multi-Agent Systems / Software Engineering</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Advancing VEsNA: Enhancing Virtual Environments with Intelligent Agent Capabilities</td>
-                  <td>VEsNA is a framework designed to manage Virtual Environments through Natural Language Agents, integrating technologies such as DialogFlow for natural language interaction (as well as LLMs), JaCaMo for cognitive agent reasoning, and Godot for simulation. While VEsNA currently allows users to design and manipulate virtual environments using conversational commands, its potential for more advanced decision-making, simulation, and interactive training is yet to be fully explored. This project aims to extend VEsNA’s capabilities by enhancing its reasoning, simulation, and training functionalities. Specifically, the research will focus on improving VEsNA’s cognitive agent capabilities to support dynamic scenario simulations, introducing more complex rule-based reasoning for compliance checks, and incorporating interactive training environments where users can engage with AI-driven virtual agents.</td>
-                  <td>Andrea Gatti and Viviana Mascardi, University of Genova</td>
-                  <td>Multi-Agent Systems / Artificial Intelligence / Human-Computer Interaction</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Runtime Verification of SARL-based Multi-Agent Systems</td>
-                  <td>
-                      This project aims to investigate the integration of Runtime Verification (RV) into SARL-based multi-agent systems to enhance their reliability and correctness. SARL is a general-purpose agent-oriented programming language that facilitates the development of autonomous and distributed systems. Ensuring correct interactions between agents at runtime is critical, as deviations from expected behaviors can lead to inconsistencies, failures, or security vulnerabilities.
-                      <br>
-                      Runtime Verification (RV) is a lightweight formal method that monitors system execution in real-time, checking whether predefined properties hold throughout the system's operation. Applying RV to SARL can provide a dynamic mechanism for verifying compliance with Agent Interaction Protocols (AIPs) and ensuring agents operate within defined safety constraints. This project will explore how RV can be effectively incorporated into the SARL runtime environment, leveraging its event-driven architecture and the Janus platform.
-                      <br>
-                      The research will focus on designing and implementing a monitoring framework that observes agent behaviors, detects violations of specified correctness properties, and provides real-time feedback or corrective actions. The evaluation will involve applying the framework to a multi-agent case study, assessing its impact on system reliability and performance.
-                      <br>
-                      This work contributes to the broader field of agent-oriented software engineering by improving runtime assurance mechanisms for intelligent, autonomous systems.
-                  </td>
-                  <td></td>
-                  <td>Runtime Verification / Multi-Agent Systems / SARL / Agent Interaction Protocols</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>SimJade: Simulating Jade Platform sas p2p nodes</td>
-                  <td>A Multi-agent system (MAS) is a software where many autonomous and proactive entities (the agents) can collaborate to solve complex tasks. A MAS is a particular type of distributed system, where the involved entities are logically distributed, and often physically distributed too. Many MAS development frameworks exist, among them JADE is one of the mostly adopted in academia and in industry too: it is a Java based framework supporting the developers in creating the MAS, and offers support to make the agents communicate in a transparent way even if they are running on different physical machines. Anyway, two JADE platforms can communicate only if they know their IPs. When testing such logically and distributed MASs before the deployment, we should need many physical machines to replicate the final deployment, or being able to manage many virtual machines, and all the complexity related to the network management: this make this testing setup extremely expensive and usually unrealistic to be available, preventing the MAS to be concretely and extensively tested. The aim of this thesis is the refactoring, design and systematic testing of SimJADE, a prototype of a simulator able to run on a single machine many JADE Platforms, so that to support the testing of a JADE MAS in a simulated distributed scenario without any change in the original MAS’ code. SimJADE is currently developed starting from PeerSim (a p2p simulator) and JADE, but some important aspects of JADE still need to be integrated in it, and some important aspects of the simulation need to be studied and integrated in the tool. The student will be asked to study how these missing aspects can be modeled and implemented in SimJade, so that to improve the simulator. Then, a set of MASs need to be found in literature and used to extensively test the simulator, so that to verify its capabilities and limitations. The thesis integrates Software Engineering and MAS design skills and approaches, and foresees both a detailed design analysis and an implementation phase.</td>
-                  <td>Daniela Briola, University of Insubria</td>
-                  <td>Multi-Agent Systems</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Runtime Verification in MESA</td>
-                  <td>Mesa is a well-adopted open source agent-based modeling (ABM) framework built in Python 3 and published under an Apache 2.0 license and the only agent-based modeling library that is NUMFOCUS affiliated. The goal of Mesa is to be easy to use, as well as easily integrated into the Python ecosystem. Mesa provides tools that allow parameter sweeps, in-browser visualizations, remote hosting, headless model runs, and an architecture that decouples design components. Mesa also integrates things like network analysis and geospatial modeling and allows for members of the ecosystem to build and contribute back libraries that extend the functionality of Mesa both generally as well as specifically to the domain in which the contributor is an expert. The aim of this thesis is to develop a Runtime Verification library to integrate in Mesa. The objective is to give the possibility to enhance the simulations with formal verification features. In particular, to let the developer add requirements and constraints to be met by the agent-based simulation. The student will be asked to develop such library and to validate its use on some existent simulation example.</td>
-                  <td></td>
-                  <td>Multi-Agent Systems / Agent-Based Modeling and Simulation</td>
-                </tr>
-                <!-- <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Comparative Analysis of Symbolic and Sub-Symbolic Agents in Collaborative Multi-Agent Environments using Overcooked-AI</td>
-                  <td>This thesis proposes a comparative analysis of symbolic and sub-symbolic agents using the Overcooked-AI environment, available at <a href="https://github.com/HumanCompatibleAI/overcooked_ai">Overcooked-AI GitHub</a>. The goal is to develop rule-based symbolic agents and benchmark their performance against deep learning-based sub-symbolic agents in collaborative cooking tasks. By leveraging the structured, interpretable nature of symbolic AI and the adaptive, data-driven capabilities of sub-symbolic AI, this study aims to uncover their respective strengths and weaknesses in complex, dynamic settings. The research will focus on key metrics such as task completion time, cooperation efficiency, and adaptability to changing scenarios. By conducting extensive experiments within the Overcooked-AI framework, we will analyze differences in strategy and behavior between the two types of agents. Additionally, the thesis will explore hybrid approaches that integrate symbolic reasoning into sub-symbolic frameworks, potentially combining the interpretability of symbolic methods with the adaptability of sub-symbolic techniques. The findings are expected to provide valuable insights into the design of AI agents for cooperative tasks, highlighting the potential for synergistic approaches that leverage the best of both paradigms.</td>
-                  <td>Rafael C. Cardoso, University of Aberdeen</td>
-                  <td>Multi-Agent Systems / Machine Learning</td>
-                </tr> -->
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Reinforcement Learning for Strategic Decision-Making in StarCraft</td>
-                  <td>StarCraft, a real-time strategy (RTS) game, presents one of the most complex environments for artificial intelligence due to its large state-action space, partial observability, and the need for long-term planning. This thesis investigates the application of reinforcement learning (RL) to develop competitive and adaptive agents capable of high-level strategic decision-making in StarCraft. The project will explore both model-free techniques, such as Deep Q-Networks (DQN), Proximal Policy Optimization (PPO), and Actor-Critic methods, as well as hierarchical reinforcement learning and multi-agent approaches suited for the multi-layered decision structures in RTS games. Emphasis will be placed on handling the challenges of sparse rewards, real-time adaptation, and macro/micro strategy formulation. Experiments will be conducted using existing StarCraft II RL environments such as DeepMind’s PySC2 or Facebook’s TorchCraftAI. The performance of the trained agents will be compared against scripted bots and baseline RL models, and generalisation will be tested across different maps and scenarios.</td>
-                  <td></td>
-                  <td>Reinforcement Learning / Game AI / StarCraft II / Multi-Agent Systems</td>
-                </tr>
-                <!--<tr>
-                  <td>Bachelor/Master</td>
-                  <td>Reinforcement Learning for Adaptive and Intelligent Game Agents</td>
-                  <td>Reinforcement Learning (RL) has become a fundamental approach for training autonomous agents in games, allowing them to learn optimal strategies through interaction with dynamic environments. This thesis explores the application of RL techniques to develop adaptive and intelligent game agents capable of strategic decision-making, learning from player behaviour, and dynamically adjusting to game conditions. The research will investigate different RL algorithms, including model-free methods such as Deep Q-Networks (DQN) and Proximal Policy Optimization (PPO), as well as model-based approaches that incorporate planning and environment modelling. A key focus will be the design of reward functions that align with complex game mechanics and encourage realistic agent behaviour. The project will involve implementing RL agents in a selected game environment, evaluating their performance against scripted AI and human players, and analysing generalisation across different game scenarios.</td>
-                  <td></td>
-                  <td>Reinforcement Learning / Game AI / Artificial Intelligence</td>
-                </tr>  -->
-                <tr>
-                  <td colspan="5"><strong>Neuro-Symbolic AI</strong></td>
-                  <tr>
-                    <td>Bachelor/Master</td>
-                    <td>Runtime Verification for Monitoring the Learning Dynamics of Neural Networks</td>
-                    <td>
-                      This thesis explores the application of Runtime Verification (RV) during the training phase of neural networks to assess whether learning is proceeding effectively. The core idea is to embed monitors between neural layers that can observe both local and global changes in the network's internal state. These monitors will check for formally specified properties indicating whether learning aligns with desired behaviors—such as consistent gradient progression, convergence trends, or avoidance of known pitfalls like vanishing gradients or overfitting symptoms. By flagging problematic training dynamics early, RV can provide actionable insights that allow practitioners to intervene, halt ineffective training, and diagnose learning issues. The project aims to define a set of temporal or semantic properties relevant to the training process, design efficient monitoring mechanisms, and evaluate the impact of RV-guided training in various neural architectures. This approach contributes to interpretability and trustworthiness in neural learning.
-                    </td>
-                    <td>Giorgia Franchini, UNIMORE</td>
-                    <td>Runtime Verification / Neural Networks / Trustworthy AI / Interpretability</td>
-                  </tr>
-                  <tr>
-                    <td>Bachelor/Master</td>
-                    <td>Investigating the Reasoning Capabilities of Large Language Models</td>
-                    <td>
-                      Large Language Models (LLMs) such as GPT-4, Claude, and Gemini have demonstrated impressive language generation abilities. However, their reasoning capabilities—such as logical inference, causal understanding, commonsense reasoning, and multi-step problem solving—remain under active investigation. This thesis proposes a systematic study to evaluate and characterize the reasoning strengths and limitations of state-of-the-art LLMs. The student will survey existing benchmarks and reasoning taxonomies, run experiments on selected reasoning tasks (e.g., theorem proving, logical puzzles, math word problems, or counterfactual reasoning), and analyze the models' outputs for consistency, coherence, and alignment with formal reasoning principles. Optionally, the project may explore how external tools (e.g., symbolic reasoning engines or verification modules) can be used to augment LLM reasoning. The results will contribute to a deeper understanding of how far LLMs have come in reasoning and what gaps remain for achieving trustworthy, explainable, and logically grounded AI.
-                    </td>
-                    <td></td>
-                    <td>Large Language Models / Reasoning / Explainability / Neuro-Symbolic AI</td>
-                  </tr>
-                  <tr>
-                    <td>Bachelor/Master</td>
-                    <td>Runtime Verification-Guided Learning in Neuro-Symbolic Systems</td>
-                    <td>Neuro-symbolic models like Logical Neural Networks (LNNs) combine the learning capabilities of neural networks with the interpretability of symbolic reasoning. However, they remain susceptible to inconsistencies and flawed inferences during training. This thesis investigates the use of Runtime Verification (RV) to monitor reasoning steps in real-time and actively guide the learning process based on formal correctness criteria. The project involves defining logic-based trace models, specifying correctness properties (e.g., consistency with domain rules), and implementing an RV module that detects violations during inference. These violation signals will be used to adapt learning through mechanisms such as regularisation loss, weight adjustments, or local retraining. The goal is to create a lightweight, feedback-driven framework that improves both the accuracy and trustworthiness of neuro-symbolic AI systems by integrating symbolic runtime feedback with gradient-based learning.</td>
-                    <td></td>
-                    <td>Neuro-Symbolic AI / Logical Neural Networks / Runtime Verification / Trustworthy AI</td>
-                  </tr>       
-                  <tr>
-                    <td>Bachelor/Master</td>
-                    <td>Monitor-Neurons: Embedding Runtime Verification in Neural Architectures for Temporal and Semantic Supervision</td>
-                    <td>This thesis introduces the concept of monitor-neurons—specialised components embedded within neural networks that perform Runtime Verification (RV) over temporal and semantic properties. Unlike standard neurons that learn from local gradients, monitor-neurons evaluate sequences of inputs, activations, or outputs against formal constraints, such as temporal logic properties or domain-specific rules. Their outputs influence learning by contributing to the loss function, gating signals, or flagging semantic violations. A key research challenge is determining optimal placement of these monitors within the network, given the distributed nature of neural representations. The thesis explores both manual placement strategies (e.g., interpretable layers or output heads) and automatic alignment techniques, including concept probing and saliency analysis. The framework will be evaluated in sequential learning tasks such as reinforcement learning or time-series classification, with a focus on formal compliance, learning dynamics, and interpretability. This work aims to bridge symbolic supervision and sub-symbolic learning, enabling neural systems that are not only adaptive but also semantically aware and self-correcting.</td>
-                    <td></td>
-                    <td>Runtime Verification / Neural Architectures / Interpretability / Temporal Logic / Monitor-Neurons</td>
-                  </tr>          
-                  <tr>
-                    <td>Bachelor/Master</td>
-                    <td>Neuro-Symbolic Integration in BDI Architectures: Learning-Based Plan Generation in Dynamic Environments</td>
-                    <td>Traditional BDI (Belief-Desire-Intention) architectures rely on predefined plans to respond to goals based on the agent's beliefs and intentions. However, in highly dynamic or unpredictable environments, suitable plans may not always exist, leading to failure or suboptimal responses. This thesis explores the integration of neural AI models into the BDI framework to enable on-the-fly plan generation when traditional methods fall short. The idea is to embed neural networks capable of learning from past interactions, environmental cues, and goal contexts to propose viable action sequences that serve as substitute plans. The project involves designing a hybrid architecture where the symbolic BDI reasoning process is augmented by a learning-based module that activates upon plan failure. The neural model can be trained using supervised data (e.g., demonstrations) or reinforcement signals from the environment. The thesis will evaluate how such integration affects the agent’s robustness, adaptability, and goal satisfaction in dynamic domains such as multi-agent simulations or robotics. This approach contributes to making cognitive agents more resilient and context-aware by combining symbolic deliberation with sub-symbolic learning.</td>
-                    <td></td>
-                    <td>BDI Architecture / Neuro-Symbolic AI / Plan Generation / Adaptive Agents / Cognitive Robotics</td>
-                  </tr>   
-                  <tr>
-                    <td>Bachelor/Master</td>
-                    <td>Learning-Guided Intention Progression in BDI Agents: Enhancing Adaptability in Neuro-Symbolic Architectures</td>
-                    <td>Belief-Desire-Intention (BDI) architectures provide a symbolic framework for autonomous agents to reason about their actions based on mental states. However, intention selection and progression are typically governed by handcrafted rules or fixed heuristics, which may be brittle in dynamic, uncertain environments. This thesis explores how learning-based components, such as neural networks, can be integrated into the BDI loop to improve the agent's ability to manage and adapt its intentions over time. The approach involves training models to predict optimal intention transitions based on context, past experiences, and evolving goals. These models can suggest when to drop, persist, or reprioritise intentions, enabling more flexible and context-sensitive behavior. The project will involve designing a neuro-symbolic framework where the learning component interacts with the symbolic reasoning engine to influence intention progression. Evaluation will be performed in simulated environments requiring complex intention management, such as multitasking agents or agents operating under shifting priorities. The aim is to enhance the adaptability and robustness of BDI agents while maintaining interpretability through symbolic structures.</td>
-                    <td></td>
-                    <td>BDI Architecture / Intention Management / Neuro-Symbolic AI / Adaptive Agents / Reinforcement Learning</td>
-                  </tr>                                                     
-                </tr>
-                <tr>
-                  <td colspan="5"><strong>Agentic AI and Reasoning</strong></td>
-                  <tr>
-                    <td>Bachelor/Master</td>
-                    <td>Rethinking Agency in the Age of Generative AI</td>
-                    <td>
-                      The recent rise of generative models, especially large language models (LLMs), has challenged traditional notions of agency in artificial systems. Classical agent architectures, such as BDI (Belief-Desire-Intention) models, assume deliberation, intention formation, and goal-directed behavior. In contrast, LLMs generate responses based on probabilistic next-token prediction without explicit goal representations. This thesis explores whether and how notions of agency can be meaningfully applied to generative models. The project involves a review of philosophical and AI literature on agency, analysis of current uses and misuses of the term in relation to LLMs, and a comparative framework that outlines key mismatches and possible hybrid views. The student may also develop criteria or a taxonomy to distinguish genuine agentic systems from generative ones. This thesis is ideal for students interested in the conceptual foundations of AI, cognitive science, and the philosophy of artificial agency.
-                    </td>
-                    <td></td>
-                    <td>Artificial Agency / Philosophy of AI / BDI Agents / Generative AI / Conceptual Foundations</td>
-                  </tr>
-                </tr>
-                <tr>
-                  <td colspan="5"><strong>ChatBot</strong></td>
-                  <tr>
-                    <td>Bachelor/Master</td>
-                    <td>Developing a Conversational AI for Digital Product Passport (DPP): An LLM-Based Chatbot for Product Interaction</td>
-                    <td>The Digital Product Passport (DPP) is a key element in the transition to a circular economy, providing detailed lifecycle data for products, including origin, usage, maintenance, and end-of-life recycling options. This thesis explores the development of a chatbot powered by Large Language Models (LLMs) to enhance user interaction with DPPs, making product information more accessible and engaging. The chatbot will be designed to simulate natural conversations, allowing users to interact as if the product itself were speaking. The project will focus on integrating the chatbot with DPP databases, enabling real-time retrieval of product data and providing personalised responses based on user queries.</td>
-                    <td></td>
-                    <td>Large Language Models / Digital Product Passport / Conversational AI</td>
-                  </tr>     
-                  <tr>
-                    <td>Bachelor/Master</td>
-                    <td>Integrating Belief-Desire-Intention (BDI) Agents with Large Language Models for Human-Agent Interaction</td>
-                    <td>Traditional Belief-Desire-Intention (BDI) agents provide a structured cognitive architecture for reasoning and planning but lack natural language communication abilities. Conversely, Large Language Models (LLMs) excel at generating human-like responses but lack intentionality and goal-directed reasoning. This thesis explores the integration of BDI agents with LLMs to create hybrid agents capable of both structured decision-making and fluent communication. The research will build on existing frameworks, such as ChatBDI, which bridges the gap between BDI agency and LLMs using the Knowledge Query and Manipulation Language (KQML) for structured message exchange. The main objectives include designing an interaction model where BDI agents handle reasoning while LLMs provide linguistic expressiveness, developing a communication framework that allows BDI agents to receive and process natural language input, and evaluating the system's effectiveness through case studies in multi-agent environments.</td>
-                    <td></td>
-                    <td>Belief-Desire-Intention Agents / Large Language Models / Human-Agent Interaction</td>
-                  </tr>                               
-                </tr>
-                <tr>
-                  <td colspan="5"><strong>Security</strong></td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Securing Robot-Collected Digital Evidence</td>
-                  <td>Robots are involved in military operations and rescue missions which frequently involve evidence collection. As such, robots may be carrying sensitive information which need to be protected for privacy, while strictly maintaining a chain of custody such that the evidence is admissible in a court of law. Focusing on the first part, this project explores how an RV-TEE [1] can be adopted to protect sensitive data while it is in the robot’s custody: RV-TEE is an architecture which prescribes a combination of software and hardware to protect the execution of cryptographic operations and safely store the related keys. At its core, RV-TEE uses a hardware security module (HSM) to provide isolation and protection from a number of side-channel attacks. The software component is based on runtime verification techniques which monitor the interaction of the HSM with the rest of the robot components and environment. Acting as a gatekeeper, such monitoring ensures that the access to the HSM-hosted functionality strictly adheres to a limited sequence of operations, whose parameters are also vetted for further restriction of the attack surface. While the above concept is generic, this project explores an instantiation with the Robot Operating System (ROS, https://www.ros.org/) ecosystem, employing the SECube chip (https://www.secube.blu5group.com/) as an HSM, and ROSMonitoring [2] framework instantiated with Larva [3] as the RV component. [1] RV-TEE: Secure Cryptographic Protocol Execution based on Runtime Verification, Mark Vella, Christian Colombo, Robert Abela, and Peter Špaček, Journal of Computer Virology and Hacking Techniques, 2021. [2] ROSMonitoring: A Runtime Verification Framework for ROS, Angelo Ferrando, Rafael C. Cardoso, Michael Fisher, Davide Ancona, Luca Franceschini, Viviana Mascardi, in TAROS 2020, Nottingham, UK. [3] LARVA - Safer Monitoring of Real-Time Java Programs, Christian Colombo, Gordon J. Pace and Gerardo Schneider, in SEFM 2009, Hanoi, Vietnam.</td>
-                  <td>Christian Colombo, University of Malta</td>
-                  <td>Security</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Monitor code attestation</td>
-                  <td>Runtime monitors frequently need to be deployed in highly secure software environments to help further secure the system under scrutiny. In such contexts, the monitor could benefit from security hardening over and above the rest of the system since the monitoring component is of particular interest to the attacker. If the attacker successfully disables the monitor, the attack can be executed without potential alarms being raised, leaving no evidence behind. Furthermore, due to separation of concerns inherent in runtime verification, monitors are typically separated from the rest of the system, facilitating isolation and a hardened security environment which would otherwise be difficult to achieve for the whole system. Through our paper [AREA23] we have explored two threat models and corresponding efforts to protect against them. In subsequent work, we have continued to expand this model into a comprehensive security stack called RVsec. This project aims to expand the current implementation of the RVsec stack, particularly the monitor code attestation component. Once implemented, this component ensures that the monitoring code is not compromised, i.e., its signature is checked regularly for consistency. Evaluating the implementation involves checking the overhead introduced and simulating attacks to check for effectiveness.<br>[AREA23] Robert Abela, Christian Colombo, Axel Curmi, Mattea Fenech, Mark Vella, Angelo Ferrando: Runtime Verification for Trustworthy Computing. AREA@ECAI 2023: 49-62</td>
-                  <td>Christian Colombo, University of Malta</td>
-                  <td>Runtime Verification / Security</td>
-                </tr>
-                <!-- <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Attack Simulation</td>
-                  <td>This project builds on previous work from multiple research groups in attack modelling and simulation. The final objective is to come up with a framework to model and simulate attacks on infrastructure using a combination of system modelling and network simulation techniques. The framework should be able to verify the feasibility of a particular attack, in terms of pre-defined security requirements which should be stated by means of temporal logic (LTL, MITL). Once a system is modelled within a particular network topology, the goal is to simulate all possible attacks (similar to model checking) and provide a trace of how an attacker might compromise the system, which components will be affected and when. The output of such a framework should assist security officers in better understanding where the vulnerabilities are and how attacks can be prevented. This project requires a background in model checking and a basic understanding of how networking protocols operate. Knowledge in RV would also be very useful. Familiarity with popular model checkers (e.g. Spin, Uppaal) and network simulators (e.g. NS2, Mininet) would be ideal.</td>
-                  <td>Christian Colombo, University of Malta</td>
-                  <td>Runtime Verification / Security</td>
-                </tr> -->
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Suitable Case Study for RVsec</td>
-                  <td>Runtime monitors frequently need to be deployed in highly secure software environments to help further secure the system under scrutiny. In such contexts, the monitor could benefit from security hardening over and above the rest of the system since the monitoring  component is of particular interest to the attacker. If the attacker successfully disables the monitor, the attack can be executed without potential alarms being raised, leaving no evidence behind. Furthermore, due to separation of concerns inherent in runtime verification, monitors are typically separated from the rest of the system, facilitating isolation and a hardened security environment which would otherwise be difficult to achieve for the whole system. Through our paper [AREA23] we have explored two threat models and corresponding efforts to protect against them. In subsequent work, we have continued to expand this model into a comprehensive security stack called RVsec. So far, RVsec has been instantiated on a Quantum-safe security protocol implementation in the context of a chat application. While results are encouraging, the approach needs further validation through further case studies. This project aims to explore a substantially different case study, potentially from the area of robotics to assess the applicability of RVsec.<br>[AREA23] Robert Abela, Christian Colombo, Axel Curmi, Mattea Fenech, Mark Vella, Angelo Ferrando: Runtime Verification for Trustworthy Computing. AREA@ECAI 2023: 49-62</td>
-                  <td>Christian Colombo, University of Malta</td>
-                  <td>Runtime Verification / Security</td>
-                </tr>  
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Extending RVsec with Performance and Security Properties</td>
-                  <td>Runtime monitors frequently need to be deployed in highly secure software environments to help further secure the system under scrutiny. In such contexts, the monitor could benefit from security hardening over and above the rest of the system since the monitoring  component is of particular interest to the attacker. If the attacker successfully disables the monitor, the attack can be executed without potential alarms being raised, leaving no evidence behind. Furthermore, due to separation of concerns inherent in runtime verification, monitors are typically separated from the rest of the system, facilitating isolation and a hardened security environment which would otherwise be difficult to achieve for the whole system. Through our paper [AREA23] we have explored two threat models and corresponding efforts to protect against them. In subsequent work, we have continued to expand this model into a comprehensive security stack called RVsec. RVsec comprises two kinds of RV monitors: functional monitors and performance/security monitors. While functional monitors are usually specific for a particular application, performance and security monitors could be more generic, focusing also on relevant signals coming from the host machine. For example, one could observe a period of heightened volume of traffic, use of commands like “whoami” (used by attackers for reconnaissance), brute forcing of logins or “su” (used for privilege escalation), service set up running as admin/root (used for persistence). Such observable behaviour can be encoded in terms of RV properties to warn of ongoing attacks being sustained by the system. The outcome of this project involves the identification of such properties and their incorporation into the RVsec stack as monitors. A case study would then serve as validation of the approach and to measure the overheads introduced.<br>[AREA23] Robert Abela, Christian Colombo, Axel Curmi, Mattea Fenech, Mark Vella, Angelo Ferrando: Runtime Verification for Trustworthy Computing. AREA@ECAI 2023: 49-62</td>
-                  <td>Christian Colombo, University of Malta</td>
-                  <td>Runtime Verification / Security</td>
-                </tr> 
-                <tr>
-                  <td colspan="5"><strong>Robotics</strong></td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Extending and Applying ROSMonitoring Framework for Robotic Systems</td>
-                  <td><a href="https://github.com/autonomy-and-verification-uol/ROSMonitoring/">ROSMonitoring</a> provides a robust framework for monitoring and verifying robotic systems. This thesis proposes to broaden its capabilities and apply it across various domains within robotics. The primary objectives are twofold: first, to enhance ROSMonitoring through the integration of new features that bolster its monitoring and verification functionalities, and second, to apply ROSMonitoring in diverse robotic domains to assess its efficacy and versatility. Extending and applying the ROSMonitoring framework holds promise for advancing monitoring and verification practices in robotics. By systematically enhancing the framework's capabilities and exploring its application in diverse contexts, this thesis aims to contribute significantly to the field of robotics research and development.</td>
-                  <td></td>
-                  <td>Runtime Verification / Robotics</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Integration of LARVA and ROSMonitoring for Enhanced Runtime Verification in Robotic Systems</td>
-                  <td>This thesis proposal seeks to integrate two runtime verification tools, LARVA and ROSMonitoring, to improve the reliability and safety of robotic systems. LARVA, from the University of Malta, monitors Java programs to ensure they meet specified properties, while ROSMonitoring focuses on verifying ROS-based applications. The integration aims to create a comprehensive framework that leverages both tools' strengths for robust runtime verification in complex robotic systems. As robotic systems become more prevalent in critical applications like healthcare and autonomous vehicles, ensuring their reliability and safety is essential. Runtime verification provides guarantees about system behavior during execution by continuously checking it against formal specifications. LARVA is effective in monitoring Java programs, and ROSMonitoring verifies ROS topics to ensure message adherence to specified properties. The thesis's primary objective is to develop a unified runtime verification framework for ROS-based systems by integrating LARVA and ROSMonitoring. Specific goals include analyzing compatibility, developing an integration architecture, implementing the framework, and evaluating its performance on benchmark applications. The framework's efficacy in detecting and reporting real-time property violations will be demonstrated.</td>
-                  <td>Christian Colombo, University of Malta</td>
-                  <td>Runtime Verification / Robotics</td>
-                </tr>
-                <tr>
-                  <td colspan="5"><strong>Autonomous Vehicles</strong></td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Integrating Reinforcement Learning into Infrastructure-Free Cooperative Parking Agents</td>
-                  <td>
-                    This thesis aims to extend the infrastructure-less, agent-based parking system presented in De Soricellis et al. (PAAMS 2025) by integrating reinforcement learning (RL) into vehicle agents. While the original system uses a static scoring function based on parking availability and proximity, this work proposes to endow agents with the ability to learn optimal parking strategies based on past experience. Each vehicle agent will learn to balance distance to destination, probability of availability, and competition with other agents in dynamic urban environments. The RL-enhanced agents will be implemented and evaluated within the SUMO framework using the TraCI API. Experiments will assess performance improvements over static heuristics in various adoption and initialization scenarios. The thesis will explore reward function design, convergence behavior, and the impact of learned strategies on urban mobility.
-                  </td>
-                  <td>Filippo Muzzini, UNIMORE</td>
-                  <td>Reinforcement Learning / Multi-Agent Systems / Urban Mobility / Simulation</td>
-                </tr>                
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Fairness and Environmental Impact in Infrastructure-Free Parking Assistance Systems</td>
-                  <td>
-                    Building on the infrastructure-free agent-based simulation presented by De Soricellis et al. (PAAMS 2025), this thesis investigates two emerging concerns in smart mobility systems: fairness and environmental sustainability. The original system prioritizes individual agent preferences (e.g., distance vs. availability) without considering global fairness across agents or overall emissions. This thesis proposes new metrics to measure fairness in parking allocation—e.g., variance in walking distance, success rate, or waiting time—and evaluates how different agent strategies affect them. It also estimates CO₂ emissions reductions by comparing heatmap-guided agents to baseline strategies. The work includes extending the SUMO simulation to log relevant environmental and fairness data, and experimenting with various adoption and parameter settings. The final goal is to identify policy recommendations and system improvements that ensure both equitable access and lower environmental impact in real-world deployments.
-                  </td>
-                  <td>Filippo Muzzini, UNIMORE</td>
-                  <td>Fairness in AI / Environmental Sustainability / Smart Cities / Agent-Based Modeling</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Formal Synthesis of Vehicle Modifications to Meet ODD Requirements in Autonomous Driving</td>
-                  <td>The Operational Design Domain (ODD) defines the specific conditions and environments under which an autonomous vehicle (AV) can safely operate. Traditionally, determining the necessary modifications for a vehicle to meet ODD requirements has been a manual process, leading to inefficiencies and potential oversights. This thesis proposes a formal methods approach to automatically synthesize the minimal set of sensors, actuators, and system enhancements required for an AV to satisfy given ODD specifications. By inputting the ODD parameters into a formal synthesis framework, the system will generate recommendations for vehicle modifications that ensure compliance with the ODD. This research aims to streamline the vehicle adaptation process, reduce development time, and enhance the reliability of autonomous systems by providing a systematic method for aligning vehicle capabilities with operational requirements.</td>
-                  <td></td>
-                  <td>Formal Synthesis / Autonomous Vehicles</td>
-                </tr>
-                <tr>
-                  <td>Bachelor/Master</td>
-                  <td>Formal Verification of Vehicle Compliance with Operational Design Domain Specifications</td>
-                  <td>Verifying that an autonomous vehicle's existing configuration aligns with its intended Operational Design Domain (ODD) is crucial for safe and effective deployment. Current practices rely heavily on manual analysis to assess whether a vehicle's sensors, actuators, and control systems meet ODD requirements, which can be error-prone and inefficient. This thesis introduces a formal verification framework that takes both the ODD specifications and the vehicle's existing hardware and software configurations as inputs. By modeling these elements within a formal system, the framework will automatically verify compliance, identify discrepancies, and highlight areas needing enhancement. The goal of this research is to provide a rigorous, automated method for validating that an autonomous vehicle can operate safely within its designated ODD, thereby improving safety standards and reducing the risk of operational failures.</td>
-                  <td></td>
-                  <td>Formal Methods / Autonomous Vehicles</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          
-          <!-- <div class="container">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Bachelor/Master</th>
-                <th scope="col">Title</th>
-                <th scope="col">Abstract</th>
-                <th scope="col">Partners</th>
-                <th scope="col">Topics</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Genetic Algorithms for learning properties</td>
-                <td>This thesis explores the application of genetic algorithms (GAs) in learning formal properties. It investigates how GAs can efficiently navigate complex search spaces to uncover and represent formal properties, offering insights into their effectiveness and limitations. The study aims to contribute to the understanding of utilizing GAs for learning formal properties, providing valuable implications for various domains, including artificial intelligence, optimization, and robotics.</td>
-                <td></td>
-                <td>Formal Verification / AI</td>
-              </tr>
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Securing Robot-Collected Digital Evidence</td>
-                <td>Robots are involved in military operations and rescue missions which frequently involve evidence collection. As such, robots may be carrying sensitive information which need to be protected for privacy, while strictly maintaining a chain of custody such that the evidence is admissible in a court of law. Focusing on the first part, this project explores how an RV-TEE [1] can be adopted to protect sensitive data while it is in the robot’s custody: RV-TEE is an architecture which prescribes a combination of software and hardware to protect the execution of cryptographic operations and safely store the related keys. At its core, RV-TEE uses a hardware security module (HSM) to provide isolation and protection from a number of side-channel attacks. The software component is based on runtime verification techniques which monitor the interaction of the HSM with the rest of the robot components and environment. Acting as a gatekeeper, such monitoring ensures that the access to the HSM-hosted functionality strictly adheres to a limited sequence of operations, whose parameters are also vetted for further restriction of the attack surface. While the above concept is generic, this project explores an instantiation with the Robot Operating System (ROS, https://www.ros.org/) ecosystem, employing the SECube chip (https://www.secube.blu5group.com/) as an HSM, and ROSMonitoring [2] framework instantiated with Larva [3] as the RV component. [1] RV-TEE: Secure Cryptographic Protocol Execution based on Runtime Verification, Mark Vella, Christian Colombo, Robert Abela, and Peter Špaček, Journal of Computer Virology and Hacking Techniques, 2021. [2] ROSMonitoring: A Runtime Verification Framework for ROS, Angelo Ferrando, Rafael C. Cardoso, Michael Fisher, Davide Ancona, Luca Franceschini, Viviana Mascardi, in TAROS 2020, Nottingham, UK. [3] LARVA - Safer Monitoring of Real-Time Java Programs, Christian Colombo, Gordon J. Pace and Gerardo Schneider, in SEFM 2009, Hanoi, Vietnam.</td>
-                <td>Christian Colombo, University of Malta</td>
-                <td>Security</td>
-              </tr>
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>GUI support for formal verification tool VITAMIN</td>
-                <td>The VITAMIN formal verification framework is a sophisticated tool used for ensuring the correctness of system models through rigorous formal methods. However, its current text-based interface poses a significant barrier to entry for users who are not well-versed in formal verification syntax and methodologies. This project aims to develop a graphical user interface (GUI) for VITAMIN, providing a more accessible and intuitive way for users to create and manipulate verification models. The proposed GUI will support drag-and-drop functionality, allowing users to visually construct and modify models without needing to write complex code. This approach not only lowers the learning curve but also enhances productivity by making the model creation process more straightforward and less error-prone. The development of this GUI will involve designing an interactive and visually appealing interface that integrates seamlessly with VITAMIN's underlying framework. By enabling users to draw models through simple drag-and-drop actions, the GUI will transform the user experience, making formal verification more approachable and efficient. The final deliverable will be a robust, user-friendly GUI that empowers users to leverage the full capabilities of VITAMIN without the need for extensive technical expertise in formal verification. This advancement is expected to broaden the adoption of formal verification practices and improve the overall quality and reliability of system models across various domains.</td>
-                <td>Vadim Malvone, Telecom Paris</td>
-                <td>Software development</td>
-              </tr>
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>SimJade: Simulating Jade Platform sas p2p nodes</td>
-                <td>A Multi-agent system (MAS) is a software where many autonomous and proactive entities (the agents) can collaborate to solve complex tasks. A MAS is a particular type of distributed system, where the involved entities are logically distributed, and often physically distributed too. Many MAS development frameworks exist, among them JADE is one of the mostly adopted in academia and in industry too: it is a Java based framework supporting the developers in creating the MAS, and offers support to make the agents communicate in a transparent way even if they are running on different physical machines. Anyway, two JADE platforms can communicate only if they know their IPs. When testing such logically and distributed MASs before the deployment, we should need many physical machines to replicate the final deployment, or being able to manage many virtual machines, and all the complexity related to the network management: this make this testing setup extremely expensive and usually unrealistic to be available, preventing the MAS to be concretely and extensively tested. The aim of this thesis is the refactoring, design and systematic testing of SimJADE, a prototype of a simulator able to run on a single machine many JADE Platforms, so that to support the testing of a JADE MAS in a simulated distributed scenario without any change in the original MAS’ code. SimJADE is currently developed starting from PeerSim (a p2p simulator) and JADE, but some important aspects of JADE still need to be integrated in it, and some important aspects of the simulation need to be studied and integrated in the tool. The student will be asked to study how these missing aspects can be modeled and implemented in SimJade, so that to improve the simulator. Then, a set of MASs need to be found in literature and used to extensively test the simulator, so that to verify its capabilities and limitations. The thesis integrates Software Engineering and MAS design skills and approaches, and foresees both a detailed design analysis and an implementation phase.</td>
-                <td>Daniela Briola, University of Insubria</td>
-                <td>Multi-Agent Systems</td>
-              </tr>
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Runtime Verification in MESA</td>
-                <td>"Mesa is a well-adopted open source agent-based modeling (ABM) framework built in Python 3 and published under an Apache 2.0 license and the only agent-based modeling library that is NUMFOCUS affiliated. The goal of Mesa is to be easy to use, as well as easily integrated into the Python ecosystem. Mesa provides tools that allow parameter sweeps, in-browser visualizations, remote hosting, headless model runs, and an architecture that decouples design components. Mesa also integrates things like network analysis and geospatial modeling and allows for members of the ecosystem to build and contribute back libraries that extend the functionality of Mesa both generally as well as specifically to the domain in which the contributor is an expert. The aim of this thesis is to develop a Runtime Verification library to integrate in Mesa. The objective is to give the possibility to enhance the simulations with formal verification features. In particular, to let the developer add requirements and constraints to be met by the agent-based simulation. The student will be asked to develop such library and to validate its use on some existent simulation example."</td>
-                <td></td>
-                <td>Multi-Agent Systems / Agent-Based Modeling and Simulation</td>
-              </tr>
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Comparative Analysis of Symbolic and Sub-Symbolic Agents in Collaborative Multi-Agent Environments using Overcooked-AI</td>
-                <td>This thesis proposes a comparative analysis of symbolic and sub-symbolic agents using the Overcooked-AI environment, available at <a href="https://github.com/HumanCompatibleAI/overcooked_ai">Overcooked-AI GitHub</a>. The goal is to develop rule-based symbolic agents and benchmark their performance against deep learning-based sub-symbolic agents in collaborative cooking tasks. By leveraging the structured, interpretable nature of symbolic AI and the adaptive, data-driven capabilities of sub-symbolic AI, this study aims to uncover their respective strengths and weaknesses in complex, dynamic settings. The research will focus on key metrics such as task completion time, cooperation efficiency, and adaptability to changing scenarios. By conducting extensive experiments within the Overcooked-AI framework, we will analyze differences in strategy and behavior between the two types of agents. Additionally, the thesis will explore hybrid approaches that integrate symbolic reasoning into sub-symbolic frameworks, potentially combining the interpretability of symbolic methods with the adaptability of sub-symbolic techniques. The findings are expected to provide valuable insights into the design of AI agents for cooperative tasks, highlighting the potential for synergistic approaches that leverage the best of both paradigms.</td>
-                <td>Rafael C. Cardoso, University of Aberdeen</td>
-                <td>Multi-Agent Systems / Machine Learning</td>
-              </tr>
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Extending the Runtime Monitoring Language (RML) to Support Metric Time Specification</td>
-                <td>The Runtime Monitoring Language is a versatile formalism for representing complex rules but lacks support for precise temporal reasoning. This thesis proposes extending RML with metric time specifications, akin to those in Metric Temporal Logic (MTL), enabling the use of time intervals and windows within rules. This enhancement will make RML more suitable for applications requiring exact timing constraints, such as event scheduling and monitoring systems. More information on RML can be found at <a href="https://rmlatdibris.github.io/">RMLatDIBRIS</a>. The primary objectives are to integrate metric time intervals into RML, define formal semantics for these extensions, and develop a prototype system to demonstrate their practical utility. The methodology involves designing the syntax and semantics for the extended RML, implementing a prototype, and evaluating its performance using real-world scenarios. This evaluation will measure the system's expressiveness, computational efficiency, and practical applicability. The extended RML will offer enhanced expressiveness for temporal reasoning, supported by formal semantics and demonstrated through a prototype system. This research will provide empirical evidence of the benefits and limitations of incorporating metric time specifications into RML, potentially expanding its use in various domains requiring precise temporal logic.</td>
-                <td>Davide Ancona, University of Genova</td>
-                <td>Runtime Verification</td>
-              </tr>
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Formal Verification of Large Language Models: A Case Study on ChatGPT</td>
-                <td>Large Language Models (LLMs) like OpenAI's ChatGPT have revolutionized natural language processing, providing human-like text generation for various applications. Despite their impressive performance, ensuring their reliability, safety, and correctness remains a significant challenge. Formal verification, a method used to prove the correctness of systems through mathematical techniques, presents a potential solution. This thesis proposes to apply formal verification techniques to LLMs, specifically focusing on ChatGPT. The primary objectives are to define formal specifications for ChatGPT, develop verification techniques suitable for LLMs, and implement and evaluate verification tools. Initially, a thorough literature review will be conducted to understand existing formal verification techniques and their application to AI systems. This research is expected to contribute significantly to the field by providing a set of formal specifications for LLMs, developing novel verification algorithms, and creating practical verification tools. The case studies will offer valuable insights into the effectiveness of formal verification techniques in real-world applications of ChatGPT.</td>
-                <td></td>
-                <td>Formal Verification / Natural Language Processing</td>
-              </tr>      
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Extending and Applying ROSMonitoring Framework for Robotic Systems</td>
-                <td><a href="https://github.com/autonomy-and-verification-uol/ROSMonitoring/">ROSMonitoring</a> provides a robust framework for monitoring and verifying robotic systems. This thesis proposes to broaden its capabilities and apply it across various domains within robotics. The primary objectives are twofold: first, to enhance ROSMonitoring through the integration of new features that bolster its monitoring and verification functionalities, and second, to apply ROSMonitoring in diverse robotic domains to assess its efficacy and versatility. Extending and applying the ROSMonitoring framework holds promise for advancing monitoring and verification practices in robotics. By systematically enhancing the framework's capabilities and exploring its application in diverse contexts, this thesis aims to contribute significantly to the field of robotics research and development.</td>
-                <td></td>
-                <td>Runtime Verification / Robotics</td>
-              </tr>     
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Integration of LARVA and ROSMonitoring for Enhanced Runtime Verification in Robotic Systems</td>
-                <td>This thesis proposal seeks to integrate two runtime verification tools, LARVA and ROSMonitoring, to improve the reliability and safety of robotic systems. LARVA, from the University of Malta, monitors Java programs to ensure they meet specified properties, while ROSMonitoring focuses on verifying ROS-based applications. The integration aims to create a comprehensive framework that leverages both tools' strengths for robust runtime verification in complex robotic systems. As robotic systems become more prevalent in critical applications like healthcare and autonomous vehicles, ensuring their reliability and safety is essential. Runtime verification provides guarantees about system behavior during execution by continuously checking it against formal specifications. LARVA is effective in monitoring Java programs, and ROSMonitoring verifies ROS topics to ensure message adherence to specified properties. The thesis's primary objective is to develop a unified runtime verification framework for ROS-based systems by integrating LARVA and ROSMonitoring. Specific goals include analyzing compatibility, developing an integration architecture, implementing the framework, and evaluating its performance on benchmark applications. The framework's efficacy in detecting and reporting real-time property violations will be demonstrated.</td>
-                <td>Christian Colombo, University of Malta</td>
-                <td>Runtime Verification / Robotics</td>
-              </tr>   
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>A Study of State-of-the-Art Runtime Verification Techniques in AI</td>
-                <td>The increasing complexity and autonomy of Artificial Intelligence (AI) systems, especially in critical applications such as healthcare, autonomous driving, and financial services, necessitates robust methods to ensure their reliability and safety. Runtime Verification (RV) has emerged as a promising technique to provide these assurances by continuously monitoring system behavior against formal specifications during execution. This thesis proposes to conduct a comprehensive study of the state-of-the-art RV techniques applied to AI systems, evaluating their effectiveness, scalability, and practicality. The primary objective of this research is to systematically review and classify existing RV techniques used in AI, highlighting their strengths, limitations, and areas for improvement. The study will cover various AI domains, including machine learning models, neural networks, and autonomous decision-making systems. We will analyze how current RV methods handle challenges such as non-deterministic behavior, high-dimensional data, and the dynamic nature of learning algorithms. Additionally, we will explore the integration of RV with AI development frameworks to enhance real-time monitoring and anomaly detection capabilities. This research will contribute to the field by providing a detailed taxonomy of RV techniques in AI, identifying gaps in current approaches, and proposing future research directions. By evaluating and comparing these techniques, we aim to offer valuable insights for researchers and practitioners seeking to implement effective runtime verification in AI systems, ultimately contributing to the development of safer and more reliable AI technologies.</td>
-                <td>Christian Colombo, University of Malta</td>
-                <td>Runtime Verification</td>
-              </tr>  
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Monitor code attestation</td>
-                <td>Runtime monitors frequently need to be deployed in highly secure software environments to help further secure the system under scrutiny. In such contexts, the monitor could benefit from security hardening over and above the rest of the system since the monitoring  component is of particular interest to the attacker. If the attacker successfully disables the monitor, the attack can be executed without potential alarms being raised, leaving no evidence behind. Furthermore, due to separation of concerns inherent in runtime verification, monitors are typically separated from the rest of the system, facilitating isolation and a hardened security environment which would otherwise be difficult to achieve for the whole system. Through our paper [AREA23] we have explored two threat models and corresponding efforts to protect against them. In subsequent work, we have continued to expand this model into a comprehensive security stack called RVsec.  This project aims to expand the current implementation of the RVsec stack, particularly the monitor code attestation component. Once implemented, this component ensures that the monitoring code is not compromised, i.e., its signature is checked regularly for consistency. Evaluating the implementation involves checking the overhead introduced and simulating attacks to check for effectiveness.<br>[AREA23] Robert Abela, Christian Colombo, Axel Curmi, Mattea Fenech, Mark Vella, Angelo Ferrando: Runtime Verification for Trustworthy Computing. AREA@ECAI 2023: 49-62</td>
-                <td>Christian Colombo, University of Malta</td>
-                <td>Runtime Verification / Security</td>
-              </tr>   
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Attack Simulation</td>
-                <td>Runtime monitors frequently need to be deployed in highly secure software environments to help further secure the system under scrutiny. In such contexts, the monitor could benefit from security hardening over and above the rest of the system since the monitoring  component is of particular interest to the attacker. If the attacker successfully disables the monitor, the attack can be executed without potential alarms being raised, leaving no evidence behind. Furthermore, due to separation of concerns inherent in runtime verification, monitors are typically separated from the rest of the system, facilitating isolation and a hardened security environment which would otherwise be difficult to achieve for the whole system. Through our paper [AREA23] we have explored two threat models and corresponding efforts to protect against them. In subsequent work, we have continued to expand this model into a comprehensive security stack called RVsec. This project aims to test the effectiveness of RVsec components which have been implemented by simulating attacks. The outcome will include a list of attacks and the efficacy (or not) of the mitigation measures against them.<br>[AREA23] Robert Abela, Christian Colombo, Axel Curmi, Mattea Fenech, Mark Vella, Angelo Ferrando: Runtime Verification for Trustworthy Computing. AREA@ECAI 2023: 49-62</td>
-                <td>Christian Colombo, University of Malta</td>
-                <td>Runtime Verification / Security</td>
-              </tr>   
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Suitable Case Study for RVsec</td>
-                <td>Runtime monitors frequently need to be deployed in highly secure software environments to help further secure the system under scrutiny. In such contexts, the monitor could benefit from security hardening over and above the rest of the system since the monitoring  component is of particular interest to the attacker. If the attacker successfully disables the monitor, the attack can be executed without potential alarms being raised, leaving no evidence behind. Furthermore, due to separation of concerns inherent in runtime verification, monitors are typically separated from the rest of the system, facilitating isolation and a hardened security environment which would otherwise be difficult to achieve for the whole system. Through our paper [AREA23] we have explored two threat models and corresponding efforts to protect against them. In subsequent work, we have continued to expand this model into a comprehensive security stack called RVsec. So far, RVsec has been instantiated on a Quantum-safe security protocol implementation in the context of a chat application. While results are encouraging, the approach needs further validation through further case studies. This project aims to explore a substantially different case study, potentially from the area of robotics to assess the applicability of RVsec.<br>[AREA23] Robert Abela, Christian Colombo, Axel Curmi, Mattea Fenech, Mark Vella, Angelo Ferrando: Runtime Verification for Trustworthy Computing. AREA@ECAI 2023: 49-62</td>
-                <td>Christian Colombo, University of Malta</td>
-                <td>Runtime Verification / Security</td>
-              </tr>   
-              <tr>
-                <td>Bachelor/Master</td>
-                <td>Extending RVsec with Performance and Security Properties</td>
-                <td>Runtime monitors frequently need to be deployed in highly secure software environments to help further secure the system under scrutiny. In such contexts, the monitor could benefit from security hardening over and above the rest of the system since the monitoring  component is of particular interest to the attacker. If the attacker successfully disables the monitor, the attack can be executed without potential alarms being raised, leaving no evidence behind. Furthermore, due to separation of concerns inherent in runtime verification, monitors are typically separated from the rest of the system, facilitating isolation and a hardened security environment which would otherwise be difficult to achieve for the whole system. Through our paper [AREA23] we have explored two threat models and corresponding efforts to protect against them. In subsequent work, we have continued to expand this model into a comprehensive security stack called RVsec. RVsec comprises two kinds of RV monitors: functional monitors and performance/security monitors. While functional monitors are usually specific for a particular application, performance and security monitors could be more generic, focusing also on relevant signals coming from the host machine. For example, one could observe a period of heightened volume of traffic, use of commands like “whoami” (used by attackers for reconnaissance), brute forcing of logins or “su” (used for privilege escalation), service set up running as admin/root (used for persistence). Such observable behaviour can be encoded in terms of RV properties to warn of ongoing attacks being sustained by the system. The outcome of this project involves the identification of such properties and their incorporation into the RVsec stack as monitors. A case study would then serve as validation of the approach and to measure the overheads introduced.<br>[AREA23] Robert Abela, Christian Colombo, Axel Curmi, Mattea Fenech, Mark Vella, Angelo Ferrando: Runtime Verification for Trustworthy Computing. AREA@ECAI 2023: 49-62</td>
-                <td>Christian Colombo, University of Malta</td>
-                <td>Runtime Verification / Security</td>
-              </tr>   
-            </tbody>
-          </table>
-        </div>-->
-        </section>
-                        
-                    
-                     
-
-           
-             
-              
-            
-                     
-             
-         <div class="margin-footer container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
-          <div class="col-md-4 d-flex align-items-center">
-            <span class="text-muted">&copy; 2024 AF & MC</span>
-          </div>
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <div class="icons ms-auto">
-                <a href="https://www.linkedin.com/in/angelo-ferrando-1aaa0a60" class="text-decoration-none mx-3">
-                  <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="https://www.facebook.com/angelo.ferrando.5" class="text-decoration-none mx-3">
-                  <i class="bi bi-facebook"></i>
-                </a>
-                <a href="https://github.com/AngeloFerrando" class="text-decoration-none mx-3">
-                  <i class="bi bi-github"></i>
-                </a>
-            </div>
-        </footer>
+        <p>
+        This project explores how Runtime Verification can be combined with nudging techniques to improve both software reliability and user behaviour. Runtime Verification monitors a system during execution, while nudging provides gentle suggestions to help users make better decisions. The goal is to design a framework that not only detects incorrect behaviour but also guides users towards safer and more effective actions.
+        </p>
       </div>
-      </main>
 
-     
-      <!-- Optional JavaScript; choose one of the two! -->
+      <!-- 2 -->
+      <div class="thesis-item"
+           data-search="ltl runtime verification machine learning metrics">
+        <h6>Machine Learning for Optimal Metric Selection in LTL Runtime Verification</h6>
+        <div class="meta">
+          Formal Verification / Machine Learning<br>
+          <em>Partners: Vadim Malvone (Télécom Paris)</em>
+        </div>
+        <p>
+         In runtime verification, monitors check system behaviour against Linear Temporal Logic (LTL) properties, but limited resources allow observing only part of the system. Instead of relying on manually defined metrics to decide what to observe, this work applies machine learning to automatically learn the best selection strategy from execution traces. The goal is to improve the efficiency and accuracy of runtime verification in resource-constrained environments.
+        </p>
+      </div>
 
-      <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-      <script>
-        function resize(e) {        
-          if (window.outerWidth >= 768)
-          {
-            $('.margin-footer').addClass('fixed-bottom');
-          } else {
-            $('.margin-footer').removeClass('fixed-bottom');
-          }
+      <!-- 3 -->
+      <div class="thesis-item"
+           data-search="genetic algorithms learning formal properties">
+        <h6>Genetic Algorithms for Learning Formal Properties</h6>
+        <div class="meta">
+          Formal Verification / AI
+        </div>
+        <p>
+          Genetic algorithms are used to automatically learn formal properties of systems by exploring large and complex search spaces. This work studies how these algorithms can discover and represent meaningful properties, as well as their strengths and limitations. The results help understand how evolutionary techniques can support formal methods in areas such as artificial intelligence, optimisation, and robotics.
+        </p>
+      </div>
+
+      <!-- 4 -->
+      <div class="thesis-item"
+           data-search="formal verification llm chatgpt nlp ai">
+        <h6>Formal Verification of Large Language Models: A Case Study on ChatGPT</h6>
+        <div class="meta">
+          Formal Verification / Natural Language Processing
+        </div>
+        <p>
+         Large Language Models such as ChatGPT are powerful but raise concerns about reliability and correctness. Formal verification techniques are explored as a way to define precise specifications and check the behaviour of LLMs against them. The aim is to develop and evaluate methods and tools that improve the safety and trustworthiness of language models in real-world applications.
+        </p>
+      </div>
+
+      <!-- 5 -->
+      <div class="thesis-item"
+           data-search="runtime monitoring rml metric time temporal logic">
+        <h6>Extending the Runtime Monitoring Language (RML) with Metric Time</h6>
+        <div class="meta">
+          Runtime Verification<br>
+          <em>Partners: Davide Ancona (University of Genova)</em>
+        </div>
+        <p>
+          The Runtime Monitoring Language (RML) is a flexible formalism for defining monitoring rules, but it currently lacks precise support for time-based reasoning. The idea is to extend RML with metric time intervals, similar to those used in Metric Temporal Logic, enabling rules with explicit timing constraints. This makes RML more suitable for applications such as event scheduling and time-critical monitoring systems. More information on RML is available at <a href="https://rmlatdibris.github.io/" target="_blank">RMLatDIBRIS</a>.
+        </p>
+      </div>
+
+      <!-- 6 -->
+      <div class="thesis-item"
+           data-search="state of the art runtime verification ai survey">
+        <h6>A Study of State-of-the-Art Runtime Verification Techniques in AI</h6>
+        <div class="meta">
+          Runtime Verification<br>
+          <em>Partners: Christian Colombo (University of Malta)</em>
+        </div>
+        <p>
+          As AI systems become more autonomous and are used in critical domains such as healthcare and autonomous driving, ensuring their reliability is essential. Runtime Verification is used to monitor AI systems during execution and detect unexpected or unsafe behaviour. The goal is to review and compare existing runtime verification techniques for AI, analysing how well they work in practice and where their limitations are. This helps identify open challenges and future research directions.
+        </p>
+      </div>
+
+      <!-- 7 -->
+      <div class="thesis-item"
+           data-search="iot healthcare wearable runtime monitoring diabetes">
+        <h6>Runtime Monitoring of IoT Wearable Devices for Diabetes Management</h6>
+        <div class="meta">
+          Runtime Verification / IoT
+        </div>
+        <p>
+          Wearable devices such as glucose monitors and smartwatches are increasingly used to support diabetes management. The idea is to analyse real data from wearable devices and study typical faults and anomalies that may occur during operation. A runtime monitoring framework is then designed and implemented to detect incorrect behaviour in real time. The approach is evaluated in terms of reliability and patient safety improvements.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================= AUTONOMOUS AGENTS & MULTI-AGENT SYSTEMS ================= -->
+<div class="accordion-item area-mas" data-area="multi-agent-systems">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#mas">
+      Autonomous Agents & Multi-Agent Systems
+      <span class="ms-2 text-muted fw-normal">
+        <span class="area-count"></span>
+      </span>
+    </button>
+  </h2>
+
+  <div id="mas" class="accordion-collapse collapse">
+    <div class="accordion-body">
+
+      <!-- 1 -->
+      <div class="thesis-item"
+           data-search="multi agent systems educational robotics sphero swarm intelligence stem">
+        <h6>Multi-Agent Systems for Educational Robotics with Sphero Devices</h6>
+        <div class="meta">
+          Multi-Agent Systems / Educational Robotics / Artificial Intelligence<br>
+          <em>Partners: Manuela Montangero (UNIMORE)</em>
+        </div>
+        <p>
+          Multi-agent systems provide a natural way to model autonomous and cooperative behaviour in distributed environments. This project applies these concepts to educational robotics by using programmable Sphero robots. Multiple robots are designed to communicate and coordinate, showing behaviours such as collaboration and swarm intelligence. Visual and intuitive programming tools allow users to experiment hands-on with core multi-agent concepts in an engaging way.
+        </p>
+      </div>
+
+      <!-- 2 -->
+      <div class="thesis-item"
+           data-search="vesna virtual environments multi agent systems hci natural language godot">
+        <h6>Design and Development of Intelligent Agents and Virtual Environments Using the VEsNA Toolkit</h6>
+        <div class="meta">
+          Multi-Agent Systems / Human-Computer Interaction<br>
+          <em>Partners: Andrea Gatti, Viviana Mascardi (University of Genova)</em>
+        </div>
+        <p>
+          This thesis explores the use of the VEsNA Toolkit to build intelligent and interactive virtual environments in Godot by combining multi-agent systems with natural language interaction. Agents embodied in virtual worlds can communicate with users through language to manipulate objects, control behaviours, and modify the environment in real time. The work involves designing interactive scenarios, implementing agent behaviours, and evaluating how natural and intuitive the interaction feels. More information on the toolkit is available at <a href="https://github.com/VEsNA-ToolKit" target="_blank">VEsNA Toolkit</a>.
+        </p>
+      </div>
+
+      <!-- 3 -->
+      <div class="thesis-item"
+           data-search="vesna intelligent agents virtual environments simulation training ai">
+        <h6>Advancing VEsNA: Enhancing Virtual Environments with Intelligent Agent Capabilities</h6>
+        <div class="meta">
+          Multi-Agent Systems / Artificial Intelligence / Human-Computer Interaction<br>
+          <em>Partners: Andrea Gatti, Viviana Mascardi (University of Genova)</em>
+        </div>
+        <p>
+          VEsNA enables users to interact with and manipulate virtual environments through natural language and cognitive agents. This work focuses on extending the framework to support more advanced reasoning, simulation, and training capabilities. The system is enhanced to allow dynamic scenario simulations, rule-based compliance checks, and interactive training with AI-driven virtual agents. These extensions make VEsNA more suitable for simulation-based learning and decision-support applications.
+        </p>
+      </div>
+
+      <!-- 4 -->
+      <div class="thesis-item"
+           data-search="runtime verification sarl multi agent systems agent interaction protocols">
+        <h6>Runtime Verification of SARL-based Multi-Agent Systems</h6>
+        <div class="meta">
+          Runtime Verification / Multi-Agent Systems / SARL
+        </div>
+        <p>
+          Runtime Verification is used to monitor the behaviour of software systems while they are running. The idea behind this work is to integrate runtime verification into SARL-based multi-agent systems in order to check agent interactions and protocols at runtime. A monitoring framework is designed to detect violations of correctness and safety properties and provide immediate feedback. The approach is evaluated on a multi-agent case study to assess its impact on reliability and performance.
+        </p>
+      </div>
+
+      <!-- 5 -->
+      <div class="thesis-item"
+           data-search="runtime verification mesa agent based modeling simulation python">
+        <h6>Runtime Verification in Mesa</h6>
+        <div class="meta">
+          Multi-Agent Systems / Agent-Based Modeling and Simulation
+        </div>
+        <p>
+          Mesa is a Python-based framework for agent-based modelling that is widely used for simulation and analysis. This work addresses the integration of Runtime Verification into Mesa by developing a dedicated library for monitoring simulations at runtime. The library allows developers to specify formal requirements and constraints that agent-based simulations must satisfy during execution. Its effectiveness is validated by applying it to existing Mesa simulation examples.
+        </p>
+      </div>
+
+      <!-- 6 -->
+      <div class="thesis-item"
+           data-search="reinforcement learning starcraft game ai multi agent systems rts">
+        <h6>Reinforcement Learning for Strategic Decision-Making in StarCraft</h6>
+        <div class="meta">
+          Reinforcement Learning / Game AI / Multi-Agent Systems
+        </div>
+        <p>
+          StarCraft is a highly challenging environment for artificial intelligence due to its complexity, partial observability, and long-term planning requirements. The aim is to apply reinforcement learning techniques to develop adaptive agents capable of making strategic decisions in real-time strategy games. Different approaches, including deep reinforcement learning and multi-agent methods, are explored and evaluated using existing StarCraft II AI environments. The resulting agents are compared against baseline models to assess their performance and generalisation abilities.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+   
+
+    <!-- ================= NEURO-SYMBOLIC AI ================= -->
+<div class="accordion-item area-nsai" data-area="neuro-symbolic-ai">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#nsai">
+      Neuro-Symbolic AI
+      <span class="ms-2 text-muted fw-normal">
+        <span class="area-count"></span>
+      </span>
+    </button>
+  </h2>
+
+  <div id="nsai" class="accordion-collapse collapse">
+    <div class="accordion-body">
+
+      <!-- 1 -->
+      <div class="thesis-item"
+           data-search="runtime verification neural networks learning dynamics interpretability trustworthy ai">
+        <h6>Runtime Verification for Monitoring the Learning Dynamics of Neural Networks</h6>
+        <div class="meta">
+          Runtime Verification / Neural Networks / Trustworthy AI / Interpretability<br>
+          <em>Partners: Giorgia Franchini (UNIMORE)</em>
+        </div>
+        <p>
+         This thesis applies Runtime Verification to the training phase of neural networks to assess whether learning is proceeding correctly. Monitors are inserted between neural layers to observe internal changes and check formally defined properties related to convergence, gradients, and training stability. This allows early detection of problematic learning dynamics such as overfitting or vanishing gradients. The approach improves interpretability and trustworthiness in neural network training.
+        </p>
+      </div>
+
+      <!-- 2 -->
+      <div class="thesis-item"
+           data-search="large language models reasoning explainability neuro symbolic ai gpt claude gemini">
+        <h6>Investigating the Reasoning Capabilities of Large Language Models</h6>
+        <div class="meta">
+          Large Language Models / Reasoning / Explainability / Neuro-Symbolic AI
+        </div>
+        <p>
+          Large Language Models (LLMs) show strong language generation skills, but their reasoning abilities are still not fully understood. This work explores the strengths and limitations of LLM reasoning by analysing their performance on tasks such as logical puzzles, mathematical problems, and multi-step reasoning. Different benchmarks and evaluation criteria are used to assess consistency, coherence, and alignment with formal reasoning principles. The results help identify current gaps and possible directions for more trustworthy and explainable AI reasoning.
+        </p>
+      </div>
+
+      <!-- 3 -->
+      <div class="thesis-item"
+           data-search="runtime verification neuro symbolic systems logical neural networks trustworthy ai">
+        <h6>Runtime Verification-Guided Learning in Neuro-Symbolic Systems</h6>
+        <div class="meta">
+          Neuro-Symbolic AI / Logical Neural Networks / Runtime Verification / Trustworthy AI
+        </div>
+        <p>
+         Neuro-symbolic models such as Logical Neural Networks (LNNs) combine neural learning with symbolic reasoning, but they can still produce inconsistent or incorrect inferences. The goal is to use Runtime Verification to monitor reasoning steps at runtime and detect violations of formal correctness rules. These violations are then used as feedback to guide and improve the learning process. The result is a more accurate and trustworthy neuro-symbolic AI system.
+        </p>
+      </div>
+
+      <!-- 4 -->
+      <div class="thesis-item"
+           data-search="monitor neurons runtime verification neural architectures temporal logic interpretability">
+        <h6>Monitor-Neurons: Embedding Runtime Verification in Neural Architectures</h6>
+        <div class="meta">
+          Runtime Verification / Neural Architectures / Interpretability / Temporal Logic
+        </div>
+        <p>
+          This thesis introduces monitor-neurons, specialised components embedded in neural networks that perform Runtime Verification over temporal and semantic properties. These monitors check formal constraints during learning and influence training through feedback mechanisms such as loss functions or gating signals. Different strategies for placing monitor-neurons inside the network are explored, both manual and automatic. The approach is evaluated on sequential learning tasks to improve interpretability, correctness, and semantic awareness of neural models.
+        </p>
+      </div>
+
+      <!-- 5 -->
+      <div class="thesis-item"
+           data-search="bdi architectures neuro symbolic ai plan generation adaptive agents robotics">
+        <h6>Neuro-Symbolic Integration in BDI Architectures: Learning-Based Plan Generation</h6>
+        <div class="meta">
+          BDI Architecture / Neuro-Symbolic AI / Plan Generation / Adaptive Agents
+        </div>
+        <p>
+          Traditional BDI (Belief-Desire-Intention) agents rely on predefined plans, which may fail in highly dynamic or unpredictable environments. This work investigates how neural models can be integrated into the BDI architecture to generate plans on the fly when no suitable symbolic plan is available. A hybrid approach is designed where learning-based components propose alternative action sequences after plan failure. The solution is evaluated in dynamic domains to assess improvements in robustness, adaptability, and goal achievement.
+        </p>
+      </div>
+
+      <!-- 6 -->
+      <div class="thesis-item"
+           data-search="bdi intention management neuro symbolic ai reinforcement learning adaptive agents">
+        <h6>Learning-Guided Intention Progression in BDI Agents</h6>
+        <div class="meta">
+          BDI Architecture / Intention Management / Neuro-Symbolic AI / Reinforcement Learning
+        </div>
+        <p>
+          BDI agents usually manage intentions using fixed rules, which can be fragile in dynamic and uncertain environments. The aim is to integrate learning-based components into the BDI reasoning loop to support more flexible intention selection and progression. Neural models are trained to suggest when intentions should be dropped, maintained, or reprioritised based on context and past experience. The approach is evaluated in simulated scenarios requiring complex and adaptive intention management.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+   <!-- ================= AGENTIC AI & REASONING ================= -->
+<div class="accordion-item area-agentic" data-area="agentic-ai">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#agentic">
+      Agentic AI & Reasoning
+      <span class="ms-2 text-muted fw-normal">
+        <span class="area-count"></span>
+      </span>
+    </button>
+  </h2>
+
+  <div id="agentic" class="accordion-collapse collapse">
+    <div class="accordion-body">
+
+      <!-- 1 -->
+      <div class="thesis-item"
+           data-search="agentic ai agency generative ai philosophy bdi agents large language models reasoning">
+        <h6>Rethinking Agency in the Age of Generative AI</h6>
+        <div class="meta">
+          Artificial Agency / Philosophy of AI / BDI Agents / Generative AI
+        </div>
+        <p>
+          This thesis explores whether and how the concept of agency can be applied to generative models such as large language models. While classical agent architectures like BDI rely on goals and intentions, LLMs operate through probabilistic text generation without explicit deliberation. The work analyses philosophical and AI perspectives on agency and compares agent-based and generative systems. The outcome is a conceptual framework or taxonomy that clarifies differences, limitations, and possible hybrid views of agency in AI.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <!-- ===== CHATBOT & CONVERSATIONAL AI ===== -->
+<div class="accordion-item area-chatbot" data-area="chatbot">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#chatbot">
+      ChatBot & Conversational AI
+      <span class="ms-2 text-muted fw-normal">
+        <span class="area-count"></span>
+      </span>
+    </button>
+  </h2>
+
+  <div id="chatbot" class="accordion-collapse collapse">
+    <div class="accordion-body">
+
+      <!-- 1 -->
+      <div class="thesis-item"
+           data-search="chatbot conversational ai digital product passport dpp llm">
+        <h6>Developing a Conversational AI for Digital Product Passport (DPP)</h6>
+        <div class="meta">
+          Large Language Models / Digital Product Passport / Conversational AI
+        </div>
+        <p>
+          The Digital Product Passport (DPP) provides detailed information about a product’s lifecycle to support sustainability and circular economy goals. This project focuses on developing a chatbot based on Large Language Models to make DPP data easier to access and understand. Users can interact with the product through natural language, as if the product itself were responding. The chatbot is integrated with DPP databases to retrieve real-time information and provide personalised answers.
+        </p>
+      </div>
+
+      <!-- 2 -->
+      <div class="thesis-item"
+           data-search="bdi agents llm chatbot human agent interaction chatbdi kqml">
+        <h6>Integrating BDI Agents with Large Language Models for Human-Agent Interaction</h6>
+        <div class="meta">
+          Belief–Desire–Intention Agents / Large Language Models / Human-Agent Interaction
+        </div>
+        <p>
+          Traditional BDI agents support goal-directed reasoning but lack natural language interaction, while Large Language Models excel at communication without true intentionality. This work explores a hybrid approach that integrates BDI agents with LLMs to combine structured decision-making and fluent language interaction. The system builds on frameworks such as ChatBDI, which use Knowledge Query and Manipulation Language (KQML) to enable structured communication between agents and language models. The approach is evaluated through case studies in multi-agent environments.
+        </p>
+      </div>
+
+      <!-- 3 -->
+<div class="thesis-item"
+     data-search="bdi agents llm human ai collaboration chatbdi overcooked explainable ai">
+  <h6>Collaborative BDI Agents with LLM-based Dialogue for Human-AI Teamwork</h6>
+  <div class="meta">
+    BDI Agents / Large Language Models / Human–AI Collaboration / Explainable AI<br>
+    <em>Partners: Rafael Cardoso (University of Aberdeen)</em>
+  </div>
+  <p>
+    This project builds on an existing implementation of the Overcooked cooperative game, where a human player collaborates with an AI teammate. The goal is to extend a Jason-based BDI agent with Large Language Models to enable strategic dialogue with the human partner. Using the ChatBDI tool, the agent engages in natural language discussions about strategy, explains its behaviour, and adapts its plans based on the outcome of these interactions. The work involves understanding the game architecture, state representation, and the Python–Java communication bridge, as well as integrating and using LLM APIs. The result is an end-to-end pipeline demonstrating how BDI agents and LLMs can be combined to improve collaboration, transparency, and teamwork in human–AI systems.
+  </p>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- ===== SECURITY & TRUSTWORTHY COMPUTING ===== -->
+<div class="accordion-item area-security" data-area="security">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#security">
+      Security & Trustworthy Computing
+      <span class="ms-2 text-muted fw-normal">
+        <span class="area-count"></span>
+      </span>
+    </button>
+  </h2>
+
+  <div id="security" class="accordion-collapse collapse">
+    <div class="accordion-body">
+
+      <!-- 1 -->
+      <div class="thesis-item"
+           data-search="security robotics digital evidence rv tee ros secube larva">
+        <h6>Securing Robot-Collected Digital Evidence</h6>
+        <div class="meta">
+          Security / Robotics<br>
+          <em>Partners: Christian Colombo (University of Malta)</em>
+        </div>
+        <p>
+          Robots used in military and rescue missions may carry sensitive evidence that must be protected while in the robot’s custody. This project explores the use of the RV-TEE architecture, which combines Runtime Verification with secure hardware to protect cryptographic operations and sensitive data. RV-TEE uses a hardware security module to isolate keys and a runtime monitor that strictly controls how and when secure functions can be accessed. The approach is studied in the ROS ecosystem (<a href="https://www.ros.org/" target="_blank">ROS</a>), using secure hardware such as <a href="https://www.secube.blu5group.com/" target="_blank">SECube</a>.
+        </p>
+      </div>
+
+      <!-- 2 -->
+      <div class="thesis-item"
+           data-search="rvsec security monitor code attestation runtime verification">
+        <h6>Monitor Code Attestation</h6>
+        <div class="meta">
+          Runtime Verification / Security<br>
+          <em>Partners: Christian Colombo (University of Malta)</em>
+        </div>
+        <p>
+          Runtime monitors are critical security components and are often prime targets for attackers. This work focuses on extending RVsec, a security stack that protects runtime verification monitors deployed in secure environments. In particular, the project develops and evaluates a monitor code attestation mechanism that continuously checks whether the monitoring code has been tampered with. The solution is assessed by measuring overhead and simulating attacks to verify its effectiveness in preserving trustworthy monitoring.
+        </p>
+      </div>
+
+      <!-- 3 -->
+      <div class="thesis-item"
+           data-search="rvsec case study security runtime verification robotics">
+        <h6>Suitable Case Study for RVsec</h6>
+        <div class="meta">
+          Runtime Verification / Security<br>
+          <em>Partners: Christian Colombo (University of Malta)</em>
+        </div>
+        <p>
+          Runtime monitors are critical security components and must be protected against tampering and disabling attacks. This project aims to evaluate the applicability of RVsec, a security stack for protecting runtime verification monitors, beyond its initial validation. While RVsec has already been tested in a secure chat application, it is applied here to a substantially different case study, potentially in the robotics domain. The focus is on assessing how well RVsec transfers to new environments and identifying its strengths and limitations across domains.
+        </p>
+      </div>
+
+      <!-- 4 -->
+      <div class="thesis-item"
+           data-search="rvsec performance security properties runtime monitoring">
+        <h6>Extending RVsec with Performance and Security Properties</h6>
+        <div class="meta">
+          Runtime Verification / Security<br>
+          <em>Partners: Christian Colombo (University of Malta)</em>
+        </div>
+        <p>
+         Runtime verification monitors can themselves become targets of cyberattacks and therefore require strong security guarantees. This project focuses on extending RVsec by identifying and formalising security- and performance-related runtime properties that indicate ongoing attacks, such as suspicious commands, abnormal traffic, or privilege escalation attempts. These properties are implemented as generic runtime monitors that observe both application behaviour and host-level signals. A case study is used to validate the approach and measure the overhead introduced by the additional monitoring.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== ROBOTICS ===== -->
+<div class="accordion-item area-robotics" data-area="robotics">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#robotics">
+      Robotics
+      <span class="ms-2 text-muted fw-normal">
+        <span class="area-count"></span>
+      </span>
+    </button>
+  </h2>
+
+  <div id="robotics" class="accordion-collapse collapse">
+    <div class="accordion-body">
+
+      <!-- 1 -->
+      <div class="thesis-item"
+           data-search="robotics runtime verification ros rosmonitoring monitoring">
+        <h6>Extending and Applying ROSMonitoring Framework for Robotic Systems</h6>
+        <div class="meta">
+          Runtime Verification / Robotics
+        </div>
+        <p>
+          This thesis focuses on extending and applying ROSMonitoring, a framework for monitoring and verifying robotic systems. New features are developed to strengthen its monitoring and verification capabilities. The enhanced framework is then applied to different robotic domains to evaluate its effectiveness and versatility. More information on the framework is available at <a href="https://github.com/autonomy-and-verification-uol/ROSMonitoring/" target="_blank">ROSMonitoring</a>.
+        </p>
+      </div>
+
+      <!-- 2 -->
+      <div class="thesis-item"
+           data-search="robotics runtime verification larva rosmonitoring safety">
+        <h6>Integration of LARVA and ROSMonitoring for Robotic Systems</h6>
+        <div class="meta">
+          Runtime Verification / Robotics<br>
+          <em>Partners: Christian Colombo (University of Malta)</em>
+        </div>
+        <p>
+          Runtime verification is essential for ensuring the safety and reliability of robotic systems during execution. This project aims to integrate two existing tools, LARVA (from the University of Malta) and ROSMonitoring, into a unified framework for verifying ROS-based robotic applications. The integration combines LARVA’s monitoring of Java programs with ROSMonitoring’s verification of ROS communications. The resulting framework is evaluated on robotic case studies to assess its effectiveness in detecting runtime violations.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================= AUTONOMOUS VEHICLES ================= -->
+<div class="accordion-item area-av" data-area="autonomous-vehicles">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#av">
+      Autonomous Vehicles
+      <span class="ms-2 text-muted fw-normal">
+        <span class="area-count"></span>
+      </span>
+    </button>
+  </h2>
+
+  <div id="av" class="accordion-collapse collapse">
+    <div class="accordion-body">
+
+      <!-- 1 -->
+      <div class="thesis-item"
+           data-search="reinforcement learning parking multi-agent sumo traci urban mobility">
+        <h6>Integrating Reinforcement Learning into Infrastructure-Free Cooperative Parking Agents</h6>
+        <div class="meta">
+          Reinforcement Learning / Multi-Agent Systems / Urban Mobility<br>
+          <em>Partner: Filippo Muzzini (UNIMORE)</em>
+        </div>
+        <p>
+          This thesis aims to enhance an agent-based parking system presented in De Soricellis et al. (PAAMS 2025) by integrating reinforcement learning into vehicle agents. Instead of relying on fixed heuristics, agents learn parking strategies from past experience, balancing distance, availability, and competition in dynamic urban settings. The solution is implemented and evaluated in traffic simulations, comparing learned behaviours with static approaches. The study analyses performance gains, reward design, and the impact of learning on urban mobility.
+        </p>
+      </div>
+
+      <!-- 2 -->
+      <div class="thesis-item"
+           data-search="fairness environmental impact parking agents smart cities sustainability">
+        <h6>Fairness and Environmental Impact in Infrastructure-Free Parking Assistance Systems</h6>
+        <div class="meta">
+          Fairness in AI / Environmental Sustainability / Smart Cities<br>
+          <em>Partner: Filippo Muzzini (UNIMORE)</em>
+        </div>
+        <p>
+          This work explores fairness and environmental sustainability in an infrastructure-free agent-based parking system presented in De Soricellis et al. (PAAMS 2025). New metrics are introduced to evaluate fairness in parking allocation, such as walking distance, waiting time, and success rate across agents. The approach also estimates CO₂ emissions by comparing different parking strategies in traffic simulations. Experiments in SUMO analyse how agent behaviours and adoption levels affect equity and environmental impact.
+        </p>
+      </div>
+
+      <!-- 3 -->
+      <div class="thesis-item"
+           data-search="formal synthesis autonomous vehicles odd sensors actuators">
+        <h6>Formal Synthesis of Vehicle Modifications to Meet ODD Requirements</h6>
+        <div class="meta">
+          Formal Synthesis / Autonomous Vehicles
+        </div>
+        <p>
+         The Operational Design Domain (ODD) defines the conditions under which an autonomous vehicle can safely operate. The goal is to use formal methods to automatically determine the minimal set of sensors, actuators, and system upgrades required for a vehicle to comply with a given ODD. Instead of manual analysis, a formal synthesis framework generates recommendations directly from ODD specifications. This approach reduces development effort and improves the reliability of autonomous vehicle design.
+        </p>
+      </div>
+
+      <!-- 4 -->
+      <div class="thesis-item"
+           data-search="formal verification odd autonomous vehicles compliance">
+        <h6>Formal Verification of Vehicle Compliance with Operational Design Domain Specifications</h6>
+        <div class="meta">
+          Formal Methods / Autonomous Vehicles
+        </div>
+        <p>
+         This thesis introduces a formal verification framework to check whether an autonomous vehicle’s existing hardware and software configuration complies with a given Operational Design Domain. Instead of relying on manual inspection, the framework models both vehicle capabilities and ODD requirements to automatically verify compliance. It identifies mismatches and missing components that could compromise safe operation. The approach improves reliability and supports safer deployment of autonomous vehicles.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+  <h2 class="mt-5 mb-3">How to Apply</h2>
+
+<div class="apply-grid">
+
+  <!-- LEFT -->
+  <div class="apply-box">
+    <h3 class="apply-title">Requirements & Expectations</h3>
+    <ul class="apply-list">
+      <li><strong>Time commitment:</strong> ~3 months (Bachelor), 6+ months (Master)</li>
+      <li><strong>Communication:</strong> regular, concise updates are expected</li>
+      <li><strong>Reporting:</strong> describe problems clearly (avoid “it doesn’t work”)</li>
+      <li><strong>Writing:</strong> LaTeX required (Overleaf recommended)</li>
+      <li><strong>Responsibility:</strong> deadlines and paperwork are your responsibility</li>
+    </ul>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="apply-box">
+    <h3 class="apply-title">Application Materials</h3>
+
+<p class="apply-intro">
+  If you are interested, please send me an <a href="mailto:angelo.ferrando@unimore.it" class="inline-mail">email</a> including:
+</p>
+
+
+<ul class="apply-list">
+  <li>Your degree programme and expected start date</li>
+  <li>The thesis topic(s) you are interested in and why</li>
+</ul>
+
+  </div>
+
+</div>
+
+
+
+  <footer>
+    © 2026 Angelo Ferrando · Thesis & Internship Opportunities
+  </footer>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const filterInput = document.getElementById("filterInput");
+  const clearBtn = document.getElementById("clearFilter");
+  const areas = document.querySelectorAll(".accordion-item");
+
+  function applyFilter() {
+    const value = filterInput.value.trim().toLowerCase();
+    clearBtn.style.display = value ? "block" : "none";
+
+    areas.forEach(area => {
+      const theses = area.querySelectorAll(".thesis-item");
+      const collapse = area.querySelector(".accordion-collapse");
+      const button = area.querySelector(".accordion-button");
+      const counter = area.querySelector(".area-count");
+
+      let visible = 0;
+
+      theses.forEach(thesis => {
+        const haystack = (thesis.dataset.search + " " + thesis.innerText).toLowerCase();
+        const match = !value || haystack.includes(value);
+        thesis.style.display = match ? "" : "none";
+        if (match) visible++;
+      });
+
+      // aggiorna contatore
+      if (counter) {
+        counter.textContent = `(${visible})`;
+      }
+
+      if (visible > 0) {
+        area.style.display = "";
+        if (value) {
+          bootstrap.Collapse.getOrCreateInstance(collapse, { toggle: false }).show();
+          button.classList.remove("collapsed");
+        } else {
+          bootstrap.Collapse.getOrCreateInstance(collapse, { toggle: false }).hide();
+          button.classList.add("collapsed");
         }
-        window.onresize = resize;
-        resize(null);
-      </script>
+      } else {
+        area.style.display = "none";
+      }
+    });
+  }
 
-      <!-- Option 2: Separate Popper and Bootstrap JS -->
-      <!--
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-      -->
-    </body>
-  </html>
+  filterInput.addEventListener("input", applyFilter);
+  filterInput.addEventListener("search", applyFilter);
+
+  clearBtn.addEventListener("click", () => {
+    filterInput.value = "";
+    applyFilter();
+    filterInput.focus();
+  });
+
+  applyFilter();
+</script>
+
+
+</body>
+</html>

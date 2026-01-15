@@ -1,727 +1,799 @@
-  <!doctype html>
-  <html lang="en">
-    <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="en">
 
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/main.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Angelo Ferrando — Assistant Professor in Computer Science. Research on Formal Methods, Runtime Verification, Multi-Agent Systems, and Software Engineering.">
+  <meta name="author" content="Angelo Ferrando">
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap" rel="stylesheet">
+  <title>Angelo Ferrando</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
 
-
-      <title>Angelo Ferrando</title>
-      <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="images/favicon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-    </head>
-
-    <body>
-      <header>
-        <div class="container">
-        <nav class="navbar navbar-expand-lg ">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="" width="60" height="60">
-          </a>
-
-          <div class="icons ms-auto">
-            <a href="mailto:angelo.ferrando@unimore.it" class="text-decoration-none">
-              <i class="bi bi-envelope-fill"></i>
-            </a>
-          </div>
-        </div>
-  </nav>
+ 
+<body>
+  <div class="topbar">
+    <div class="window-controls">
+      <span class="wc-btn close"></span>
+      <span class="wc-btn minimize"></span>
+      <span class="wc-btn maximize"></span>
+    </div>
+    <div class="topbar-title">angelo_ferrando — workspace</div>
   </div>
-      </header>
 
-      <main>
+  <div class="layout">
+    <!-- Sidebar con contatti -->
+    <aside class="sidebar">
+      <a href="mailto:angelo.ferrando@unimore.it" class="sidebar-icon" aria-label="Email">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+      <a href="https://scholar.google.com/citations?user=ekIM0qgAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" class="sidebar-icon" aria-label="Google Scholar">
+        <i class="bi bi-mortarboard-fill"></i>
+      </a>
+      <a href="https://github.com/AngeloFerrando" target="_blank" rel="noopener noreferrer" class="sidebar-icon" aria-label="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+       <a href="https://www.linkedin.com/in/angelo-ferrando-1aaa0a60" target="_blank" rel="noopener noreferrer" class="sidebar-icon" aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+    </aside>
 
-        <section id="intro" class="text-center mb-5">
-        <div class="container">
-          <a class="text-decoration-none" href="index.html">
-            <h1 class="display-4">Angelo Ferrando</h1>
-          </a>
-            <p class="lead">Assistant Professor - University of Modena and Reggio Emilia - Department of Computer Science</p>
+    <!-- Area editor (terminale + tabs + contenuto + status bar) -->
+    <main class="editor-area">
+
+      <!-- TERMINALE -->
+      <section class="terminal">
+        <div class="terminal-output"></div>
+        <div class="terminal-line">
+          <span class="prompt">angelo@website:~$ </span>
+          <span class="terminal-input" contenteditable="true"></span>
+          <span class="cursor"></span>
         </div>
       </section>
 
-        <section id="sticker" class=" text-center mt-5">
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Modal0"><img src="images/about.png" width="100"/><br><b>About Me<b></button>
-            <div class="modal fade" id="Modal0" tabindex="-1" aria-labelledby="Modal0Label" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content text-start">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="Modal0Label">About</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body tab-content text-justify">
-                    <div class="profile d-flex justify-content-evenly align-items-center">
-    <img src="images/profile.jpg" class="mt-2 rounded-circle img-thumbnail" width="150px" alt="Angelo Ferrando">
+      <!-- TABS -->
+      <div class="tabs">
+        <div class="tab active" data-target="about" data-file="about.md" onclick="openTab('about', this)">
+          <i class="bi bi-person-fill"></i> about.md
+        </div>
+        <div class="tab" data-target="work" data-file="work.md" onclick="openTab('work', this)">
+          <i class="bi bi-briefcase-fill"></i> work.md
+        </div>
+        <div class="tab" data-target="education" data-file="education.md" onclick="openTab('education', this)">
+          <i class="bi bi-patch-check-fill"></i> education.md
+        </div>
+        <div class="tab" data-target="teaching" data-file="teaching.md" onclick="openTab('teaching', this)">
+          <i class="bi bi-easel2-fill"></i> teaching.md
+        </div>
+        <div class="tab" data-target="projects" data-file="projects.md" onclick="openTab('projects', this)">
+          <i class="bi bi-diagram-3-fill"></i> projects.md
+        </div>
+        <div class="tab" data-target="community" data-file="community.md" onclick="openTab('community', this)">
+          <i class="bi bi-globe"></i> community.md
+        </div>
+        <a class="tab external"
+        href="https://dblp.org/pid/134/9527.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="return openExternalFromClick('publications.bib','dblp.org', this.href);">
+        <i class="bi bi-book-fill"></i> publications.bib <span class="ext">↗</span>
+        </a>
+        <a class="tab external"
+          href="https://angeloferrando.github.io/website/thesis.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          onclick="return openExternalFromClick('thesis.link','thesis supervision page', this.href);">
+          <i class="bi bi-file-earmark-text-fill"></i> thesis.link <span class="ext">↗</span>
+        </a>
 
+      </div>
+
+      <!-- CONTENUTO EDITOR -->
+      <div class="window">
+
+        <div id="about" class="content" style="display:none;">
+          <div class="code-block with-lines markdown-syntax">
+            
+          <span class="line-number">1</span><span class="code-line"><span class="syntax-comment">// File: about.md</span></span>
+          <span class="line-number">2</span><span class="code-line"><span class="syntax-comment">// Author: Angelo Ferrando</span></span>
+          <span class="line-number">3</span><span class="code-line"></span>
+
+          <span class="line-number">4</span><span class="code-line"><span class="syntax-title"># About Me</span></span>
+
+          <span class="line-number">5</span><span class="code-line"><span class="syntax-strong">Assistant Professor</span></span>
+          <span class="line-number">6</span><span class="code-line indent-hanging">Department of Computer Science</span></span>
+          <span class="line-number">7</span><span class="code-line"><span class="indent">@ <a href="https://www.fim.unimore.it/it" target="_blank">University of Modena and Reggio Emilia</a></span></span>
+
+          <span class="line-number">8</span><span class="code-line"></span>
+
+          <span class="line-number">9</span><span class="code-line"><span class="syntax-title"># Experience</span></span>
+
+          <span class="line-number">10</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Research Fellow</span></span>
+          <span class="line-number">11</span><span class="code-line"><span class="indent">@ <a href="https://dibris.unige.it/" target="_blank">University of Genova</a> (2021–2024)</span></span>
+
+          <span class="line-number">12</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Postdoctoral Research Associate</span></span>
+          <span class="line-number">13</span><span class="code-line"><span class="indent">@ <a href="https://www.cs.manchester.ac.uk/" target="_blank">University of Manchester</a> (2020–2021)</span></span>
+
+          <span class="line-number">14</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Postdoctoral Research Associate</span></span>
+          <span class="line-number">15</span><span class="code-line"><span class="indent">@ <a href="https://www.liverpool.ac.uk/computer-science/" target="_blank">University of Liverpool</a> (2018–2020)</span></span>
+
+          <span class="line-number">16</span><span class="code-line"></span>
+
+          <span class="line-number">17</span><span class="code-line"><span class="syntax-title"># Roles</span></span>
+          <span class="line-number">18</span><span class="code-line">Coordinator @ <a href="https://www.consorzio-cini.it/index.php/it/laboratori-nazionali/smart-cities" target="_blank">CINI Smart Cities &amp; Communities</a> (2021–2024)</span>
+
+          <span class="line-number">19</span><span class="code-line"></span>
+
+          <span class="line-number">20</span><span class="code-line"><span class="syntax-title"># Research Topics</span></span>
+
+          <span class="line-number">21</span><span class="code-line"><span class="syntax-list">-</span>Formal Methods</span>
+          <span class="line-number">22</span><span class="code-line"><span class="syntax-list">-</span>Runtime Verification</span>
+          <span class="line-number">23</span><span class="code-line"><span class="syntax-list">-</span>Software Engineering</span>
+          <span class="line-number">24</span><span class="code-line"><span class="syntax-list">-</span>Multi-Agent Systems</span>
+
+          </div>
+        </div>
+        
+
+        <div id="work" class="content" style="display:none;">
+          <div class="code-block with-lines markdown-syntax">
+            
+          <span class="line-number">1</span><span class="code-line"><span class="syntax-comment">// File: work.md</span></span>
+          <span class="line-number">2</span><span class="code-line"><span class="syntax-comment">// Author: Angelo Ferrando</span></span>
+          <span class="line-number">3</span><span class="code-line"></span>
+
+          <span class="line-number">4</span><span class="code-line"><span class="syntax-title"># Work Experience</span></span>
+
+          <span class="line-number">5</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Assistant Professor (RTDB)</span></span>
+          <span class="line-number">6</span><span class="code-line"><span class="indent">University of Modena and Reggio Emilia (Feb 2024–present)</span></span>
+
+          <span class="line-number">7</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Research Fellow (RTDA)</span></span>
+          <span class="line-number">8</span><span class="code-line"><span class="indent">University of Genova (Mar 2021–Jan 2024)</span></span>
+
+          <span class="line-number">9</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Postdoctoral Research Associate</span></span>
+          <span class="line-number">10</span><span class="code-line"><span class="indent">University of Manchester (Jul 2020–Feb 2021)</span></span>
+
+          <span class="line-number">11</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Postdoctoral Research Associate</span></span>
+          <span class="line-number">12</span><span class="code-line"><span class="indent">University of Liverpool (Dec 2018–Jun 2020)</span></span>
+
+          <span class="line-number">13</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Software Developer</span></span>
+          <span class="line-number">14</span><span class="code-line"><span class="indent">Simulation Team (Oct 2012–May 2014)</span></span>
+
+          <span class="line-number">15</span><span class="code-line"></span>
+
+          <span class="line-number">16</span><span class="code-line"><span class="syntax-title"># Visiting Researcher</span></span>
+
+          <span class="line-number">17</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">University of Liverpool, UK</span> (Jan–Feb 2017)</span>
+          <span class="line-number">18</span><span class="code-line"><span class="indent">Worked with Prof. Michael Fisher and Prof. Louise A. Dennis</span></span>
+
+          <span class="line-number">19</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">University of Lancaster, UK</span> (Feb–Mar 2018)</span>
+          <span class="line-number">20</span><span class="code-line"><span class="indent">Worked with Prof. Amit K. Chopra and Dr. Akin Gunay</span></span>
+
+          <span class="line-number">21</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">University of Otago, New Zealand</span> (Aug–Oct 2018)</span>
+          <span class="line-number">22</span><span class="code-line"><span class="indent">Worked with Prof. Michael Winikoff, Prof. Stephen Cranefield and Prof. Frank Dignum</span></span>
+
+          </div>
+        </div>
+        
+
+       <div id="education" class="content" style="display:none;">
+        <div class="code-block with-lines markdown-syntax">
+
+        <span class="line-number">1</span><span class="code-line"><span class="syntax-comment">// File: education.md</span></span>
+        <span class="line-number">2</span><span class="code-line"><span class="syntax-comment">// Author: Angelo Ferrando</span></span>
+        <span class="line-number">3</span><span class="code-line"></span>
+
+        <span class="line-number">4</span><span class="code-line"><span class="syntax-title"># Education</span></span>
+
+        <!-- PhD -->
+        <span class="line-number">5</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">PhD in Computer Science</span></span>
+        <span class="line-number">6</span><span class="code-line"><span class="indent">University of Genova (2015–2019)</span></span>
+        <span class="line-number">7</span><span class="code-line"><span class="indent"> Thesis = <a href="assets/template.pdf">("phd-thesis.pdf")</a></span></span>
+
+        <!-- MS -->
+        <span class="line-number">8</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">MS in Computer Science with honors</span></span>
+        <span class="line-number">9</span><span class="code-line"><span class="indent">University of Genova (2013–2015)</span></span>
+        <span class="line-number">10</span><span class="code-line"><span class="indent"> Thesis = <a href="assets/master_thesis.pdf">("ms-thesis.pdf")</a></span></span>
+
+        <!-- BS -->
+        <span class="line-number">11</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">BS in Computer Science with honors</span></span>
+        <span class="line-number">12</span><span class="code-line"><span class="indent">University of Genova (2010–2013)</span></span>
+
+        <!-- English -->
+        <span class="line-number">13</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">First Certificate in English (Level B2)</span></span>
+
+        </div>
+      </div>
+
+
+
+      <div id="teaching" class="content" style="display:none;">
+        <div class="code-block with-lines markdown-syntax">
+
+        <span class="line-number">1</span><span class="code-line"><span class="syntax-comment">// File: teaching.md</span></span>
+        <span class="line-number">2</span><span class="code-line"><span class="syntax-comment">// Author: Angelo Ferrando</span></span>
+        <span class="line-number">3</span><span class="code-line"></span>
+
+        <span class="line-number">4</span><span class="code-line"><span class="syntax-title"># A.Y. 2025–2026 (UNIMORE)</span></span>
+        <span class="line-number">5</span><span class="code-line"><span class="syntax-list">-</span>Complementi di Programmazione <span class="syntax-symbol">[BSc]</span></span>
+        <span class="line-number">6</span><span class="code-line"><span class="syntax-list">-</span>Metodi per il ciclo di vita del software <span class="syntax-symbol">[MSc]</span></span>
+
+        <span class="line-number">7</span><span class="code-line"></span>
+
+        <span class="line-number">8</span><span class="code-line"><span class="syntax-title"># A.Y. 2024–2025 (UNIMORE)</span></span>
+        <span class="line-number">9</span><span class="code-line"><span class="syntax-list">-</span>Complementi di Programmazione <span class="syntax-symbol">[BSc]</span></span>
+        <span class="line-number">10</span><span class="code-line"><span class="syntax-list">-</span>Metodi per il ciclo di vita del software <span class="syntax-symbol">[MSc]</span></span>
+
+        <span class="line-number">11</span><span class="code-line"></span>
+
+        <span class="line-number">12</span><span class="code-line"><span class="syntax-title"># A.Y. 2023–2024 (UNIGE)</span></span>
+        <span class="line-number">13</span><span class="code-line"><span class="syntax-list">-</span>Multi-Agent Systems (MAS) <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
+        <span class="line-number">14</span><span class="code-line"><span class="syntax-list">-</span>Introduction to formal verification: an appetiser <span class="syntax-symbol">[PhD]</span></span>
+
+        <span class="line-number">15</span><span class="code-line"></span>
+
+        <span class="line-number">16</span><span class="code-line"><span class="syntax-title"># A.Y. 2022–2023 (UNIGE)</span></span>
+        <span class="line-number">17</span><span class="code-line"><span class="syntax-list">-</span>Programmazione Concorrente e Algoritmi Distribuiti (PCAD) <span class="syntax-symbol">[BSc]</span></span>
+        <span class="line-number">18</span><span class="code-line"><span class="syntax-list">-</span>Multi-Agent Systems (MAS) <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
+        <span class="line-number">19</span><span class="code-line"><span class="syntax-list">-</span>Natural Language Processing (NLP) <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
+        <span class="line-number">20</span><span class="code-line"><span class="syntax-list">-</span>Introduction to formal verification: an appetiser <span class="syntax-symbol">[PhD]</span></span>
+
+        <span class="line-number">21</span><span class="code-line"></span>
+
+        <span class="line-number">22</span><span class="code-line"><span class="syntax-title"># A.Y. 2021–2022 (UNIGE)</span></span>
+        <span class="line-number">23</span><span class="code-line"><span class="syntax-list">-</span>Algoritmi e Strutture Dati (ASD) <span class="syntax-symbol">[BSc]</span> — Co-Lecturer</span>
+        <span class="line-number">24</span><span class="code-line"><span class="syntax-list">-</span>Multi-Agent Systems (MAS) <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
+        <span class="line-number">25</span><span class="code-line"><span class="syntax-list">-</span>Natural Language Processing (NLP) <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
+        <span class="line-number">26</span><span class="code-line"><span class="syntax-list">-</span>Introduction to Computer Science <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
+        <span class="line-number">27</span><span class="code-line"><span class="syntax-list">-</span>Introduction to formal verification: an appetiser <span class="syntax-symbol">[PhD]</span></span>
+
+        <span class="line-number">28</span><span class="code-line"></span>
+
+        <span class="line-number">29</span><span class="code-line"><span class="syntax-title"># A.Y. 2020–2021 (UNIGE)</span></span>
+        <span class="line-number">30</span><span class="code-line"><span class="syntax-list">-</span>Programmazione Concorrente e Algoritmi Distribuiti (PCAD) <span class="syntax-symbol">[BSc]</span> — Co-Lecturer</span>
+
+        </div>
+      </div>
+
+
+       <div id="projects" class="content" style="display:none;">
+        <div class="code-block with-lines markdown-syntax">
+
+        <span class="line-number">1</span><span class="code-line"><span class="syntax-comment">// File: projects.md</span></span>
+        <span class="line-number">2</span><span class="code-line"><span class="syntax-comment">// Author: Angelo Ferrando</span></span>
+        <span class="line-number">3</span><span class="code-line"></span>
+
+        <span class="line-number">4</span><span class="code-line"><span class="syntax-title"># CONVINCE</span></span>
+        <span class="line-number">5</span><span class="code-line"><span class="syntax-symbol">[Horizon Europe]</span></span>
+        <span class="line-number">6</span><span class="code-line"><span class="syntax-strong">Member of WP4 (Verification and Monitoring)</span> (Oct 2022 – Dec 2024)</span>
+        <span class="line-number">7</span><span class="code-line indent-hanging">Funded by the European Union Horizon Europe Programme</span>
+
+        <span class="line-number">8</span><span class="code-line"></span>
+
+        <span class="line-number">9</span><span class="code-line"><span class="syntax-title"># INSERTION</span></span>
+        <span class="line-number">10</span><span class="code-line"><span class="syntax-symbol">[SEED Research Grant]</span></span>
+        <span class="line-number">11</span><span class="code-line"><span class="syntax-strong">Principal Investigator</span> (Jul 2022 – Jul 2024)</span>
+        <span class="line-number">12</span><span class="code-line indent-hanging">Funded by DIBRIS (University of Genova)</span>
+
+        <span class="line-number">13</span><span class="code-line"></span>
+
+        <span class="line-number">14</span><span class="code-line"><span class="syntax-title"># Smart Rogaining</span></span>
+        <span class="line-number">15</span><span class="code-line"><span class="syntax-strong">Software Developer</span> (Feb 2018 – Feb 2019)</span>
+        <span class="line-number">16</span><span class="code-line indent-hanging">Commissioned by <a href="https://www.linkedin.com/in/luca-gelati-5b30b038/" target="_blank">Luca Gelati</a> — Web application for supporting team-building activities</span>
+
+        <span class="line-number">17</span><span class="code-line"></span>
+
+        <span class="line-number">18</span><span class="code-line"><span class="syntax-title"># PortBot</span></span>
+        <span class="line-number">19</span><span class="code-line"><span class="syntax-strong">Software Developer</span> (Apr 2018 – Dec 2018)</span>
+        <span class="line-number">20</span><span class="code-line indent-hanging">Commissioned by <a href="https://www.cipi.unige.it/" target="_blank">CIPI</a> — Chatbot for the Port of Genova</span>
+
+        <span class="line-number">21</span><span class="code-line"></span>
+
+        <span class="line-number">22</span><span class="code-line"><span class="syntax-title"># Video and Auto Expertises</span></span>
+        <span class="line-number">23</span><span class="code-line"><span class="syntax-strong">Software Developer</span> (Jan 2018 – Jan 2019)</span>
+        <span class="line-number">24</span><span class="code-line indent-hanging">Commissioned by <a href="https://www.queirolo.eu/" target="_blank">Queirolo &amp; Associati</a> — Progressive Web App for supporting video and auto expertises</span>
+        
+        </div>
+      </div>
+
+      <div id="community" class="content" style="display:none;">
+        <div class="code-block with-lines markdown-syntax">
+
+        <span class="line-number">1</span><span class="code-line"><span class="syntax-comment">// File: community.md</span></span>
+        <span class="line-number">2</span><span class="code-line"><span class="syntax-comment">// Author: Angelo Ferrando</span></span>
+        <span class="line-number">3</span><span class="code-line"></span>
+
+        <span class="line-number">4</span><span class="code-line"><span class="syntax-title"># PC Member and Reviewer (Conferences)</span></span>
+        <span class="line-number">5</span><span class="code-line"><span class="syntax-strong">Area Chair</span></span>
+        <span class="line-number">6</span><span class="code-line indent-hanging">Engineering and Analysis of Multi-Agent Systems Track — AAMAS (2026)</span></span>
+
+        <span class="line-number">7</span><span class="code-line"></span>
+
+        <span class="line-number">8</span><span class="code-line"><span class="syntax-strong">Senior Program Committee Member</span></span>
+        <span class="line-number">9</span><span class="code-line indent-hanging">European Conference on Artificial Intelligence — ECAI (2025)</span></span>
+
+        <span class="line-number">10</span><span class="code-line"></span>
+
+        <span class="line-number">11</span><span class="code-line"><span class="syntax-strong">Program Committee Member</span></span>
+        <span class="line-number">12</span><span class="code-line"><span class="syntax-list">-</span>AAAI Conference on Artificial Intelligence — AAAI (2022–2026)</span></span>
+        <span class="line-number">13</span><span class="code-line"><span class="syntax-list">-</span>International Conference on Autonomous Agents and Multiagent Systems — AAMAS (2021–2026)</span></span>
+        <span class="line-number">14</span><span class="code-line"><span class="syntax-list">-</span>International Joint Conference on Artificial Intelligence — IJCAI (2020–2026)</span></span>
+        <span class="line-number">15</span><span class="code-line"><span class="syntax-list">-</span>European Conference on Artificial Intelligence — ECAI (2023–2025)</span></span>
+        <span class="line-number">16</span><span class="code-line"><span class="syntax-list">-</span>European Conference on Multi-Agent Systems — EUMAS (2023–2025)</span></span>
+        <span class="line-number">17</span><span class="code-line"><span class="syntax-list">-</span>Principles and Practice of Multi-Agent Systems — PRIMA (2019–2024)</span></span>
+        <span class="line-number">18</span><span class="code-line"><span class="syntax-list">-</span>NASA Formal Methods Symposium — NFM (2024–2026)</span></span>
+        <span class="line-number">19</span><span class="code-line"><span class="syntax-list">-</span>IEEE International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises — WETICE (2020–2025)</span></span>
+
+        <span class="line-number">20</span><span class="code-line"></span>
+
+        <span class="line-number">21</span><span class="code-line"><span class="syntax-strong">Program Committee Member (Workshops)</span></span>
+        <span class="line-number">22</span><span class="code-line"><span class="syntax-list">-</span>International Workshop on Engineering Multi-Agent Systems — EMAS (2019–2026)</span></span>
+        <span class="line-number">23</span><span class="code-line"><span class="syntax-list">-</span>Workshop on Formal Methods for Autonomous Systems — FMAS (2020–2025)</span></span>
+        <span class="line-number">24</span><span class="code-line"><span class="syntax-list">-</span>Workshop on Verification and Monitoring at Runtime Execution — VORTEX (2021–2024)</span></span>
+        <span class="line-number">25</span><span class="code-line"><span class="syntax-list">-</span>Workshop From Objects to Agents — WOA (2021–2023)</span></span>
+        <span class="line-number">26</span><span class="code-line"><span class="syntax-list">-</span>Workshop on Governing Adaptive and Unplanned Systems of Systems — GAUSS (2020–2021)</span></span>
+
+        <span class="line-number">27</span><span class="code-line"></span>
+
+        <span class="line-number">28</span><span class="code-line"><span class="syntax-title"># Reviewer (Journals)</span></span>
+        <span class="line-number">29</span><span class="code-line"><span class="syntax-list">-</span>IEEE Transactions on Computers — TC</span></span>
+        <span class="line-number">30</span><span class="code-line"><span class="syntax-list">-</span>Multidisciplinary Digital Publishing Institute — MDPI</span></span>
+        <span class="line-number">31</span><span class="code-line"><span class="syntax-list">-</span>ACM Transactions on Internet Technology — TOIT</span></span>
+        <span class="line-number">32</span><span class="code-line"><span class="syntax-list">-</span>Journal of Systems and Software — JSS</span></span>
+        <span class="line-number">33</span><span class="code-line"><span class="syntax-list">-</span>Logic Journal of the IGPL — IGPL</span></span>
+        <span class="line-number">34</span><span class="code-line"><span class="syntax-list">-</span>Journal of the International Foundation for Autonomous Agents and Multi-Agent Systems — JAAMAS</span></span>
+
+        <span class="line-number">35</span><span class="code-line"></span>
+
+        <span class="line-number">36</span><span class="code-line"><span class="syntax-title"># Organiser and Chair Roles</span></span>
+        <span class="line-number">37</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Topical Area Curator</span> — Computer Science &amp; Systems, Conference on Computer Science and Intelligence Systems — FedCSIS (2025)</span></span>
+        <span class="line-number">38</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">General Co-Chair</span> — International Conference on Principles and Practice of Multi-Agent Systems — PRIMA (2025)</span></span>
+        <span class="line-number">39</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Proceedings Co-Chair</span> — European Conference on Artificial Intelligence — ECAI (2025)</span></span>
+        <span class="line-number">40</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">PhD Track Chair</span> — European Conference on Multi-Agent Systems — EUMAS (2023)</span></span>
+        <span class="line-number">41</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Co-Organiser</span> — Workshop on Agents and Robots for Reliable Engineered Autonomy — AREA (2020–2025)</span></span>
+        <span class="line-number">42</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Co-Organiser</span> — Engineering Reliable Autonomous Systems, Lorentz Center — ERAS (2024)</span></span>
+        <span class="line-number">43</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Co-Chair</span> — Workshop on Logical Aspects in Multi-Agent Systems and Strategic Reasoning — LAMAS&amp;SR (2024)</span></span>
+        <span class="line-number">44</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Local Organiser</span> — International Conference on Logic Programming and Nonmonotonic Reasoning — LPNMR (2022)</span></span>
+        <span class="line-number">45</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Local Co-Organiser</span> — Italian Conference on Computational Logic — CILC (2015)</span></span>
+        <span class="line-number">46</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Committee Member</span> — ARIAC Competition, National Institute of Standards and Technology — NIST (2022)</span></span>
+        <span class="line-number">47</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Publicity and Communication Committee Member</span> — Italian Association for Artificial Intelligence Conference — AIxIA (2021)</span></span>
+
+        <span class="line-number">48</span><span class="code-line"></span>
+
+        <span class="line-number">49</span><span class="code-line"><span class="syntax-title"># Editor</span></span>
+        <span class="line-number">50</span><span class="code-line"><span class="syntax-list">-</span>5th Workshop on Agents and Robots for Reliable Engineered Autonomy — AREA Proceedings on CCIS (2025)</span></span>
+        <span class="line-number">51</span><span class="code-line"><span class="syntax-list">-</span>4th Workshop on Agents and Robots for Reliable Engineered Autonomy — AREA Proceedings on CCIS (2024)</span></span>
+        <span class="line-number">52</span><span class="code-line"><span class="syntax-list">-</span>Special Issue of the 3rd Workshop on Agents and Robots for Reliable Engineered Autonomy — AREA on Annals of Mathematics and Artificial Intelligence (2023)</span></span>
+        <span class="line-number">53</span><span class="code-line"><span class="syntax-list">-</span>Special Issue of the 23rd Workshop From Objects to Agents — WOA on Intelligenza Artificiale (2022)</span></span>
+        <span class="line-number">54</span><span class="code-line"><span class="syntax-list">-</span>23rd Workshop From Objects to Agents — WOA Proceedings on CEUR AIxIA Series (2022)</span></span>
+        <span class="line-number">55</span><span class="code-line"><span class="syntax-list">-</span>3rd Workshop on Agents and Robots for Reliable Engineered Autonomy — AREA Proceedings on EPTCS (2023)</span></span>
+        <span class="line-number">56</span><span class="code-line"><span class="syntax-list">-</span>Special Issue of the 2nd Workshop on Agents and Robots for Reliable Engineered Autonomy — AREA on Robotics (2022)</span></span>
+        <span class="line-number">57</span><span class="code-line"><span class="syntax-list">-</span>2nd Workshop on Agents and Robots for Reliable Engineered Autonomy — AREA Proceedings on EPTCS (2022)</span></span>
+        <span class="line-number">58</span><span class="code-line"><span class="syntax-list">-</span>Special Issue of the 1st Workshop on Agents and Robots for Reliable Engineered Autonomy — AREA on Journal of Sensor and Actuator Networks (2020)</span></span>
+        <span class="line-number">59</span><span class="code-line"><span class="syntax-list">-</span>1st Workshop on Agents and Robots for Reliable Engineered Autonomy — AREA Proceedings on EPTCS (2020)</span></span>
+
+        <span class="line-number">60</span><span class="code-line"></span>
+
+        <span class="line-number">61</span><span class="code-line"><span class="syntax-title"># Honors &amp; Awards</span></span>
+        <span class="line-number">62</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Best Paper Award</span> for “Theory and Practice of Quantitative ATL” @ International Conference on Principles and Practice of Multi-Agent Systems — PRIMA (2024)</span></span>
+        <span class="line-number">63</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Journal-First Track Award</span> for “Bridging the Gap between Single- and Multi-Model Predictive Runtime Verification” @ International Symposium on Formal Methods — FM (2023)</span></span>
+        <span class="line-number">64</span><span class="code-line"><span class="syntax-list">-</span>2nd Place Multi-Agent Programming Contest (2020)</span></span>
+        <span class="line-number">65</span><span class="code-line"><span class="syntax-list">-</span>1st Place Multi-Agent Programming Contest (2019)</span></span>
+        <span class="line-number">66</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Best Paper Award</span> @ International Workshop on Engineering Multi-Agent Systems — EMAS (2019)</span></span>
+        <span class="line-number">67</span><span class="code-line"><span class="syntax-list">-</span>Special Mention for the Master’s Thesis “Trace Expressions for Runtime Verification and Protocol-Driven Behaviour”</span></span>
+        
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+      <!-- STATUS BAR -->
+      <footer class="statusbar">
+        <div class="status-left">
+          <span><i class="bi bi-git"></i> main</span>
+          <span><i class="bi bi-circle-fill"></i> Ready</span>
+        </div>
+        <div class="status-right">
+          <span>UTF-8</span>
+          <span>LF</span>
+          <span>MD</span>
+          <span><i class="bi bi-person-fill"></i> user: angelo</span>
+        </div>
+      </footer>
+
+      <div id="matrix-overlay" class="matrix-overlay"></div>
+      <canvas id="snake-canvas" style="display:none;"></canvas>
+
+    </main>
   </div>
-                    <br>
-                    <p style="text-align: justify">
-<p>Angelo Ferrando is an Assistant Professor at the <a href="https://www.unimore.it/">University of Modena and Reggio Emilia</a>. He previously was a Research Fellow at the <a href="https://www.dibris.unige.it/">University of Genova</a> (IT) and a Research Associate at the <a href="https://www.liverpool.ac.uk/computer-science/">University of Liverpool</a> (UK).</p>
 
-<p>Since 2021 to 2024, he has been the coordinator of the <a href="https://www.consorzio-cini.it/index.php/it/laboratori-nazionali/smart-cities">CINI</a> "Smart Cities & Communities" node at the University of Genova.</p>
+  <!-- SCRIPT UNICO: TABS + TERMINALE + ANIMAZIONE INIZIALE -->
+<script>
 
-<p>Previously, he was a Postdoctoral Research Associate at the <a href="https://www.cs.manchester.ac.uk/">University of Manchester</a> (UK) from July 2020 to February 2021 and a Postdoctoral Research Associate at the University of Liverpool (UK) from 2018 to 2020.</p>
+/* ============================================================
+   TABS
+   ============================================================ */
+function openTab(name, tabEl, fromTerminal = false) {
+  const sections = document.querySelectorAll('.content');
+  const tabs = document.querySelectorAll('.tab');
 
-<p>He was part of the <a href="https://autonomy-and-verification.github.io/">Autonomy and Verification Network</a> at the University of Manchester, where he worked on applying RV in the <a href="https://rainhub.org.uk/">RAIN</a> and <a href="https://orcahub.org/">ORCA</a> research hubs funded by <a href="https://www.ukri.org/">UKRI</a>. He is a member of the program committee in several international conferences such as AAAI, AAMAS, and IJCAI.</p>
+  sections.forEach(s => s.style.display = 'none');
+  tabs.forEach(t => t.classList.remove('active'));
 
-<p>His main research interests are Formal Methods, Software Engineering, Multi-Agent Systems (MASs), and Runtime Verification (RV), especially when applied to improve the reliability of intelligent systems.</p>
-                    </p>
+  const target = document.getElementById(name);
+  if (target) target.style.display = 'block';
+
+  if (tabEl) {
+    tabEl.classList.add('active');
+  } else {
+    const t = document.querySelector('.tab[data-target="' + name + '"]');
+    if (t) t.classList.add('active');
+  }
+
+  // SOLO se non arrivo dal terminale scrivo "view ..."
+  if (!fromTerminal) {
+    const fileName = Object.keys(realFiles).find(key => realFiles[key] === name);
+    if (fileName) {
+      appendOutput(prompt + "view " + fileName);
+      appendOutput("Opening " + fileName + "...");
+    }
+  }
+}
+
+/* ============================================================
+   TERMINALE
+   ============================================================ */
+const terminalOutput = document.querySelector(".terminal-output");
+const terminalInput  = document.querySelector(".terminal-input");
+const terminal = document.querySelector(".terminal");
+const prompt = "angelo@website:~$ ";
+
+/* file interni (renderizzati nel sito) */
+const realFiles = {
+  "about.md": "about",
+  "work.md": "work",
+  "education.md": "education",
+  "teaching.md": "teaching",
+  "projects.md": "projects",
+  "community.md": "community",
+  "publications.bib": "external",
+  "thesis.link": "external"
+};
+
+/* stampa nel terminale */
+function appendOutput(text) {
+  const line = document.createElement("div");
+  line.className = "terminal-row";
+  line.textContent = text;
+  terminalOutput.appendChild(line);
+  terminal.scrollTop = terminal.scrollHeight;
+}
+
+/* ============================================================
+   LINK ESTERNI
+   ============================================================ */
+function openExternalFromClick(name, label, url) {
+  appendOutput(prompt + "view " + name);
+
+  if (name === "publications.bib") {
+    appendOutput("Hint: full and authoritative publication list maintained on DBLP.");
+  }
+
+  if (name === "thesis.link") {
+    appendOutput("Hint: thesis and internship topics maintained on a dedicated page.");
+  }
+
+  appendOutput(`[external] ${name} → ${label}`);
+  window.open(url, "_blank");
+  return false;
+}
+
+
+/* ============================================================
+   COMANDI TERMINALE
+   ============================================================ */
+async function executeCommand(cmd) {
+  appendOutput(prompt + cmd);
+
+  const parts   = cmd.trim().split(/\s+/);
+  const command = parts[0] || "";
+  const arg     = parts[1];
+
+  if (command === "ls") {
+   appendOutput(
+  Object.keys(realFiles).join("  ")
+)
+  }
+
+  else if (command === "view") {
+    if (!arg) {
+      appendOutput("view: missing file operand");
+    }
+
+    else if (arg === "publications.bib") {
+  openExternalFromClick(
+    "publications.bib",
+    "dblp.org",
+    "https://dblp.org/pid/134/9527.html"
+  );
+}
+
+
+    else if (arg === "thesis.link") {
+      openExternalFromClick(
+        "thesis.link",
+        "thesis supervision page",
+        "https://angeloferrando.github.io/website/thesis.html"
+      );
+    }
+
+    else if (!realFiles[arg]) {
+      appendOutput(`view: ${arg}: No such file`);
+    }
+
+    else {
+      appendOutput(`Opening ${arg}...`);
+      openTab(realFiles[arg], null, true);
+    }
+  }
+
+  else if (command === "cd") {
+    appendOutput(`bash: cd: ${arg ?? ""}: Not a directory`);
+  }
+
+  else if (command === "start" && arg === "matrix") {
+    appendOutput("Entering Matrix Mode...");
+    startMatrix();
+  }
+
+  else if (command === "stop" && arg === "matrix") {
+    appendOutput("Matrix Mode disabled.");
+    stopMatrix();
+  }
+
+  else if (command === "snake" || (command === "start" && arg === "snake")) {
+  appendOutput("Launching Snake...");
+  startSnake();
+}
+
+  else if (command === "clear") {
+    terminalOutput.innerHTML = "";
+    openTab("about", null, true);
+  }
+
+  else if (command === "") {
+    appendOutput("");
+  }
+
+  else if (command === "help") {
+  appendOutput("Available commands:");
+  appendOutput("  ls");
+  appendOutput("  view <file>");
+  appendOutput("  clear");
+}
+
+  else {
+    appendOutput(`${command}: command not found`);
+  }
+}
+
+/* ENTER */
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    const cmd = terminalInput.textContent.trim();
+    terminalInput.textContent = "";
+    executeCommand(cmd);
+  }
+});
+
+/* Focus */
+document.querySelector(".terminal-line").addEventListener("click", () => {
+  terminalInput.focus();
+});
+
+/* ============================================================
+   ANIMAZIONE INIZIALE
+   ============================================================ */
+const initialLines = [
+  "angelo@website:~$ ls",
+  "about.md  work.md  education.md  teaching.md  projects.md  community.md  publications.bib  thesis.link",
+  "angelo@website:~$ view about.md",
+  "Opening about.md...",
+];
+
+let initIndex = 0;
+let charIndex = 0;
+let currentAnimLine = null;
+
+function typeInitial() {
+  if (initIndex >= initialLines.length) {
+    openTab("about", null, true);
+    terminalInput.focus();
+    return;
+  }
+
+  if (!currentAnimLine) {
+    currentAnimLine = document.createElement("div");
+    currentAnimLine.className = "terminal-row";
+    terminalOutput.appendChild(currentAnimLine);
+  }
+
+  const fullText = initialLines[initIndex];
+  currentAnimLine.textContent = fullText.slice(0, charIndex + 1);
+  charIndex++;
+
+  if (charIndex < fullText.length) {
+    setTimeout(typeInitial, 25);
+  } else {
+    charIndex = 0;
+    currentAnimLine = null;
+    initIndex++;
+    setTimeout(typeInitial, 200);
+  }
+}
+
+window.addEventListener("load", () => {
+
+  // MOBILE: apri subito about.md
+  if (window.innerWidth <= 768) {
+    openTab("about", null, true);
+    return;
+  }
+
+  // DESKTOP: animazione terminale
+  terminalInput.blur();
+  typeInitial();
+  setTimeout(() => terminalInput.focus(), 3000);
+});
+
+
+
+
+/* ============================================================
+   MATRIX MODE
+   ============================================================ */
+let matrixActive = false;
+
+function startMatrix() {
+  if (matrixActive) return;
+  matrixActive = true;
+
+  const overlay = document.getElementById("matrix-overlay");
+  overlay.style.display = "block";
+  overlay.innerHTML = "";
+
+  const width = overlay.offsetWidth;
+  const columns = Math.floor(width / 20);
+
+  for (let i = 0; i < columns; i++) {
+    const stream = document.createElement("div");
+    stream.className = "matrix-rain";
+    stream.style.left = `${i * 20}px`;
+    stream.style.animationDuration = `${2 + Math.random() * 3}s`;
+    stream.style.animationDelay = `${Math.random() * 2}s`;
+    stream.textContent = generateMatrixStream(30 + Math.random() * 40);
+    overlay.appendChild(stream);
+  }
+}
+
+function stopMatrix() {
+  const oldOverlay = document.getElementById("matrix-overlay");
+  const clean = oldOverlay.cloneNode(false);
+  clean.style.display = "none";
+  oldOverlay.parentNode.replaceChild(clean, oldOverlay);
+  matrixActive = false;
+}
+
+function generateMatrixStream(length) {
+  const chars = "01アイウエオカキクケコｱｲｳｴｵ0123456789";
+  let out = "";
+  for (let i = 0; i < length; i++) {
+    out += chars.charAt(Math.floor(Math.random() * chars.length)) + "\n";
+  }
+  return out;
+}
+
+/* ============================================================
+   SNAKE MODE
+   ============================================================ */
+
+let snakeInterval;
+let snakeDir = "right";
+let snake, food;
+
+function startSnake() {
+  const canvas = document.getElementById("snake-canvas");
+  const ctx = canvas.getContext("2d");
+
+  canvas.style.display = "block";
+ canvas.width  = window.innerWidth;
+canvas.height = window.innerHeight;
+
+  const size = 16;
+  snake = [{ x: 10, y: 10 }];
+  food = spawnFood();
+
+  document.addEventListener("keydown", handleSnakeKeys);
+
+  snakeInterval = setInterval(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    moveSnake();
+
+    // draw food
+    ctx.fillStyle = "#9cdcfe";
+    ctx.fillRect(food.x * size, food.y * size, size, size);
+
+    // draw snake
+    ctx.fillStyle = "#6a9955";
+    snake.forEach(p =>
+      ctx.fillRect(p.x * size, p.y * size, size, size)
+    );
+  }, 120);
+}
+
+function handleSnakeKeys(e) {
+  if (e.key === "ArrowUp" && snakeDir !== "down") snakeDir = "up";
+  if (e.key === "ArrowDown" && snakeDir !== "up") snakeDir = "down";
+  if (e.key === "ArrowLeft" && snakeDir !== "right") snakeDir = "left";
+  if (e.key === "ArrowRight" && snakeDir !== "left") snakeDir = "right";
+
+  if (e.key === "Escape" || e.key === "q") stopSnake();
+}
+
+function moveSnake() {
+  const head = { ...snake[0] };
+
+  if (snakeDir === "up") head.y--;
+  if (snakeDir === "down") head.y++;
+  if (snakeDir === "left") head.x--;
+  if (snakeDir === "right") head.x++;
+
+  // collision
+  if (
+    head.x < 0 || head.y < 0 ||
+    head.x * 16 >= window.innerWidth ||
+    head.y * 16 >= window.innerHeight ||
+    snake.some(p => p.x === head.x && p.y === head.y)
+  ) {
+    stopSnake();
+    return;
+  }
+
+  snake.unshift(head);
+
+  if (head.x === food.x && head.y === food.y) {
+    food = spawnFood();
+  } else {
+    snake.pop();
+  }
+}
+
+function spawnFood() {
+  return {
+    x: Math.floor(Math.random() * 30),
+    y: Math.floor(Math.random() * 20)
+  };
+}
+
+function stopSnake() {
+  clearInterval(snakeInterval);
+  document.removeEventListener("keydown", handleSnakeKeys);
+  document.getElementById("snake-canvas").style.display = "none";
+  appendOutput("Game over — thanks for playing 🐍");
+}
+
+</script>
+
+
   
-                    
-                  </div>
-                  </div>
-                </div>
-            </div>
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Modal1"><img src="images/work.png" width="100"/><br><b>Work<b></button>
-            <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="Modal1Label" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content text-start">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="Modal1Label">Work</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <ul class="timeline">
-                      <li>
-                        <h5>Assistant Professor (RTDB)</h5>
-                        <p>February 2024 - present | University of Modena and Reggio Emilia (Italy)</p>
-                      </li>
-                      <li>
-                        <h5>Research Fellow (RTDA)</h5>
-                        <p>March 2021 - January 2024 | University of Genova (Italy)</p>
-                      </li>
-                      <li>
-                        <h5>Postdoctoral Research Associate</h5>
-                        <p>July 2020 - February 2021 | University of Manchester (United Kingdom)</p>
-                      </li>
-                      <li>
-                        <h5>Postdoctoral Research Associate</h5>
-                        <p>December 2018 - June 2020 | University of Liverpool (United Kingdom)</p>
-                      </li>
-                      <li>
-                        <h5>Software Developer</h5>
-                        <p>October 2012 - May 2014 | Simulation Team, Savona (Italy)</p>
-                      </li>
-                    </ul>
-                  </div>
-                  </div>
-                </div>
-            </div>
+</body>
 
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Modal2"><img src="images/edu.png" width="100"/><br><b>Education</b></button>
-            <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="Modal2Label" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content text-start">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="Modal2Label">Education</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <ul class="timeline">
-                      <li>
-                        <h5>PHD in Computer Science</h5>
-                        <p>A.Y 2015-2019 | University of Genova</p>
-                        <a class="text-decoration-none" href="https://angeloferrando.github.io/website/assets/template.pdf"><i class="bi bi-download me-2"></i>Ph.D. Thesis</a>
-                      </li>
-                      <li>
-                        <h5>MS in Computer Science with honors</h5>
-                        <p>A.Y 2013-2015 | University of Genova</p>
-                        <a class="text-decoration-none" href="https://angeloferrando.github.io/website/assets/master_thesis.pdf"><i class="bi bi-download me-2"></i>Master's Thesis</a>
-                      </li>
-                      <li>
-                        <h5>BS in Computer Science with honors</h5>
-                        <p>A.Y 2010-2013 | University of Genova</p>
-                      </li>
-                      <li>
-                        <h5>First certificate in English (Level B2)</h5>
-                        <p>2012</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Modal3"><img src="images/skills.png" width="100"/><br><b>Skills</b></button>
-            <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="Modal3Label" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="Modal3Label">Skills</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                    <div class="modal-body">
-                      <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link active" id="pl-tab" data-bs-toggle="tab" data-bs-target="#pl" type="button" role="tab" aria-controls="pl" aria-selected="true">Programming Languages</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="frameworks-tab" data-bs-toggle="tab" data-bs-target="#frameworks" type="button" role="tab" aria-controls="frameworks" aria-selected="false">Frameworks and Libraries</button>
-                        </li>
-                      </ul>
-                    <div class="tab-content" id="myTabContent">
-                      <div class="tab-pane fade show active" id="pl" role="tabpanel" aria-labelledby="pl-tab">
-                        <div class="progress mt-3">
-                          <div class="progress-bar progress-bar-two progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Python / C# / Java / LaTeX</div>
-                        </div>
-                        <div class="progress mt-3">
-                          <div class="progress-bar progress-bar-one progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Prolog</div>
-                        </div>
-                        <div class="progress mt-3">
-                          <div class="progress-bar progress-bar-three progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">C / C++ / SQL </div>
-                        </div>
-                        <div class="progress mt-3">
-                          <div class="progress-bar progress-bar-four progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">HTML / CSS / JavaScript / PHP</div>
-                        </div>
-                        <div class="progress mt-3">
-                          <div class="progress-bar progress-bar-five progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Haskell</div>
-                        </div>
-                      </div>
-                      <div class="tab-pane fade" id="frameworks" role="tabpanel" aria-labelledby="frameworks-tab">
-                        <div class="progress mt-3">
-                          <div class="progress-bar progress-bar-two progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Jason / JaCaMo</div>
-                        </div>
-                        <div class="progress mt-3">
-        <div class="progress-bar progress-bar-one progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Spark Java</div>
-      </div>
-      <div class="progress mt-3">
-        <div class="progress-bar progress-bar-three progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">JADE</div>
-      </div>
-      <div class="progress mt-3">
-        <div class="progress-bar progress-bar-four progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">NetLogo / ROS</div>
-      </div>
-      <div class="progress mt-3">
-        <div class="progress-bar progress-bar-five progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Matlab / R / DialogFlow</div>
-      </div>
-    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Modal4"><img src="images/teach.png" width="100"/><br><b>Teaching</b></button>
-            <div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="Modal4Label" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content text-start">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="Modal4Label">Teaching</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                  <ul class="nav nav-tabs" id="myTab2" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="teach-2024-2025-tab" data-bs-toggle="tab" data-bs-target="#teach-2024-2025" type="button" role="tab" aria-controls="teach-2024-2025" aria-selected="false">A.Y. 2024/2025</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="teach-2023-2024-tab" data-bs-toggle="tab" data-bs-target="#teach-2023-2024" type="button" role="tab" aria-controls="teach-2023-2024" aria-selected="false">A.Y. 2023/2024</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="teach-2022-2023-tab" data-bs-toggle="tab" data-bs-target="#teach-2022-2023" type="button" role="tab" aria-controls="teach-2022-2023" aria-selected="false">A.Y. 2022/2023</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="teach-2021-2022-tab" data-bs-toggle="tab" data-bs-target="#teach-2021-2022" type="button" role="tab" aria-controls="teach-2021-2022" aria-selected="false">A.Y. 2021/2022</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="teach-2020-2021-tab" data-bs-toggle="tab" data-bs-target="#teach-2020-2021" type="button" role="tab" aria-controls="teach-2020-2021" aria-selected="false">A.Y. 2020/2021</button>
-                    </li>
-                  </ul>
-      <div class="tab-content" id="myTabContent2">
-        <div class="tab-pane fade show active" id="teach-2024-2025" role="tabpanel" aria-labelledby="teach-2024-2025-tab">
-          <ul class="list-unstyled mt-3">
-            <ul>
-              <h5>Bachelor Courses</h5>
-                <li>Lecturer for the course "Complementi di Programmazione"</li>
-              <br>
-              <h5>Master Courses</h5>
-                <li>Lecturer for the course "Metodi per il ciclo di vita del software"</li>
-                <!--<li>Co-Lecturer for the course "Natural Language Processing (NLP)"</li>-->
-              <br>
-              <!-- <h5>PhD Courses</h5>
-                <li>Lecturer for the course "Introduction to formal verification: an appetiser"</li>
-              <br> -->
-              <!-- <h5>Thesis Advisor</h5>
-                <li>RMLGym: a formal reward machine framework for reinforcement learning by Hisham Unniyankal</li>
-                <li>On Theoretical Questions of Machine Learning, Multi-Agent Systems, and Quantum Computing With Their Reciprocal Applications by Mahyar Sadeghi Garjan</li>
-              </ul> -->
-            </ul>
-        </div>
-        
-        <div class="tab-pane fade" id="teach-2023-2024" role="tabpanel" aria-labelledby="teach-2023-2024-tab">
-          <ul class="list-unstyled mt-3">
-            <ul>
-              <!--<h5>Bachelor Courses</h5>
-                <li>Lecturer for the course "Programmazione Concorrente e Algoritmi Distribuiti (PCAD)"</li>
-              <br>-->
-              <h5>Master Courses</h5>
-                <li>Co-Lecturer for the course "Multi-Agent Systems (MAS)"</li>
-                <!--<li>Co-Lecturer for the course "Natural Language Processing (NLP)"</li>-->
-              <br>
-              <h5>PhD Courses</h5>
-                <li>Lecturer for the course "Introduction to formal verification: an appetiser"</li>
-              <br>
-              <h5>Thesis Advisor</h5>
-                <li>RMLGym: a formal reward machine framework for reinforcement learning by Hisham Unniyankal</li>
-                <li>On Theoretical Questions of Machine Learning, Multi-Agent Systems, and Quantum Computing With Their Reciprocal Applications by Mahyar Sadeghi Garjan</li>
-              </ul>
-            </ul>
-        </div>
-        
-        <div class="tab-pane fade" id="teach-2022-2023" role="tabpanel" aria-labelledby="teach-2022-2023-tab">
-          <ul class="list-unstyled mt-3">
-            <ul>
-              <h5>Bachelor Courses</h5>
-                <li>Lecturer for the course "Programmazione Concorrente e Algoritmi Distribuiti (PCAD)"</li>
-              <br>
-              <h5>Master Courses</h5>
-                <li>Co-Lecturer for the course "Multi-Agent Systems (MAS)"</li>
-                <li>Co-Lecturer for the course "Natural Language Processing (NLP)"</li>
-<!--                 <li>Co-Lecturer for the course "Introduction to Computer Science"</li> -->
-              <br>
-              <h5>PhD Courses</h5>
-                <li>Lecturer for the course "Introduction to formal verification: an appetiser"</li>
-              <br>
-              <h5>Thesis Advisor</h5>
-                <li>Onto2Conv: An application for boosting cognitive conversational agents by Zeinab Namakizadeh Esfahani</li>
-                <li>Towards Incremental Process Mining with PM4Py by Riccardo Grimaldi</li>
-                <li>Assessing Neural Network Transferability through Learned Features by Andrea Canepa</li>
-                <li>'Among Us' game implementation and simulation in Jason with BDI and RL approaches by Manuel Parmiggiani</li>
-              </ul>
-            </ul>
-        </div>
-        
-        <div class="tab-pane fade" id="teach-2021-2022" role="tabpanel" aria-labelledby="teach-2021-2022-tab">
-          <ul class="list-unstyled mt-3">
-            <ul>
-              <h5>Bachelor Courses</h5>
-                <li>Co-Lecturer for the course "Algoritmi e Strutture Dati (ASD)"</li>
-              <br>
-              <h5>Master Courses</h5>
-                <li>Co-Lecturer for the course "Multi-Agent Systems (MAS)"</li>
-                <li>Co-Lecturer for the course "Natural Language Processing (NLP)"</li>
-                <li>Co-Lecturer for the course "Introduction to Computer Science"</li>
-              <br>
-              <h5>PhD Courses</h5>
-                <li>Lecturer for the course "Introduction to formal verification: an appetiser"</li>
-              <br>
-              <h5>Thesis Advisor</h5>
-                <li>Hyper Runtime Verification by Claudio Stana</li>
-                <li>Design and Implementation of a Semantic Search Engine for the AGRICORE project by Jyoti Dhiman</li>
-                <li>To be or not to Be... an Agent in the Theater? by Andrea Gatti</li>
-                <li>Exploiting JADE as a Multi-Agent simulator of the Immune System by Sanchayan Bhunia</li>
-              </ul>
-            </ul>
-        </div>
-
-        <div class="tab-pane fade" id="teach-2020-2021" role="tabpanel" aria-labelledby="teach-2020-2021-tab">
-          <ul class="list-unstyled mt-3">
-            <ul>
-              <h5>Bachelor Courses</h5>
-                <li>Co-Lecturer for the course "Programmazione Concorrente e Algoritmi Distribuiti (PCAD)"</li>
-              <br>
-              <h5>Thesis Advisor</h5>
-                <li>P2P Architecture: Analysis and Implementation of a Smart Parking by Alex Di Stefano</li>
-                <li> Analysis and Development of Control Dashboard in Angular for Smart Parking Server by Christian Stingone</li>
-                <li> Runtime Verification of Autonomous Driving Systems in CARLA by Rodolfo Centanaro</li>
-              </ul>
-            </ul>
-        </div>
-
-
-
-        </div>
-      </div>
-    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Modal5"><img src="images/project.png" width="100"/><br><b>Projects</b></button>
-            <div class="modal fade" id="Modal5" tabindex="-1" aria-labelledby="Modal5Label" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="Modal5Label">Projects</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-          <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="CONVINCE">
-            <button type="button" class="btn btn-secondary"data-bs-toggle="tooltip" data-bs-placement="right" disabled><b>CONVINCE</b></button>
-          </span>
-          <p>
-            Role: Member of WP4 (Verification and Monitoring)<br>
-            October 2022 - December 2024 <br>
-            Funded by the European Union Horizon Europe Programme
-          </p>
-            <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="aI ageNt-baSed modEl oRiented To traffIc cONtrol using CAVs">
-            <button type="button" class="btn btn-secondary"data-bs-toggle="tooltip" data-bs-placement="right" disabled><b>INSERTION</b></button>
-          </span>
-          <p>
-            Role: Principal Investigator <br>
-            July 2022 - July 2024 <br>
-            Funded by the Department of Informatics, Bioengineering, Robotics and Systems Engineering of University of Genova<br>
-            in the context of the SEED research grant.
-          </p>
-          <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Development of a webapp for supporting team building experiences. The app is used to guide the players inside the game and allows interacting with a set of interesting points positioned on the map.">
-            <button type="button" class="btn btn-secondary"data-bs-toggle="tooltip" data-bs-placement="right" disabled><b>Smart Rogaining</b></button>
-          </span>
-          <p>
-            Role: Software Developer <br>
-            February 2018 - February 2019 <br>
-            Commissioned by <a href="https://www.linkedin.com/in/luca-gelati-5b30b038/">Luca Gelati</a><br>
-            WebApp for supporting Team Building
-          </p>
-            <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Development of a chatbot for supporting the call center of the port of Genova. The chatbot answers to generic and specific questions concerning the situation inside the port. The objective of this work is to have support off the clock, since the call center is not a 24h/24h service. The framework used for developing such kind of chatbot is called Dialogflow">
-              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"  data-bs-placement="right" disabled><b>PortBot</b></button>
-            </span>
-            <p>
-              Role: Software Developer <br>
-              April 2018 - December 2018<br>
-              Commissioned by <a href="http://www.cipi.unige.it/">CIPI</a><br>
-              ChatBot for the port of Genova</p>
-
-              <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Development of a progressive webapp for supporting video and auto expertise for an insurance adjuster agency in Genova. The app is divided in two parts: Video and Auto. The video part allows the insurance adjuster to communicate directly with the client through a video chat. During this communication, the app supports also the exchange of information and datas to support the negotiation. The auto part allows the client to insert the datas relating to the damage in order to speed up the negotiation">
-                  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" disabled><b>Video and Auto Expertises</b></button>
-                </span>
-                <p>
-                  Role: Software Developer <br>
-                  January 2018 - January 2019 <br>
-                  Commissioned by <a href="https://www.queirolo.eu/">Queirolo & Associati</a><br>
-                  Progressive WebApp for supporting Video and Auto expertises
-                </p>
-              </div>
-                </div>
-            </div>
-          </div>
-
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Modal6"><img src="images/community.png" width="100"/><br><b>Research community</b></button>
-            <div class="modal fade" id="Modal6" tabindex="-1" aria-labelledby="Modal6Label" aria-hidden="true">
-              <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="Modal6Label">Research community</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body text-start">
-                  <ul class="nav nav-tabs" id="myTab1" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pc-tab" data-bs-toggle="tab" data-bs-target="#pc" type="button" role="tab" aria-controls="pc" aria-selected="true">PC Member and Reviewer [Conferences]</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="reviewer-tab" data-bs-toggle="tab" data-bs-target="#reviewer" type="button" role="tab" aria-controls="reviewer" aria-selected="false">Reviewer [Journals]</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="organiser-tab" data-bs-toggle="tab" data-bs-target="#organiser" type="button" role="tab" aria-controls="organiser" aria-selected="false">Organiser</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="editor-tab" data-bs-toggle="tab" data-bs-target="#editor" type="button" role="tab" aria-controls="editor" aria-selected="false">Editor</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="collaborations-tab" data-bs-toggle="tab" data-bs-target="#collaborations" type="button" role="tab" aria-controls="collaborations" aria-selected="false">Collaborations</button>
-              </li>      
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="speaker-tab" data-bs-toggle="tab" data-bs-target="#speaker" type="button" role="tab" aria-controls="speaker" aria-selected="false">Speaker</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="honor-tab" data-bs-toggle="tab" data-bs-target="#honor" type="button" role="tab" aria-controls="honor" aria-selected="false">Honors and Awards</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="vr-tab" data-bs-toggle="tab" data-bs-target="#vr" type="button" role="tab" aria-controls="vr" aria-selected="false">Visiting researcher</button>
-              </li>
-            </ul>
-            <div class="tab-content" id="myTabContent1">
-              <div class="tab-pane fade show active" id="pc" role="tabpanel" aria-labelledby="pc-tab">
-                <ul class="list-unstyled mt-3">
-                  <ul>
-                    <li>Area Chair for the Engineering and Analysis of Multiagent Systems track in the 25th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2026)</li>
-                    <li>PC Member of the 35th International Joint Conference on Artificial Intelligence (IJCAI 2026)</li>
-                    <li>PC Member in the 40th AAAI Conference on Artificial Intelligence (AAAI 2026)</li>
-                    <li>PC Member in the 14th International Workshop on Engineering Multi-Agent Systems (EMAS 2026)</li>
-                    <li>PC Member in the 18th NASA Formal Methods Symposium (NFM 2026)</li>
-                    <li>Senior PC Member in the 28th European Conference on Artificial Intelligence (ECAI 2025)</li>
-                    <li>PC Member in the 16th International Symposium on Games, Automata, Logics, and Formal Verification (GandALF 2025)</li>
-                    <li>PC Member in the 7th Workshop on Formal Methods for Autonomous Systems (FM AS 2025)</li>
-                    <li>PC Member in the 22nd European Conference on Multi-Agent Systems (EUMAS 2025)</li>
-                    <li>PC Member in the 33rd IEEE International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE 2025)</li>
-                    <li>PC Member in the 13th International Workshop on Engineering Multi-Agent Systems (EMAS 2025)</li>
-                    <li>PC Member of the 34th International Joint Conference on Artificial Intelligence (IJCAI 2025)</li>
-                    <li>PC Member in the 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)</li>
-                    <li>PC Member in the 39th AAAI Conference on Artificial Intelligence (AAAI 2025)</li>
-                    <li>PC Member in the 21st European Conference on Multi-Agent Systems (EUMAS 2024)</li>
-                    <li>PC Member in the 7th Workshop on Verification and Monitoring at Runtime Execution (VORTEX 2024)</li>
-                    <li>PC Member in the 6th Workshop on Formal Methods for Autonomous Systems (FM AS 2024)</li>
-                    <li>PC Member in the 32nd IEEE International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE 2024)</li>
-                    <li>PC Member in the 25th International Conference on Principles and Practice of Multi-Agent Systems (PRIMA 2024)</li>
-                    <li>PC Member in the 1st Workshop on "eXtended Reality & Intelligent Agents" (XRIA24 2024)</li>
-                    <li>PC Member in the 12th International Workshop on Engineering Multi-Agent Systems (EMAS 2024)</li>
-                    <li>PC Member in the 27th European Conference on Artificial Intelligence (ECAI 2024)</li>
-                    <li>PC Member in the 16th NASA Formal Methods Symposium (NFM 2024)</li>
-                    <li>PC Member in the IEEE Space Mission Challenges for Information Technology - IEEE Space Computing Conference (SMC-IT/SCC 2024)</li>
-                    <li>PC Member in the 23rd International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2024)</li>
-                    <li>PC Member in the 38th AAAI Conference on Artificial Intelligence (AAAI 2024)</li>
-                    <li>PC Member in the 2nd Workshop on Strategies, Prediction, Interaction, and Reasoning (SPIRIT 2023)</li>
-                    <li>PC Member in the 23rd Workshop "From Objects to Agents" (WOA 2023)</li>
-                    <li>PC Member in the 26th European Conference on Artificial Intelligence (ECAI 2023)</li>
-                    <li>PC Member in the 5th Workshop on Formal Methods for Autonomous Systems (FM AS 2023)</li>
-                    <li>PC Member in the 6th Workshop on Verification and Monitoring at Runtime Execution (VORTEX 2023)</li>
-                    <li>PC Member in the 20th European Conference on Multi-Agent Systems (EUMAS 2023)</li>
-                    <li>PC Member in the 11th International Workshop on Engineering Multi-Agent Systems (EMAS 2023)</li>
-                    <li>PC Member in the 22nd International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2023)</li>
-                    <li>PC Member in the 37th AAAI Conference on Artificial Intelligence (AAAI 2023)</li>
-                    <li>PC Member in the 5th International Workshop on Verification of Objects at Runtime Execution (VORTEX 2022)</li>
-                    <li>PC Member in the 4th Workshop on Formal Methods for Autonomous Systems (FM AS 2022)</li>
-                    <li>PC Member in the 24th International Conference on Principles and Practice of Multi-Agent Systems (PRIMA 2022)</li>
-                    <li>PC Member in the 10th International Workshop on Engineering Multi-Agent Systems (EMAS 2022)</li>
-                    <li>PC Member in the PhD Symposium (PhD-iFM) at the International Conference on integrated Formal Methods (iFM 2022)</li>
-                    <li>PC Member in the 36th AAAI Conference on Artificial Intelligence (AAAI 2022)</li>
-                    <li>PC Member in the 21st International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2022)</li>
-                    <li>PC Board of the 31st, 32nd and 33rd International Joint Conference on Artificial Intelligence (IJCAI 2022,2023,2024)</li>
-                    <li>PC Member in the 3rd International Workshop on Governing Adaptive and Unplanned Systems of Systems (GAUSS 2021)</li>
-                    <li>PC Member in the 22nd Workshop "From Objects to Agents" (WOA 2021)</li>
-                    <li>PC Member in the 22nd Towards Autonomous Robotic Systems Conference (TAROS 2021)</li>
-                    <li>PC Member in the 30th IEEE International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE 2021)</li>
-                    <li>PC Member in the 4th International Workshop on Verification of Objects at Runtime Execution (VORTEX 2021)</li>
-                    <li>PC Member in the 3rd Workshop on Formal Methods for Autonomous Systems (FM AS 2021)</li>
-                    <li>PC Member in the 9th International Workshop on Engineering Multi-Agent Systems (EMAS 2021)</li>
-                    <li>PC Member in the 30th International Joint Conference on Artificial Intelligence (IJCAI-21)</li>
-                    <li>PC Member in the 20th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2021)</li>
-                    <li>Reviewer in the 32nd International Conference on Database and Expert Systems Applications (DEXA 2021)</li>
-                    <li>Reviewer in the 5th APWeb-WAIM International Joint Conference on Web and Big Data (APWeb-WAIM 2021)</li>
-                    <li>Reviewer in the 21st Towards Autonomous Robotic Systems Conference (TAROS 2020)</li>
-                    <li>PC Member in the 23rd International Conference on Principles and Practice of Multi-Agent Systems (PRIMA 2020)</li>
-                    <li>PC Member in the 2nd Workshop on Formal Methods for Autonomous Systems (FM AS 2020)</li>
-                    <li>PC Member in the 2nd International Workshop on Governing Adaptive and Unplanned Systems of Systems (GAUSS 2020)</li>
-                    <li>PC Member in the 8th International Workshop on Engineering Multi-Agent Systems (EMAS 2020)</li>
-                    <li>PC Member in the 29th International Joint Conference on Artificial Intelligence and the 17th Pacific Rim International Conference on Artificial Intelligence (IJCAI-PRICAI 2020)</li>
-                    <li>PC Member the 29th IEEE International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE 2020)</li>
-                    <li>PC Member in the 22nd International Conference on Principles and Practice of Multi-Agent Systems (PRIMA 2019)</li>
-                    <li>PC Member in the 19th International Conference on Runtime Verification (RV 2019)</li>
-                    <li>PC Member in the 7th International Workshop on Engineering Multi-Agent Systems (EMAS 2019).</li>
-                  </ul>
-                </ul>
-              </div>
-              <div class="tab-pane fade" id="reviewer" role="tabpanel" aria-labelledby="reviewer-tab">
-                <ul class="list-unstyled mt-3">
-                  <ul>
-                    <li>Reviewer of IEEE Transactions on Computers</li>
-                    <li>Reviewer of Multidisciplinary Digital Publishing Institute (MDPI)</li>
-                    <li>Reviewer of Transactions on Internet Technology (TOIT)</li>
-                    <li>Reviewer of Journal of Systems and Software (JSS)</li>
-                    <li>Reviewer of Logic Journal of the IGPL</li>
-                    <li>Reviewer of the journal of the International Foundation for Autonomous Agents and Multi-Agent Systems (JAAMAS)</li>
-                  </ul>
-                </ul></div>
-
-                <div class="tab-pane fade" id="organiser" role="tabpanel" aria-labelledby="organiser-tab">
-                  <ul class="list-unstyled mt-3">
-                    <ul>
-                      <li>Topical Area Curator of Computer Science & Systems (CSS) at Conference on Computer Science and Intelligence Systems (FedCSIS 2025)</li>
-                      <li>Organiser (with R. C. Cardoso) of the 5th Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2025), co-located with ECAI 2025</li>
-                      <li>General Chair (with Vadim Malvone) of the 26th <a href="https://conferences-website.github.io/prima2025/">International Conference on Principles and Practice of Multi-Agent Systems (PRIMA 2025)</a></li>
-                      <li>Proceedings Co-Chair of the 28th European Conference on Artificial Intelligence (ECAI 2025)</li>
-                      <li>Organiser (with R. C. Cardoso, M. Farrell, and M. Luckcuck) of the Engineering Reliable Autonomous Systems (ERAS) in the Lorentz Center (2024)</li>
-                      <li>Co-Chair (with Munyque Mittelmann and Aniello Murano) of the 4th International Workshop on Logical Aspects in Multi-Agent Systems and Strategic Reasoning (LAMAS&SR 2024)</li>
-                      <li>Organiser (with R. C. Cardoso) of the 4th Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2024), co-located with ECAI 2024</li>
-                      <li>PhD Track Chair of the 20th European Conference on Multi-Agent Systems (EUMAS 2023)</li>
-                      <li>Organiser (with R. C. Cardoso) of the 3rd Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2023), co-located with ECAI 2023</li>
-                      <li>Organiser (with R. C. Cardoso, F. Papacchini, M. Askarpour, L. A. Dennis) of the 2nd Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2022), co-located with IJCAI-ECAI 2022</li>
-                      <li>Organiser (with V. Mascardi) of the 23rd Workshop "From Objects to Agents" (WOA 22)</li>
-                      <li>Local organiser of the 16th International Conference on Logic Programming and Nonmonotonic Reasoning (LPNMR 22)</li>
-                      <li>Part of the developing group organising the ARIAC competition at NIST (2022)</li>
-                      <li>Part of the Publicity and Communication Committee for the 20th International Conference of the Italian Association for Artificial Intelligence (AIxIA 2021)</li>
-                      <li>Organiser (with R. C. Cardoso, D. Briola, T. Ahlbrecht, C. Menghi) of the 1st Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2020), co-located with ECAI 2020</li>
-                      <li>Local organizer of the 15th International Conference of the Italian Association for Artificial Intelligence, Genova</li>
-                      <li>Local organiser (with D. Briola, A. Corradi, PC) of Italian Conference on Computational Logic (CILC 2015), Genova</li>
-                    </ul>
-                  </ul></div>
-                <div class="tab-pane fade" id="editor" role="tabpanel" aria-labelledby="editor-tab">
-                  <ul class="list-unstyled mt-3">
-                    <ul>
-                      <li>Editor of the 5th Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2025) proceedings, on CCIS.</li>
-                      <li>Editor of the 4th Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2024) proceedings, on CCIS.</li>
-                      <li>Editor of the <a href="https://link.springer.com/collections/cgbbbjagbj">Special Issue</a> of the 3rd Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2023), on Annals of Mathematics and Artificial Intelligence.</li> 
-                      <li>Editor of the <a href="https://content.iospress.com/articles/intelligenza-artificiale/ia230015?resultNumber=0&totalResults=99&start=0&q=woa+2022&resultsPageSize=10&rows=10">Special Issue</a> of the 23rd Workshop "From Objects to Agents" (WOA22), on Intelligenza Artificiale.</li>
-                      <li>Editor of the 23rd Workshop "From Objects to Agents" (WOA22) proceedings, on CEUR AIxIA Series.</li>
-                      <li>Editor of the 3rd Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2023) proceedings, on EPTCS.</li>
-                      <li>Editor of the <a href="https://www.mdpi.com/journal/robotics/special_issues/1G9447AW7O">Special Issue</a> of the 2nd Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2022), on Robotics.</li> 
-                      <li>Editor of the 2nd Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2022) proceedings, on EPTCS.</li>
-                      <li>Editor of the <a href="https://www.mdpi.com/journal/jsan/special_issues/REA">Special Issue</a> of the 1st Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2020), on the Journal of Sensor and Actuator Networks (JSAN).</li>
-                      <li>Editor of the 1st Workshop on Agents and Robots for reliable Engineered Autonomy (AREA 2020) proceedings, on EPTCS.</li>
-                    </ul>
-                  </ul></div>
-                  <div class="tab-pane fade" id="collaborations" role="tabpanel" aria-labelledby="collaborations-tab">
-                  <ul class="list-unstyled mt-3">
-                    <ul>
-                      <li><a href="https://forma-unige.github.io/">FORmal Methods and logic in Action (FORMA)</a> research group, as a member of the group.</li>
-                      <li><a href="https://autonomy-and-verification.github.io/">Autonomy and Verification Network</a>, as a member of the network.</li>
-                      <li><a href="https://rafaelcaue.github.io/">Rafael C. Cardoso</a> [University of Aberdeen], on topics: Multi-Agent Systems, Robotics, Software Engineering.</li>
-                      <li><a href="https://vadimmalvone.github.io/">Vadim Malvone</a> [Telecom Paris], on topics: Formal Verification, Multi-Agent Systems, Strategic Reasoning.</li>
-                      <li><a href="https://www.nist.gov/">NIST [National Institute of Standards and Technology]</a>, on the development of the <a href="https://www.nist.gov/el/intelligent-systems-division-73500/agile-robotics-industrial-automation-competition">ARIAC</a> competition.</li>
-                    </ul>
-                  </ul></div>
-                  <div class="tab-pane fade" id="speaker" role="tabpanel" aria-labelledby="speaker-tab">
-                    <ul class="list-unstyled mt-3">
-                      <ul>
-                        <li>Regular paper. Evaluating Infrastructure-Less Cooperative Parking Guidance via Agent-Based Simulation (PAAMS 2025), Lille, 25-27 June, 2025.</li>
-                        <li>Regular paper. Oops, I Heard That! Situated Communication with Locality-Aware KQML (EMAS 2025), Detroit, 19-20 June, 2025.</li>
-                        <li>Regular paper. RV4Chatbot: Are Chatbots Allowed to Dream of Electric Sheep? (FMAS 2024), Manchester, 11-13 November, 2024.</li>
-                        <li>Regular paper. Open Challenges in the Formal Verification of Autonomous Driving (FMAS 2024), Manchester, 11-13 November, 2024.</li>
-                        <li>Regular paper. ROSMonitoring 2.0: Extending ROS Runtime Verification to Services and Ordered Topics (FMAS 2024), Manchester, 11-13 November, 2024.</li>
-                        <li>Demo paper. VITAMIN: A Tool for Model Checking of MAS. In the 21st European Conference on Multi-Agent Systems (EUMAS 2024), Dublin, 26-28 August, 2024.</li>
-                        <li>Regular paper. MAiS: Exploiting JADE as a Multi-Agent simulator of the Immune System. In the 21st European Conference on Multi-Agent Systems (EUMAS 2024), Dublin, 26-28 August, 2024.</li>
-                        <li>Regular paper. Walking around with VITAMIN: A Compositional Tool for Model Checking of Multi-Agent Systems. In the 25th Workshop "From Objects to Agents" (WOA 2024), Forte di Bard, 8-10 July, 2024.</li>
-                        <li>Regular paper. RVElastic: a Runtime Verification Framework for Microservice Systems. In the 32nd International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE 2024), Reggio Emilia, 26-28 June, 2024.</li>
-                        <li>Oral communication. Solvent: liveness verification of smart contracts. In the 6th Distributed Ledger Technologies Workshop (DLT 2024), Turin, 14-15 May, 2024.</li>
-                        <li>Regular paper. 3vLTL: a Tool to Generate Automata for Three-valued LTL. In the 5th Workshop on Formal Methods for Autonomous Systems (FMAS 2023), Leiden, 15-16 November, 2023.</li>
-                        <li>Regular paper. RMLGym: a formal reward machine framework for reinforcement learning. In the 24th Workshop "From Objects to Agents" (WOA 2023), Rome, 6-8 November, 2023.</li>
-                        <li>Regular paper. Towards a Coalition Refinement Approach in the Strategic Verification of Multi-Agent Systems. In the Workshop on Strategies, Prediction, Interaction, and Reasoning in Italy (SPIRIT 2023), Rome, 6-9 November, 2023.</li>
-                        <li>Regular paper. Failure Handling in BDI Plans via Runtime Enforcement. 26th European Conference on Artificial Intelligence (ECAI 2023), Kraków, 30 September - 4 October, 2023.</li>
-                        <li>Regular paper. Using a BDI Agent to Represent a Human on the Factory Floor of the ARIAC 2023 Industrial Automation Competition. The 20th European Conference on Multi-Agent Systems (EUMAS 2023), Naples, 14-15 September, 2023.</li>
-                        <li>Journal-First track invited talk. Bridging the gap between Single- and Multi-Model Predictive Runtime Verification. The 25th International Symposium on Formal Methods (FM 2023), Lübeck, 7-9 March, 2023.</li>
-                        <li>Regular paper. Give Me a Hand: How to Use Model Checking for Multi-Agent Systems to Help Runtime Verification and Vice Versa. The 1st Workshop on Strategies, Prediction, Interaction, and Reasoning (SPIRIT 2022), Udine, 29 November, 2022.</li>
-                        <li>Regular paper. Runtime Verification of Autonomous Systems with Imperfect Information. The 20th International Conference on Software Engineering and Formal Methods (SEFM 2022), Berlin, 26-30 September, 2022.</li>
-                        <li>Regular paper. Extending Attack-Fault Trees with Runtime Verification. The 4th Workshop on Formal Methods for Autonomous Systems (FMAS 2022), Berlin, 26-27 September, 2022.</li>
-                        <li>Tutorial. Exploiting Logic Programming for Runtime Verification. The 16th International Conference on Logic Programming and Non-monotonic Reasoning (LPNMR 2022), Genova, 5-9 September, 2022.</li>
-                        <li>Regular paper. Towards the Combination of Model Checking and Runtime Verification on Multi-Agent Systems. The 20th International Conference on Practical Applications of Agents and Multi-Agent Systems (PAAMS 2022), L'Aquila, 13-15 July, 2022.</li>
-                        <li>Regular paper. Summarising a Holistic Approach to the Verification and Validation of Autonomous Cognitive Systems. The 18th International Conference on Principles of Knowledge Representation and Reasoning (KR 2021), Virtual, 10 Novembre, 2021</li>
-                        <li>Tutorial. Enhancing Robot Reliability through Runtime Verification (Tool Demonstration). The 32nd International Symposium on Software Reliability Engineering (ISSRE 2021), Virtual, 27 October, 2021</li>
-                        <li>Regular paper. Towards Partial Monitoring: It is Always too Soon to Give Up. Third Workshop on Formal Methods for Autonomous Systems (FM AS 2021), Virtual, 21 October, 2021.</li>
-                        <li>Regular paper. The IoT Posteggio Smart Parking Project. Italian Conference on ICT for Smart Cities and Communities (I-Cities 2021), Virtual, 22 September, 2021</li>
-                        <li>Regular paper. Combine Model Checking and Runtime Verification in Multi-Agent Systems. Italian Conference on Theoretical Computer Science (ICTCS 2021), Virtual, 13 September, 2021</li>
-                        <li>Regular paper. Incrementally Predictive Runtime Verification. Italian Conference on Computational Logic (CILC 2021), Virtual, 8 September, 2021</li>
-                        <li>Regular paper. RVPLAN: A General Purpose Framework for Replanning using Runtime Verification. Verification and mOnitoring at RunTime EXecution (VORTEX 2021), Virtual, 12 July, 2021</li>
-                        <li>Invited speaker. The IEEE TC on the Verification of Autonomous Systems, 6 May, 2021</li>
-                        <li>Invited speaker. Italian Association for Artificial Intelligence (AixIA 2020) Doctoral Consortium</li>
-                        <li>Regular paper. StreamB: a declarative language forautomatically synthesising abstractenvironments in agent platforms International Workshop on Engineering Multi-Agent Systems (EMAS 2021), London, 3-4 May, 2021</li>
-                        <li>Regular paper. Runtime Verification of the ARIAC competition: Can a robot be Agile and Safe at the same time? Italian Research Group on Artificial Intelligence and Robotics Workshop (AIRO 2020), Torino, 26 November, 2020</li>
-                        <li>Regular paper. ROSMonitoring: a Runtime Verification Framework for ROS. Towards Autonomous Robotic Systems Conference (TAROS 2020), Nottingham, 16 September, 2020</li>
-                        <li>Regular paper. On Enactability of Agent Interaction Protocols: Towards a Unified Approach. International Workshop on Engineering Multi-Agent Systems (EMAS 2019), Montreal, 13-14 May, 2019</li>
-                        <li>Regular paper. Verifying and Validating Autonomous Systems: Towards an Integrated Approach. International Conference on Runtime Verification (RV 2018), Limassol (Cyprus), 10-13 November, 2018</li>
-                        <li>Regular paper. Decentralizing MAS Monitoring with DecaMon. International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2017), San Paolo, 8-12 May, 2017</li>
-                        <li>Regular paper. Automatic Partitions Extraction to Distribute the Runtime Verification of a Global Specification. International Conference of the Italian Association for the Artificial Intelligence Doctoral Consortium (AI*IA 2016), Genova, 28 November - 1 December, 2016</li>
-                        <li>Regular paper. Monitoring Patients with Hypoglycemia Using Self-adaptive Protocol-Driven Agents: A Case Study. International Workshop on Engineering Multi-Agent Systems (EMAS 2016), Singapore, 9-10 May, 2016</li>
-                      </ul>
-                    </ul></div>
-                    <div class="tab-pane fade" id="honor" role="tabpanel" aria-labelledby="honor-tab">
-                      <ul class="list-unstyled mt-3">
-                        <ul>
-                          <li>The paper "Theory and Practice of Quantitative ATL" won the Best Paper Award at the 25th International Conference on Principles and Practice of Multi-Agent Systems (PRIMA 2024)</li>
-                          <li>The paper "Bridging the gap between single- and multi-model predictive runtime verification" won the journal-first track award at the 25th International Symposium on Formal Methods (FM 2023)</li>
-                          <li>2nd place in the <a href="https://multiagentcontest.org/2020/">Multi-Agent Programming Contest</a>, 2020</li>
-                          <li>1st place in the <a href="https://multiagentcontest.org/2019/">Multi-Agent Programming Contest</a>, 2019</li>
-                          <li>Best Paper Award at the 7th International Workshop on Engineering Multi-Agent Systems (EMAS 2019)</li>
-                          <li>Special mention for the Master's thesis: <a href="https://angeloferrando.github.io/website/assets/master_thesis.pdf">"Trace expressions for runtime verification and protocol-driven behaviour"</a></li>
-                        </ul>
-                      </ul></div>
-                      <div class="tab-pane fade" id="vr" role="tabpanel" aria-labelledby="vr-tab">
-                        <ul class="list-unstyled mt-3">
-                          <ul>
-                            <li>Two months at the University of Liverpool, UK (Jan - Feb 2017) where he worked with Prof. Michael Fisher and Prof. Louise A. Dennis for integrating a runtime verification process inside the <a href="https://sourceforge.net/projects/mcapl/">MCAPL framework</a></li>
-                            <li>One month at the University of Lancaster, UK (Feb - Mar 2018) where he worked with Prof. Amit K. Chopra and Dr. Akin Gunay</li>
-                            <li>Three months at the University of Otago, New Zealand (Aug - Oct 2018) where he worked with Prof. Michael Winikoff, Prof. Stephen Cranefield and Prof. Frank Dignum</li>
-                          </ul>
-                        </ul></div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Modal7"><img src="images/pub.png" width="100"/><br><b>Publications</b></button>
-            <div class="modal fade" id="Modal7" tabindex="-1" aria-labelledby="Modal7Label" aria-hidden="true">
-              <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="Modal7Label">Publications</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/134/9527.bib&jsonp=1&fullnames=1&filter=authors:Ferrando&jsonp=1&folding=1"></script>
-                  </div>
-
-                        </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-        </section>
-
-        <section id="thesis">
-          <div class="container text-center">
-              <a href="thesis.html"><button type="button" class="btn btn-primary btn-lg mt-5"><strong>Thesis and Internships</strong></button></a>
-            </div>
-        </section>  
-
-         <div class="margin-footer container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
-          <div class="col-md-4 d-flex align-items-center">
-            <span class="text-muted">&copy; 2024 AF & MC</span>
-          </div>
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <div class="icons ms-auto">
-                <a href="https://www.linkedin.com/in/angelo-ferrando-1aaa0a60" class="text-decoration-none mx-3">
-                  <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="https://www.facebook.com/angelo.ferrando.5" class="text-decoration-none mx-3">
-                  <i class="bi bi-facebook"></i>
-                </a>
-                <a href="https://github.com/AngeloFerrando" class="text-decoration-none mx-3">
-                  <i class="bi bi-github"></i>
-                </a>
-<!--                 <a href="https://orcid.org/0000-0002-8711-4670" class="text-decoration-none mx-3">
-                  <i class="fa-brands fa-orcid"></i>
-                </a> -->
-            </div>
-        </footer>
-      </div>
-      </main>
-
-
-      <!-- Optional JavaScript; choose one of the two! -->
-
-      <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-      <script>
-        function resize(e) {
-          if (window.outerWidth >= 768)
-          {
-            $('.margin-footer').addClass('fixed-bottom');
-          } else {
-            $('.margin-footer').removeClass('fixed-bottom');
-          }
-        }
-        window.onresize = resize;
-        resize(null);
-      </script>
-
-      <!-- Option 2: Separate Popper and Bootstrap JS -->
-      <!--
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-      -->
-    </body>
-  </html>
+  
+</html>
