@@ -177,10 +177,17 @@ a:hover {
 /* =========================================================
    FILTER INPUT
 ========================================================= */
-#filterInput {
+.thesis-filter {
   max-width: 520px;
+}
+
+#filterInput {
   border-radius: 6px;
   font-size: 0.9rem;
+}
+
+#filterInput::-webkit-search-cancel-button {
+  appearance: none;
 }
 
 .form-control:focus {
@@ -435,7 +442,7 @@ footer {
 
   <!-- Filter -->
   <div class="d-flex flex-column flex-md-row gap-2 mb-4">
-    <div class="position-relative flex-grow-1">
+    <div class="position-relative flex-grow-1 thesis-filter">
       <input
         type="search"
         id="filterInput"

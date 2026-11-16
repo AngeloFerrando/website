@@ -6,6 +6,11 @@ body {
   background: #1e1e1e;
   font-family: "Fira Code", monospace;
   color: #d4d4d4;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar { width: 6px; height: 6px; }
@@ -28,6 +33,7 @@ body {
 
 .window-controls {
   display: flex;
+  flex: none;
   gap: 6px;
 }
 
@@ -44,6 +50,7 @@ body {
 
 .topbar-title {
   opacity: 0.9;
+  overflow-wrap: anywhere;
 }
 
 /* ================================================================
@@ -51,7 +58,9 @@ body {
    ================================================================ */
 .layout {
   display: flex;
-  height: calc(100vh - 48px);
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
 }
 
 /* ================================================================
@@ -59,6 +68,7 @@ body {
    ================================================================ */
 .sidebar {
   width: 50px;
+  flex-shrink: 0;
   background: #202020;
   border-right: 1px solid #333;
   display: flex;
@@ -92,6 +102,8 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 0;
+  min-width: 0;
 }
 
 /* ================================================================
@@ -108,6 +120,7 @@ body {
 
 .terminal-output {
   white-space: pre-wrap;
+  overflow-wrap: anywhere;
   margin-bottom: 4px;
 }
 
@@ -139,25 +152,38 @@ body {
 /* ================================================================
    TABS
    ================================================================ */
+.file-navigation {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.file-menu-toggle {
+  display: none;
+}
+
 .tabs {
   display: flex;
+  flex-wrap: wrap;
   background: #252526;
   border-bottom: 1px solid #333;
-  overflow-x: auto;
-  position: sticky;
-  top: 0;
-  z-index: 100;
   box-shadow: 0 4px 8px rgba(0,0,0,0.35);
 }
 
-.tabs::-webkit-scrollbar { display: none; }
-
 .tab {
-  padding: 12px 20px;
+  display: block;
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 12px 14px;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid #333;
+  border-bottom: 2px solid transparent;
   cursor: pointer;
   color: #ccc;
-  border-right: 1px solid #333;
-  white-space: nowrap;
+  font: inherit;
+  text-align: left;
+  overflow-wrap: anywhere;
   transition: background 0.2s, color 0.2s;
 }
 
@@ -170,7 +196,13 @@ body {
   background: #1e1e1e;
   color: #fff;
   font-weight: 600;
-  border-bottom: 2px solid #007acc;
+  border-bottom-color: #007acc;
+}
+
+.tab:focus-visible,
+.file-menu-toggle:focus-visible {
+  outline: 2px solid #52a8ff;
+  outline-offset: -2px;
 }
 
 /* ================================================================
@@ -178,13 +210,14 @@ body {
    ================================================================ */
 .window {
   flex: 1;
+  min-height: 0;
   background: #1e1e1e;
   overflow-y: auto;
 }
 
 .content {
   padding: 8px 24px 24px 24px;
-  white-space: normal;     /* ← la vera fix */
+  white-space: normal;
   line-height: 1.45;
 }
 
@@ -202,8 +235,7 @@ body {
 /* Line numbers */
 .code-block.with-lines {
   display: grid;
-  grid-template-columns: 50px auto;
-  column-gap: 16px;
+  grid-template-columns: 50px minmax(0, 1fr);
   padding: 16px 20px;
   background: #1e1e1e;
   line-height: 1.50;
@@ -222,33 +254,38 @@ body {
 .code-line {
   color: #d4d4d4;
   white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.code-line:has(> .syntax-list:first-child) {
+  position: relative;
+  padding-inline-start: 2.4ch;
+  white-space: normal;
+}
+
+.code-line:has(> .syntax-list:first-child) > .syntax-list {
+  position: absolute;
+  inset-inline-start: 2px;
+  padding-inline-end: 0;
+}
+
+.academic-years {
+  display: inline-block;
+  max-width: 100%;
 }
 
 
 /* Syntax highlight */
 .syntax-comment { color: #6a9955; }
 .syntax-title   { color: #569CD6; }
-.syntax-list    { color: #d7ba7d; padding-right: 6px; }
+.syntax-list    { color: #d7ba7d; padding-inline-end: 1ch; }
 .syntax-symbol  { color: #9cdcfe; }
 .syntax-strong  { color: #d19a66; }
 .syntax-fn { color: #c586c0; }
+.syntax-degree {color: #969696;}
 
 a { color: #9cdcfe; text-decoration: none;}
 a:hover { color: #9cdcfe;  text-decoration: underline;}
-
-/* LISTE STILE CODICE (desktop + mobile) */
-.syntax-list {
-  display: inline-block;
-  width: 12px;               /* spazio per il trattino */
-  padding-left: 2px;
-  margin-left: 0;
-}
-
-/* Il contenuto dopo il trattino si allinea bene */
-.syntax-list + span {
-  display: inline;
-  padding-left: 2px;
-}
 
 .code-line .indent {
   display: inline-block;
@@ -262,8 +299,12 @@ a:hover { color: #9cdcfe;  text-decoration: underline;}
 /* ================================================================
    STATUS BAR
    ================================================================ */
+
 .statusbar {
   height: 26px;
+  min-height: 26px;
+  flex-shrink: 0;
+  box-sizing: border-box;
   background: #007acc;
   color: #fff;
   font-size: 0.75rem;
@@ -272,6 +313,7 @@ a:hover { color: #9cdcfe;  text-decoration: underline;}
   align-items: center;
   padding: 0 12px;
 }
+
 
 .status-left span,
 .status-right span {
@@ -309,38 +351,54 @@ a:hover { color: #9cdcfe;  text-decoration: underline;}
 /* ================================================================
    RESPONSIVE
    ================================================================ */
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
+  .tabs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 
-  /* layout verticale */
+  .tab {
+    border-top: 1px solid #333;
+  }
+}
+
+@media (max-width: 1024px), (max-width: 1366px) and (pointer: coarse) {
   .layout {
     flex-direction: column;
-    height: auto;
   }
 
   .sidebar {
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
-    padding: 6px 0;
+    padding: 4px 0;
+    gap: 0;
     border-right: none;
     border-bottom: 1px solid #333;
   }
 
-  /* tabs più compatti */
   .tab {
-    padding: 8px 14px;
-    font-size: 0.85rem;
+    min-height: 44px;
+    padding: 8px;
+    font-size: 0.8rem;
   }
 
-  /* codeblock: versione mobile-friendly */
+  .terminal,
+  .statusbar {
+    display: none;
+  }
+
+  .content {
+    padding: 8px 14px 20px;
+  }
+
   .code-block.with-lines {
-    grid-template-columns: 32px auto;  /* più stretta la colonna numeri */
-    padding: 16px 16px;
+    grid-template-columns: 32px minmax(0, 1fr);
+    padding: 12px;
     column-gap: 10px;
   }
 
   .code-block.with-lines .line-number {
-    width: 28px;
     font-size: 0.75rem;
     padding-right: 4px;
   }
@@ -352,87 +410,92 @@ a:hover { color: #9cdcfe;  text-decoration: underline;}
 
 }
 
-@media (max-width:480px) {
-
-  /* Tabs più compatti */
-  .tab {
-    padding: 6px 8px;
-    font-size: 0.75rem;
+@media (max-width: 700px), (max-width: 1024px) and (max-height: 500px) and (pointer: coarse) {
+  .file-menu-toggle:not([hidden]) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 46px;
+    padding: 6px 12px;
+    border: 0;
+    border-bottom: 1px solid #333;
+    background: #252526;
+    color: #dcdcdc;
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
   }
 
-  /* Contenuto meno distanziato a sinistra */
-  .content {
-    padding-top: 22px !important;
-    padding-left: 6px;       /* ← ridotto */
-    padding-right: 8px;      /* ← più naturale */
-    padding-bottom: 14px;
-  }
-
-  /* Codeblock più compatto e allineato */
-  .code-block {
-    padding-top: 18px !important;
-    padding-bottom: 8px;
-    padding-left: 6px !important;   /* ← ridotto */
-    padding-right: 8px !important;  /* ← ridotto */
-  }
-
-  /* Versione con numeri rimossi */
-  .code-block.with-lines {
-    display: block !important;
-    padding-top: 18px !important;
-    padding-left: 6px !important;   /* ← uguale agli altri */
-    padding-right: 8px !important;
-  }
-
-  /* Nascondi numeri */
-  .code-block.with-lines .line-number {
-    display: none !important;
-  }
-
-  /* Linee del codice */
-  .code-block.with-lines span {
-    display: block;
+  .current-file {
+    color: #9cdcfe;
     font-size: 0.9rem;
-    line-height: 1.34;
-    margin-bottom: 3px;   /* ← ridotto */
+    font-weight: 600;
+    overflow-wrap: anywhere;
   }
 
-  /* Indentazione liste */
-  .syntax-list {
-    display: inline-block !important;
-    margin-right: 6px;
+  .file-menu-action {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    background: #2d2d30;
+    font-size: 0.8rem;
   }
 
-  .syntax-list + span {
-    display: inline !important;
-    padding-left: 0 !important;
+  .file-menu-toggle[aria-expanded="true"] .bi-chevron-down {
+    transform: rotate(180deg);
   }
 
-  /* Righe vuote */
-  .code-block.with-lines span:empty {
-    height: 4px;          /* ← più compatta */
+  .file-menu-toggle:not([hidden]) + .tabs {
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline: 0;
+    max-height: 60vh;
+    max-height: 60dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    box-shadow: 0 12px 20px rgba(0,0,0,0.5);
   }
 
-  /* Titoli */
-  .code-block.with-lines .code-line .syntax-title {
-    display: inline-block;
-    margin-top: 12px;      /* ← era vuoto, ora corretto */
-  }
-
-  /* Primo titolo */
-  .code-block.with-lines .code-line:first-of-type .syntax-title {
-    margin-top: 0;
-  }
-
-}
-
-@media (max-width: 768px) {
-  .terminal , .statusbar {
+  .file-menu-toggle:not([hidden])[aria-expanded="false"] + .tabs {
     display: none;
   }
 }
 
+@media (max-width: 600px), (max-width: 700px) and (min-height: 501px) {
+  .tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
+@media (max-width: 480px) {
+  .topbar-title {
+    font-size: 0.8rem;
+  }
+
+  .content {
+    padding: 8px 12px 16px;
+  }
+
+  .code-block.with-lines {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 8px 0;
+    row-gap: 3px;
+  }
+
+  .code-block.with-lines .line-number {
+    display: none;
+  }
+
+  .code-block.with-lines > .code-line:empty {
+    min-height: 6px;
+  }
+}
 
 .code-line.indent-hanging {
   margin-left: 18px;
@@ -441,7 +504,7 @@ a:hover { color: #9cdcfe;  text-decoration: underline;}
 .tab .ext {
   font-size: 0.75em;
   opacity: 0.6;
-  margin-left: 4px;
+  margin-left: 0.5em;
 }
 
 .tab.external {
@@ -451,6 +514,13 @@ a:hover { color: #9cdcfe;  text-decoration: underline;}
 .tab.external:hover {
   background: #2d2d2d;
   color: #9cdcfe;
+}
+
+@media (max-width: 360px), (max-width: 700px) and (max-height: 500px) {
+  .tab {
+    padding-inline: 6px;
+    font-size: 0.75rem;
+  }
 }
 
 #snake-canvas {

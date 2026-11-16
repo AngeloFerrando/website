@@ -56,46 +56,54 @@
       </section>
 
       <!-- TABS -->
-      <div class="tabs">
-        <div class="tab active" data-target="about" data-file="about.md" onclick="openTab('about', this)">
-          <i class="bi bi-person-fill"></i> about.md
-        </div>
-        <div class="tab" data-target="work" data-file="work.md" onclick="openTab('work', this)">
-          <i class="bi bi-briefcase-fill"></i> work.md
-        </div>
-        <div class="tab" data-target="education" data-file="education.md" onclick="openTab('education', this)">
-          <i class="bi bi-patch-check-fill"></i> education.md
-        </div>
-        <div class="tab" data-target="teaching" data-file="teaching.md" onclick="openTab('teaching', this)">
-          <i class="bi bi-easel2-fill"></i> teaching.md
-        </div>
-        <div class="tab" data-target="projects" data-file="projects.md" onclick="openTab('projects', this)">
-          <i class="bi bi-diagram-3-fill"></i> projects.md
-        </div>
-        <div class="tab" data-target="community" data-file="community.md" onclick="openTab('community', this)">
-          <i class="bi bi-globe"></i> community.md
-        </div>
-        <a class="tab external"
-        href="https://dblp.org/pid/134/9527.html"
-        target="_blank"
-        rel="noopener noreferrer"
-        onclick="return openExternalFromClick('publications.bib','dblp.org', this.href);">
-        <i class="bi bi-book-fill"></i> publications.bib <span class="ext">↗</span>
-        </a>
-        <a class="tab external"
-          href="https://angeloferrando.github.io/website/thesis.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          onclick="return openExternalFromClick('thesis.link','thesis supervision page', this.href);">
-          <i class="bi bi-file-earmark-text-fill"></i> thesis.link <span class="ext">↗</span>
-        </a>
-
+      <div class="file-navigation">
+        <button type="button" class="file-menu-toggle" aria-expanded="false" aria-controls="site-tabs" aria-labelledby="file-menu-label current-file" hidden>
+          <span class="current-file" id="current-file">about.md</span>
+          <span class="file-menu-action">
+            <span id="file-menu-label">Menu</span>
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </span>
+        </button>
+        <nav class="tabs" id="site-tabs" aria-label="Website sections">
+          <button type="button" class="tab active" data-target="about" data-file="about.md" aria-controls="about" aria-pressed="true" onclick="openTab('about', this)">
+            <i class="bi bi-person-fill"></i> about.md
+          </button>
+          <button type="button" class="tab" data-target="work" data-file="work.md" aria-controls="work" aria-pressed="false" onclick="openTab('work', this)">
+            <i class="bi bi-briefcase-fill"></i> work.md
+          </button>
+          <button type="button" class="tab" data-target="education" data-file="education.md" aria-controls="education" aria-pressed="false" onclick="openTab('education', this)">
+            <i class="bi bi-patch-check-fill"></i> education.md
+          </button>
+          <button type="button" class="tab" data-target="teaching" data-file="teaching.md" aria-controls="teaching" aria-pressed="false" onclick="openTab('teaching', this)">
+            <i class="bi bi-easel2-fill"></i> teaching.md
+          </button>
+          <button type="button" class="tab" data-target="projects" data-file="projects.md" aria-controls="projects" aria-pressed="false" onclick="openTab('projects', this)">
+            <i class="bi bi-diagram-3-fill"></i> projects.md
+          </button>
+          <button type="button" class="tab" data-target="community" data-file="community.md" aria-controls="community" aria-pressed="false" onclick="openTab('community', this)">
+            <i class="bi bi-globe"></i> community.md
+          </button>
+          <a class="tab external"
+            href="https://dblp.org/pid/134/9527.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            onclick="return openExternalFromClick('publications.bib','dblp.org', this.href);">
+            <i class="bi bi-book-fill"></i> publications.bib<span class="ext">↗</span>
+          </a>
+          <a class="tab external"
+            href="https://angeloferrando.github.io/website/thesis.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            onclick="return openExternalFromClick('thesis.link','thesis supervision page', this.href);">
+            <i class="bi bi-file-earmark-text-fill"></i> thesis.link<span class="ext">↗</span>
+          </a>
+        </nav>
       </div>
 
       <!-- CONTENUTO EDITOR -->
       <div class="window">
 
-        <div id="about" class="content" style="display:none;">
+        <div id="about" class="content">
           <div class="code-block with-lines markdown-syntax">
             
           <span class="line-number">1</span><span class="code-line"><span class="syntax-comment">// File: about.md</span></span>
@@ -110,32 +118,19 @@
 
           <span class="line-number">8</span><span class="code-line"></span>
 
-          <span class="line-number">9</span><span class="code-line"><span class="syntax-title"># Experience</span></span>
-
-          <span class="line-number">10</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Research Fellow</span></span>
-          <span class="line-number">11</span><span class="code-line"><span class="indent">@ <a href="https://dibris.unige.it/" target="_blank">University of Genova</a> (2021–2024)</span></span>
-
-          <span class="line-number">12</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Postdoctoral Research Associate</span></span>
-          <span class="line-number">13</span><span class="code-line"><span class="indent">@ <a href="https://www.cs.manchester.ac.uk/" target="_blank">University of Manchester</a> (2020–2021)</span></span>
-
-          <span class="line-number">14</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Postdoctoral Research Associate</span></span>
-          <span class="line-number">15</span><span class="code-line"><span class="indent">@ <a href="https://www.liverpool.ac.uk/computer-science/" target="_blank">University of Liverpool</a> (2018–2020)</span></span>
-
-          <span class="line-number">16</span><span class="code-line"></span>
-
-          <span class="line-number">17</span><span class="code-line"><span class="syntax-title"># Roles</span></span>
-          <span class="line-number">18</span><span class="code-line">Head of public relations for <a href="https://www.jair.org/index.php/jair/about/editorialTeam" target="_blank">JAIR</a> (2026–present)</span>
-          <span class="line-number">19</span><span class="code-line">Deputy Coordinator of the <a href="https://www.cds.unimore.it" target="_blank">PhD Program in Computer and Data Science for Technological and Social Innovation (CDS-TSI) </a>a @ UNIMORE (2026–present)</span>
-          <span class="line-number">20</span><span class="code-line">Coordinator @ <a href="https://www.consorzio-cini.it/index.php/it/laboratori-nazionali/smart-cities" target="_blank">CINI Smart Cities &amp; Communities</a> (2021–2024)</span>
+          <span class="line-number">9</span><span class="code-line"><span class="syntax-title"># Roles</span></span>
+          <span class="line-number">10</span><span class="code-line"><span class="syntax-list">-</span>Head of Public Relations @ <a href="https://www.jair.org/index.php/jair/about/editorialTeam" target="_blank">Journal of Artificial Intelligence Research - JAIR</a> (2026–present)</span>
+          <span class="line-number">11</span><span class="code-line"><span class="syntax-list">-</span>Deputy Coordinator @ <a href="https://www.cds.unimore.it" target="_blank">UNIMORE PhD Program in Computer and Data Science</a> (2026–present)</span>
+          <span class="line-number">12</span><span class="code-line"><span class="syntax-list">-</span>Coordinator @ <a href="https://www.consorzio-cini.it/index.php/it/laboratori-nazionali/smart-cities" target="_blank">CINI Smart Cities &amp; Communities</a> (2021–2024)</span>
             
-          <span class="line-number">21</span><span class="code-line"></span>
+          <span class="line-number">13</span><span class="code-line"></span>
 
-          <span class="line-number">22</span><span class="code-line"><span class="syntax-title"># Research Topics</span></span>
+          <span class="line-number">14</span><span class="code-line"><span class="syntax-title"># Research Topics</span></span>
 
-          <span class="line-number">23</span><span class="code-line"><span class="syntax-list">-</span>Formal Methods</span>
-          <span class="line-number">24</span><span class="code-line"><span class="syntax-list">-</span>Runtime Verification</span>
-          <span class="line-number">25</span><span class="code-line"><span class="syntax-list">-</span>Software Engineering</span>
-          <span class="line-number">26</span><span class="code-line"><span class="syntax-list">-</span>Multi-Agent Systems</span>
+          <span class="line-number">15</span><span class="code-line"><span class="syntax-list">-</span>Formal Methods and Verification</span>
+          <span class="line-number">16</span><span class="code-line"><span class="syntax-list">-</span>Runtime Verification and Monitoring</span>
+          <span class="line-number">17</span><span class="code-line"><span class="syntax-list">-</span>Multi-Agent Systems and Strategic Reasoning</span>
+          <span class="line-number">18</span><span class="code-line"><span class="syntax-list">-</span>Autonomous Systems and Trustworthy AI</span>
 
           </div>
         </div>
@@ -167,16 +162,19 @@
 
           <span class="line-number">15</span><span class="code-line"></span>
 
-          <span class="line-number">16</span><span class="code-line"><span class="syntax-title"># Visiting Researcher</span></span>
+          <span class="line-number">16</span><span class="code-line"><span class="syntax-title"># Research Visits</span></span>
+          
+          <span class="line-number">17</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">University of Otago, New Zealand</span> (Aug–Oct 2018)</span>
+          <span class="line-number">18</span><span class="code-line"><span class="indent">Collaborated with Michael Winikoff, Stephen Cranefield and Frank Dignum</span></span>
 
-          <span class="line-number">17</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">University of Liverpool, UK</span> (Jan–Feb 2017)</span>
-          <span class="line-number">18</span><span class="code-line"><span class="indent">Worked with Prof. Michael Fisher and Prof. Louise A. Dennis</span></span>
+          <span class="line-number">19</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Lancaster University, UK</span> (Feb–Mar 2018)</span>
+          <span class="line-number">20</span><span class="code-line"><span class="indent">Collaborated with Amit K. Chopra and Akin Gunay</span></span>
 
-          <span class="line-number">19</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">University of Lancaster, UK</span> (Feb–Mar 2018)</span>
-          <span class="line-number">20</span><span class="code-line"><span class="indent">Worked with Prof. Amit K. Chopra and Dr. Akin Gunay</span></span>
+          <span class="line-number">21</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">University of Liverpool, UK</span> (Jan–Feb 2017)</span>
+          <span class="line-number">22</span><span class="code-line"><span class="indent">Collaborated with Michael Fisher and Louise A. Dennis</span></span>
 
-          <span class="line-number">21</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">University of Otago, New Zealand</span> (Aug–Oct 2018)</span>
-          <span class="line-number">22</span><span class="code-line"><span class="indent">Worked with Prof. Michael Winikoff, Prof. Stephen Cranefield and Prof. Frank Dignum</span></span>
+
+          
 
           </div>
         </div>
@@ -197,20 +195,16 @@
         <span class="line-number">7</span><span class="code-line"><span class="indent"> Thesis = <a href="assets/template.pdf">("phd-thesis.pdf")</a></span></span>
 
         <!-- MS -->
-        <span class="line-number">8</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">MS in Computer Science with honors</span></span>
+        <span class="line-number">8</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">MSc in Computer Science with honors</span></span>
         <span class="line-number">9</span><span class="code-line"><span class="indent">University of Genova (2013–2015)</span></span>
         <span class="line-number">10</span><span class="code-line"><span class="indent"> Thesis = <a href="assets/master_thesis.pdf">("ms-thesis.pdf")</a></span></span>
 
         <!-- BS -->
-        <span class="line-number">11</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">BS in Computer Science with honors</span></span>
+        <span class="line-number">11</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">BSc in Computer Science with honors</span></span>
         <span class="line-number">12</span><span class="code-line"><span class="indent">University of Genova (2010–2013)</span></span>
 
-        <!-- English -->
-        <span class="line-number">13</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">First Certificate in English (Level B2)</span></span>
-
-        </div>
       </div>
-
+</div>
 
 
       <div id="teaching" class="content" style="display:none;">
@@ -220,47 +214,32 @@
         <span class="line-number">2</span><span class="code-line"><span class="syntax-comment">// Author: Angelo Ferrando</span></span>
         <span class="line-number">3</span><span class="code-line"></span>
 
-        <span class="line-number">4</span><span class="code-line"><span class="syntax-title"># A.Y. 2026–2027 (UNIMORE)</span></span>
-        <span class="line-number">5</span><span class="code-line"><span class="syntax-list">-</span>Programmazione 1 <span class="syntax-symbol">[BSc]</span></span>
-        <span class="line-number">6</span><span class="code-line"><span class="syntax-list">-</span>Metodi per il ciclo di vita del software <span class="syntax-symbol">[MSc]</span></span>
-          
-        <span class="line-number">7</span><span class="code-line"><span class="syntax-title"># A.Y. 2025–2026 (UNIMORE)</span></span>
-        <span class="line-number">8</span><span class="code-line"><span class="syntax-list">-</span>Complementi di Programmazione <span class="syntax-symbol">[BSc]</span></span>
-        <span class="line-number">9</span><span class="code-line"><span class="syntax-list">-</span>Metodi per il ciclo di vita del software <span class="syntax-symbol">[MSc]</span></span>
+        
+        <span class="line-number">4</span><span class="code-line"><span class="syntax-title"># University of Modena and Reggio Emilia (UNIMORE)</span></span>
+        <span class="line-number">5</span><span class="code-line"><span class="syntax-list">-</span> Programmazione 1 <span class="syntax-degree">[BSc]</span> (A.Y. 2026–2027)</span>
+        <span class="line-number">6</span><span class="code-line"><span class="syntax-list">-</span> Introduction to Formal Verification: From Foundations to AI and Multi-Agent Systems <span class="syntax-degree">[PhD]</span> <span class="academic-years">(A.Y. 2025–2026, 2026–2027)</span></span>
+        <span class="line-number">7</span><span class="code-line"><span class="syntax-list">-</span> Metodi per il ciclo di vita del software <span class="syntax-degree">[MSc]</span> (A.Y. 2024–2025, 2025–2026, 2026–2027)</span>
+        <span class="line-number">8</span><span class="code-line"><span class="syntax-list">-</span> Complementi di Programmazione <span class="syntax-degree">[BSc]</span> (A.Y. 2024–2025, 2025–2026)</span>
 
-        <span class="line-number">10</span><span class="code-line"></span>
+        <span class="line-number">9</span><span class="code-line"></span>
 
-        <span class="line-number">11</span><span class="code-line"><span class="syntax-title"># A.Y. 2024–2025 (UNIMORE)</span></span>
-        <span class="line-number">12</span><span class="code-line"><span class="syntax-list">-</span>Complementi di Programmazione <span class="syntax-symbol">[BSc]</span></span>
-        <span class="line-number">13</span><span class="code-line"><span class="syntax-list">-</span>Metodi per il ciclo di vita del software <span class="syntax-symbol">[MSc]</span></span>
+        <span class="line-number">10</span><span class="code-line"><span class="syntax-title"># University of Genova (UNIGE)</span></span>
+        <span class="line-number">11</span><span class="code-line"><span class="syntax-list">-</span> Multi-Agent Systems (MAS) <span class="syntax-degree">[MSc]</span> (A.Y. 2021–2022, 2022–2023, 2023–2024) — Co-Lecturer</span>
+        <span class="line-number">12</span><span class="code-line"><span class="syntax-list">-</span> Introduction to Formal Verification: An Appetiser <span class="syntax-degree">[PhD]</span> (A.Y. 2021–2022, 2022–2023, 2023–2024)</span>
+        <span class="line-number">13</span><span class="code-line"><span class="syntax-list">-</span> Programmazione Concorrente e Algoritmi Distribuiti <span class="syntax-degree">[BSc]</span> (A.Y. 2020–2021 as Co-Lecturer, 2022–2023)</span>
+        <span class="line-number">14</span><span class="code-line"><span class="syntax-list">-</span> Natural Language Processing (NLP) <span class="syntax-degree">[MSc]</span> (A.Y. 2021–2022, 2022–2023) — Co-Lecturer</span>
+        <span class="line-number">15</span><span class="code-line"><span class="syntax-list">-</span> Algoritmi e Strutture Dati <span class="syntax-degree">[BSc]</span> (A.Y. 2021–2022) — Co-Lecturer</span>
+        <span class="line-number">16</span><span class="code-line"><span class="syntax-list">-</span> Introduction to Computer Science <span class="syntax-degree">[MSc]</span> (A.Y. 2021–2022) — Co-Lecturer</span>
+        
+        <span class="line-number">17</span><span class="code-line"></span>
 
-        <span class="line-number">14</span><span class="code-line"></span>
-
-        <span class="line-number">15</span><span class="code-line"><span class="syntax-title"># A.Y. 2023–2024 (UNIGE)</span></span>
-        <span class="line-number">16</span><span class="code-line"><span class="syntax-list">-</span>Multi-Agent Systems (MAS) <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
-        <span class="line-number">17</span><span class="code-line"><span class="syntax-list">-</span>Introduction to formal verification: an appetiser <span class="syntax-symbol">[PhD]</span></span>
-
-        <span class="line-number">18</span><span class="code-line"></span>
-
-        <span class="line-number">19</span><span class="code-line"><span class="syntax-title"># A.Y. 2022–2023 (UNIGE)</span></span>
-        <span class="line-number">20</span><span class="code-line"><span class="syntax-list">-</span>Programmazione Concorrente e Algoritmi Distribuiti (PCAD) <span class="syntax-symbol">[BSc]</span></span>
-        <span class="line-number">21</span><span class="code-line"><span class="syntax-list">-</span>Multi-Agent Systems (MAS) <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
-        <span class="line-number">22</span><span class="code-line"><span class="syntax-list">-</span>Natural Language Processing (NLP) <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
-        <span class="line-number">23</span><span class="code-line"><span class="syntax-list">-</span>Introduction to formal verification: an appetiser <span class="syntax-symbol">[PhD]</span></span>
-
-        <span class="line-number">24</span><span class="code-line"></span>
-
-        <span class="line-number">25</span><span class="code-line"><span class="syntax-title"># A.Y. 2021–2022 (UNIGE)</span></span>
-        <span class="line-number">26</span><span class="code-line"><span class="syntax-list">-</span>Algoritmi e Strutture Dati (ASD) <span class="syntax-symbol">[BSc]</span> — Co-Lecturer</span>
-        <span class="line-number">27</span><span class="code-line"><span class="syntax-list">-</span>Multi-Agent Systems (MAS) <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
-        <span class="line-number">28</span><span class="code-line"><span class="syntax-list">-</span>Natural Language Processing (NLP) <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
-        <span class="line-number">29</span><span class="code-line"><span class="syntax-list">-</span>Introduction to Computer Science <span class="syntax-symbol">[MSc]</span> — Co-Lecturer</span>
-        <span class="line-number">30</span><span class="code-line"><span class="syntax-list">-</span>Introduction to formal verification: an appetiser <span class="syntax-symbol">[PhD]</span></span>
-
-        <span class="line-number">31</span><span class="code-line"></span>
-
-        <span class="line-number">32</span><span class="code-line"><span class="syntax-title"># A.Y. 2020–2021 (UNIGE)</span></span>
-        <span class="line-number">33</span><span class="code-line"><span class="syntax-list">-</span>Programmazione Concorrente e Algoritmi Distribuiti (PCAD) <span class="syntax-symbol">[BSc]</span> — Co-Lecturer</span>
+        <span class="line-number">18</span><span class="code-line"><span class="syntax-title"># PhD Supervision and Mentoring</span></span>
+        <span class="line-number">19</span><span class="code-line"><span class="syntax-list">-</span> Adriano D'Alessandro — UNIMORE <span class="syntax-degree">[Co-Supervisor]</span></span>
+        <span class="line-number">20</span><span class="code-line"><span class="syntax-list">-</span> Hisham Unniyankal — UNIGE <span class="syntax-degree">[Co-Supervisor]</span></span>
+        <span class="line-number">21</span><span class="code-line"><span class="syntax-list">-</span> Adam Hutchinson — Newcastle University <span class="syntax-degree">[Co-Supervisor]</span></span>
+        <span class="line-number">22</span><span class="code-line"><span class="syntax-list">-</span> Andrea Gatti — UNIGE <span class="syntax-degree">[Research Mentor]</span></span>
+        <span class="line-number">23</span><span class="code-line"><span class="syntax-list">-</span> Zahra Daoui — UNIGE <span class="syntax-degree">[Research Mentor]</span></span>
+        <span class="line-number">24</span><span class="code-line"><span class="syntax-list">-</span> Hussaini Idris Aliyu — UNIMORE <span class="syntax-degree">[Research Mentor]</span></span>
 
         </div>
       </div>
@@ -272,55 +251,56 @@
           <span class="line-number">2</span><span class="code-line"><span class="syntax-comment">// Author: Angelo Ferrando</span></span>
           <span class="line-number">3</span><span class="code-line"></span>
               
+          
           <span class="line-number">4</span><span class="code-line"><span class="syntax-title"># Sound or Silent (SoS)</span></span>
-          <span class="line-number">5</span><span class="code-line"><span class="syntax-symbol">[Frontiers — IP Paris]</span></span>
-          <span class="line-number">6</span><span class="code-line"><span class="syntax-strong">Co-Principal Investigator</span> (2026 – ongoing)</span>
-          <span class="line-number">7</span><span class="code-line indent-hanging">Funded by Institut Polytechnique de Paris (IP Paris) — High-risk/high-gain research on sound-by-construction agentic AI and multi-agent systems verification</span>
-        
+          <span class="line-number">5</span><span class="code-line"><span class="syntax-degree">[Frontiers — Institut Polytechnique de Paris (IP Paris)]</span></span>
+          <span class="line-number">6</span><span class="code-line"><span class="syntax-strong">Co-Principal Investigator</span> (2026–present)</span>
+          <span class="line-number">7</span><span class="code-line indent-hanging">High-risk/high-gain research on sound-by-construction agentic AI and the formal verification of multi-agent systems</span>
+
           <span class="line-number">8</span><span class="code-line"></span>
-        
+
           <span class="line-number">9</span><span class="code-line"><span class="syntax-title"># VITAMIN-C</span></span>
-          <span class="line-number">10</span><span class="code-line"><span class="syntax-symbol">[Programme de Transfert au Campus Cyber]</span></span>
-          <span class="line-number">11</span><span class="code-line"><span class="syntax-strong">Academic Partner</span> (2026 – ongoing)</span>
-          <span class="line-number">12</span><span class="code-line indent-hanging">Funded project led by Télécom Paris — Formal verification of multi-agent systems for cybersecurity, extending VITAMIN toward scalable verification of adversarial and distributed systems</span>
-        
+          <span class="line-number">10</span><span class="code-line"><span class="syntax-degree">[Programme de Transfert au Campus Cyber - Télécom Paris]</span></span>
+          <span class="line-number">11</span><span class="code-line"><span class="syntax-strong">Academic Partner</span> (2026–present)</span>
+          <span class="line-number">12</span><span class="code-line indent-hanging">Extending <a href="https://vitamin-organisation.github.io/website/" target="_blank">VITAMIN</a> towards scalable formal verification of adversarial and distributed multi-agent systems for cybersecurity</span>
+
           <span class="line-number">13</span><span class="code-line"></span>
-        
+
           <span class="line-number">14</span><span class="code-line"><span class="syntax-title"># Digital Product Passport (DPP)</span></span>
-          <span class="line-number">15</span><span class="code-line"><span class="syntax-strong">Research Consultant</span> (Oct 2024 – Feb 2026)</span>
-          <span class="line-number">16</span><span class="code-line indent-hanging">Commissioned by <a href="https://www.democentersipe.it/" target="_blank">Fondazione Democenter-Sipe</a> — DPP Browser and DPP Monitor</span>
-        
+          <span class="line-number">15</span><span class="code-line"><span class="syntax-strong">Research Consultant</span> (Oct 2024–Feb 2026)</span>
+          <span class="line-number">16</span><span class="code-line indent-hanging">Commissioned by <a href="https://www.democentersipe.it/" target="_blank">Fondazione Democenter-Sipe</a> — Development of DPP Browser and DPP Monitor</span>
+
           <span class="line-number">17</span><span class="code-line"></span>
-        
+
           <span class="line-number">18</span><span class="code-line"><span class="syntax-title"># CONVINCE</span></span>
-          <span class="line-number">19</span><span class="code-line"><span class="syntax-symbol">[Horizon Europe]</span></span>
-          <span class="line-number">20</span><span class="code-line"><span class="syntax-strong">Member of WP4 (Verification and Monitoring)</span> (Oct 2022 – Dec 2024)</span>
-          <span class="line-number">21</span><span class="code-line indent-hanging">Funded by the European Union Horizon Europe Programme</span>
-        
+          <span class="line-number">19</span><span class="code-line"><span class="syntax-degree">[Horizon Europe]</span></span>
+          <span class="line-number">20</span><span class="code-line"><span class="syntax-strong">Member of WP4 (Verification and Monitoring)</span> (Oct 2022–Dec 2024)</span>
+          <span class="line-number">21</span><span class="code-line indent-hanging">Formal verification and runtime monitoring of autonomous robotic systems</span>
+
           <span class="line-number">22</span><span class="code-line"></span>
-        
+
           <span class="line-number">23</span><span class="code-line"><span class="syntax-title"># INSERTION</span></span>
-          <span class="line-number">24</span><span class="code-line"><span class="syntax-symbol">[SEED Research Grant]</span></span>
-          <span class="line-number">25</span><span class="code-line"><span class="syntax-strong">Principal Investigator</span> (Jul 2022 – Jul 2024)</span>
-          <span class="line-number">26</span><span class="code-line indent-hanging">Funded by DIBRIS (University of Genova)</span>
-        
+          <span class="line-number">24</span><span class="code-line"><span class="syntax-degree">[SEED Research Grant — DIBRIS, University of Genova]</span></span>
+          <span class="line-number">25</span><span class="code-line"><span class="syntax-strong">Principal Investigator</span> (Jul 2022–Jul 2024)</span>
+          <span class="line-number">26</span><span class="code-line indent-hanging">Agent-based modelling and simulation for traffic control using Connected and Autonomous Vehicles (CAVs)</span>
+
           <span class="line-number">27</span><span class="code-line"></span>
-        
+
           <span class="line-number">28</span><span class="code-line"><span class="syntax-title"># Smart Rogaining</span></span>
-          <span class="line-number">29</span><span class="code-line"><span class="syntax-strong">Software Developer</span> (Feb 2018 – Feb 2019)</span>
-          <span class="line-number">30</span><span class="code-line indent-hanging">Commissioned by <a href="https://www.linkedin.com/in/luca-gelati-5b30b038/" target="_blank">Luca Gelati</a> — Web application for supporting team-building activities</span>
-        
+          <span class="line-number">29</span><span class="code-line"><span class="syntax-strong">Software Developer</span> (Feb 2018–Feb 2019)</span>
+          <span class="line-number">30</span><span class="code-line indent-hanging">Commissioned by <a href="https://www.linkedin.com/in/luca-gelati-5b30b038/" target="_blank">Luca Gelati</a> — Web application supporting team-building activities</span>
+
           <span class="line-number">31</span><span class="code-line"></span>
-        
+
           <span class="line-number">32</span><span class="code-line"><span class="syntax-title"># PortBot</span></span>
-          <span class="line-number">33</span><span class="code-line"><span class="syntax-strong">Software Developer</span> (Apr 2018 – Dec 2018)</span>
+          <span class="line-number">33</span><span class="code-line"><span class="syntax-strong">Software Developer</span> (Apr 2018–Dec 2018)</span>
           <span class="line-number">34</span><span class="code-line indent-hanging">Commissioned by <a href="https://www.cipi.unige.it/" target="_blank">CIPI</a> — Chatbot for the Port of Genova</span>
-        
+
           <span class="line-number">35</span><span class="code-line"></span>
-        
+
           <span class="line-number">36</span><span class="code-line"><span class="syntax-title"># Video and Auto Expertises</span></span>
-          <span class="line-number">37</span><span class="code-line"><span class="syntax-strong">Software Developer</span> (Jan 2018 – Jan 2019)</span>
-          <span class="line-number">38</span><span class="code-line indent-hanging">Commissioned by <a href="https://www.queirolo.eu/" target="_blank">Queirolo &amp; Associati</a> — Progressive Web App for supporting video and auto expertises</span>
+          <span class="line-number">37</span><span class="code-line"><span class="syntax-strong">Software Developer</span> (Jan 2018–Jan 2019)</span>
+          <span class="line-number">38</span><span class="code-line indent-hanging">Commissioned by <a href="https://www.queirolo.eu/" target="_blank">Queirolo &amp; Associati</a> — Progressive Web App supporting video and vehicle assessments</span>
         
         </div>
       </div>
@@ -333,113 +313,114 @@
         <span class="line-number">2</span><span class="code-line"><span class="syntax-comment">// Author: Angelo Ferrando</span></span>
         <span class="line-number">3</span><span class="code-line"></span>
 
-        <span class="line-number">4</span><span class="code-line"><span class="syntax-title"># PC Member and Reviewer (Conferences)</span></span>
-        <span class="line-number">5</span><span class="code-line"><span class="syntax-strong">Area Chair</span></span>
-        <span class="line-number">6</span><span class="code-line indent-hanging">Engineering and Analysis of Multi-Agent Systems Track — AAMAS (2026)</span></span>
+        <span class="line-number">4</span><span class="code-line"><span class="syntax-title"># Honors &amp; Awards</span></span>
+        <span class="line-number">5</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">CRADLE Best Paper Award</span> - “Predictive Varanus: Combining CSP Conformance Monitoring with Predictive LTL Runtime Verification” @ TAROS (2026)</span></span>
+       <span class="line-number">6</span><span class="code-line"><span class="syntax-list">-</span>3rd Place Demo Paper Award - “VEsNA Goes Very Fast: Demonstrating Symbolic Racing Agents in a Live Formula One Simulation” @ PAAMS (2026)</span>
+       <span class="line-number">7</span><span class="code-line"><span class="syntax-list">-</span>Shortlisted for Best Paper Award - “VEsNA-Pro: Exploiting BDI Agents with Propensities for Emergent Narrative” @ AAMAS (2026)</span></span>
+       <span class="line-number">8</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Best Paper Award</span> - “Theory and Practice of Quantitative ATL” @ PRIMA (2024)</span></span>
+       <span class="line-number">9</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Journal-First Track Award</span> - “Bridging the Gap between Single- and Multi-Model Predictive Runtime Verification” @ FM (2023)</span></span>
+       <span class="line-number">10</span><span class="code-line"><span class="syntax-list">-</span>2nd Place Multi-Agent Programming Contest (2020)</span></span>
+       <span class="line-number">11</span><span class="code-line"><span class="syntax-list">-</span>1st Place Multi-Agent Programming Contest (2019)</span></span>
+       <span class="line-number">12</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Best Paper Award</span> - “On Enactability of Agent Interaction Protocols: Towards a Unified Approach” @ EMAS (2019)</span></span>
+       <span class="line-number">13</span><span class="code-line"><span class="syntax-list">-</span>Special Mention - Master’s Thesis “Trace Expressions for Runtime Verification and Protocol-Driven Behaviour”</span></span>
+       <span class="line-number">14</span><span class="code-line"></span>
 
-        <span class="line-number">7</span><span class="code-line"></span>
+       <span class="line-number">15</span><span class="code-line"><span class="syntax-title"># Invited Speaker</span></span>
+       <span class="line-number">16</span><span class="code-line indent-hanging">SPIRIT Workshop (2026)</span>
+       <span class="line-number">17</span><span class="code-line"></span>
 
-        <span class="line-number">8</span><span class="code-line"><span class="syntax-strong">Senior Program Committee Member</span></span>
-        <span class="line-number">9</span><span class="code-line indent-hanging">European Conference on Artificial Intelligence — ECAI (2025)</span></span>
+       <span class="line-number">18</span><span class="code-line"><span class="syntax-title"># Organiser and Chair Roles</span></span>
+       <span class="line-number">19</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Topical Area Curator</span> — FedCSIS (Computer Science & Systems, 2025)</span></span>
+       <span class="line-number">20</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">General Co-Chair</span> - PRIMA (2025)</span></span>
+       <span class="line-number">21</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Proceedings Co-Chair</span> — ECAI (2025)</span></span>
+       <span class="line-number">22</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">PhD Track Chair</span> — EUMAS (2023)</span></span>
+       <span class="line-number">23</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Co-Organiser</span> — AREA Workshop (2020–2026)</span></span>
+       <span class="line-number">24</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Co-Organiser</span> — ERAS, Lorentz Center (2024)</span></span>
+       <span class="line-number">25</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Co-Chair</span> — LAMAS&SR Workshop (2024)</span></span>
+       <span class="line-number">26</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Local Organiser</span> — LPNMR (2022)</span></span>
+       <span class="line-number">27</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Committee Member</span> — ARIAC Competition, NIST (2022)</span></span>
+       <span class="line-number">28</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Publicity and Communication Committee Member</span> — AIxIA (2021)</span></span>
+       <span class="line-number">29</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Local Co-Organiser</span> — CILC (2015)</span></span>
+       
+       <span class="line-number">30</span><span class="code-line"></span>
 
-        <span class="line-number">10</span><span class="code-line"></span>
+       <span class="line-number">31</span><span class="code-line"><span class="syntax-title"># Area Chair</span></span>
+       <span class="line-number">32</span><span class="code-line indent-hanging">AAMAS — Engineering and Analysis of Multi-Agent Systems Track (2026)</span></span>
+       <span class="line-number">33</span><span class="code-line"></span>
 
-        <span class="line-number">11</span><span class="code-line"><span class="syntax-strong">Program Committee Member</span></span>
-        <span class="line-number">12</span><span class="code-line"><span class="syntax-list">-</span>AAAI Conference on Artificial Intelligence — AAAI (2022–2027)</span></span>
-        <span class="line-number">13</span><span class="code-line"><span class="syntax-list">-</span>International Conference on Autonomous Agents and Multiagent Systems — AAMAS (2021–2027)</span></span>
-        <span class="line-number">14</span><span class="code-line"><span class="syntax-list">-</span>International Joint Conference on Artificial Intelligence — IJCAI (2020–2026)</span></span>
-        <span class="line-number">15</span><span class="code-line"><span class="syntax-list">-</span>European Conference on Artificial Intelligence — ECAI (2023–2026)</span></span>
-        <span class="line-number">16</span><span class="code-line"><span class="syntax-list">-</span>European Conference on Multi-Agent Systems — EUMAS (2023–2026)</span></span>
-        <span class="line-number">17</span><span class="code-line"><span class="syntax-list">-</span>Principles and Practice of Multi-Agent Systems — PRIMA (2019–2026)</span></span>
-        <span class="line-number">18</span><span class="code-line"><span class="syntax-list">-</span>NASA Formal Methods Symposium — NFM (2024–2026)</span></span>
-        <span class="line-number">19</span><span class="code-line"><span class="syntax-list">-</span>IEEE International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises — WETICE (2020–2025)</span></span>
+       <span class="line-number">34</span><span class="code-line"><span class="syntax-title"># Senior Program Committee Member</span></span>
+       <span class="line-number">35</span><span class="code-line indent-hanging">ECAI (2025)</span></span>
 
-        <span class="line-number">20</span><span class="code-line"></span>
+       <span class="line-number">36</span><span class="code-line"></span>
 
-        <span class="line-number">21</span><span class="code-line"><span class="syntax-strong">Program Committee Member (Workshops)</span></span>
-        <span class="line-number">22</span><span class="code-line"><span class="syntax-list">-</span>International Workshop on Engineering Multi-Agent Systems — EMAS (2019–2026)</span></span>
-        <span class="line-number">23</span><span class="code-line"><span class="syntax-list">-</span>Workshop on Formal Methods for Autonomous Systems — FMAS (2020–2025)</span></span>
-        <span class="line-number">24</span><span class="code-line"><span class="syntax-list">-</span>Workshop on Verification and Monitoring at Runtime Execution — VORTEX (2021–2026)</span></span>
-        <span class="line-number">25</span><span class="code-line"><span class="syntax-list">-</span>Workshop From Objects to Agents — WOA (2021–2023, 2026)</span></span>
-        <span class="line-number">26</span><span class="code-line"><span class="syntax-list">-</span>Workshop on Governing Adaptive and Unplanned Systems of Systems — GAUSS (2020–2021)</span></span>
+       <span class="line-number">37</span><span class="code-line"><span class="syntax-title"># Program Committee Member (Conferences)</span></span>
+       <span class="line-number">38</span><span class="code-line"><span class="syntax-list">-</span>AAAI (2022–2027)</span></span>
+       <span class="line-number">39</span><span class="code-line"><span class="syntax-list">-</span>AAMAS (2021–2027)</span></span>
+       <span class="line-number">40</span><span class="code-line"><span class="syntax-list">-</span>IJCAI (2020–2026)</span></span>
+       <span class="line-number">41</span><span class="code-line"><span class="syntax-list">-</span>ECAI (2023–2026)</span></span>
+       <span class="line-number">42</span><span class="code-line"><span class="syntax-list">-</span>EUMAS (2023–2026)</span></span>
+       <span class="line-number">43</span><span class="code-line"><span class="syntax-list">-</span>ICAART (2027)</span></span>
+       <span class="line-number">44</span><span class="code-line"><span class="syntax-list">-</span>PRIMA (2019–2026)</span></span>
+       <span class="line-number">45</span><span class="code-line"><span class="syntax-list">-</span>NASA Formal Methods Symposium (2024–2026)</span></span>
+       <span class="line-number">46</span><span class="code-line"><span class="syntax-list">-</span>WETICE (2020–2025)</span></span>
+       <span class="line-number">47</span><span class="code-line"></span>
 
-        <span class="line-number">27</span><span class="code-line"></span>
+       <span class="line-number">48</span><span class="code-line"><span class="syntax-title"># Program Committee Member (Workshops)</span></span>
+       <span class="line-number">49</span><span class="code-line"><span class="syntax-list">-</span>EMAS (2019–2026)</span></span>
+       <span class="line-number">50</span><span class="code-line"><span class="syntax-list">-</span>FMAS (2020–2026)</span></span>
+       <span class="line-number">51</span><span class="code-line"><span class="syntax-list">-</span>VORTEX (2021–2026)</span></span>
+       <span class="line-number">52</span><span class="code-line"><span class="syntax-list">-</span>WOA (2021–2023, 2026)</span></span>
+       <span class="line-number">53</span><span class="code-line"><span class="syntax-list">-</span>GAUSS (2020–2021)</span></span>
+      
+       <span class="line-number">54</span><span class="code-line"></span>
 
-        <span class="line-number">28</span><span class="code-line"><span class="syntax-title"># Reviewer (Journals)</span></span>
-        <span class="line-number">29</span><span class="code-line"><span class="syntax-list">-</span>IEEE Transactions on Computers — TC</span></span>
-        <span class="line-number">30</span><span class="code-line"><span class="syntax-list">-</span>Multidisciplinary Digital Publishing Institute — MDPI</span></span>
-        <span class="line-number">31</span><span class="code-line"><span class="syntax-list">-</span>ACM Transactions on Internet Technology — TOIT</span></span>
-        <span class="line-number">32</span><span class="code-line"><span class="syntax-list">-</span>Journal of Systems and Software — JSS</span></span>
-        <span class="line-number">33</span><span class="code-line"><span class="syntax-list">-</span>Logic Journal of the IGPL — IGPL</span></span>
-        <span class="line-number">34</span><span class="code-line"><span class="syntax-list">-</span>Journal of the International Foundation for Autonomous Agents and Multi-Agent Systems — JAAMAS</span></span>
+       <span class="line-number">55</span><span class="code-line"><span class="syntax-title"># Reviewer (Journals)</span></span>
+       <span class="line-number">56</span><span class="code-line"><span class="syntax-list">-</span>IEEE Transactions on Computers — TC</span></span>
+       <span class="line-number">57</span><span class="code-line"><span class="syntax-list">-</span>Multidisciplinary Digital Publishing Institute — MDPI</span></span>
+       <span class="line-number">58</span><span class="code-line"><span class="syntax-list">-</span>ACM Transactions on Internet Technology — TOIT</span></span>
+       <span class="line-number">59</span><span class="code-line"><span class="syntax-list">-</span>Journal of Systems and Software — JSS</span></span>
+       <span class="line-number">60</span><span class="code-line"><span class="syntax-list">-</span>Logic Journal of the IGPL — IGPL</span></span>
+       <span class="line-number">61</span><span class="code-line"><span class="syntax-list">-</span>Journal of the International Foundation for Autonomous Agents and Multi-Agent Systems — JAAMAS</span></span>
 
-        <span class="line-number">35</span><span class="code-line"></span>
+       <span class="line-number">62</span><span class="code-line"></span>
 
-        <span class="line-number">36</span><span class="code-line"><span class="syntax-title"># Organiser and Chair Roles</span></span>
-        <span class="line-number">37</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Topical Area Curator</span> — Computer Science &amp; Systems, Conference on Computer Science and Intelligence Systems — FedCSIS (2025)</span></span>
-        <span class="line-number">38</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">General Co-Chair</span> — International Conference on Principles and Practice of Multi-Agent Systems — PRIMA (2025)</span></span>
-        <span class="line-number">39</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Proceedings Co-Chair</span> — European Conference on Artificial Intelligence — ECAI (2025)</span></span>
-        <span class="line-number">40</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">PhD Track Chair</span> — European Conference on Multi-Agent Systems — EUMAS (2023)</span></span>
-        <span class="line-number">41</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Co-Organiser</span> — Workshop on Agents and Robots for reliable Engineered Autonomy — AREA (2020–2025)</span></span>
-        <span class="line-number">42</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Co-Organiser</span> — Engineering Reliable Autonomous Systems, Lorentz Center — ERAS (2024)</span></span>
-        <span class="line-number">43</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Co-Chair</span> — Workshop on Logical Aspects in Multi-Agent Systems and Strategic Reasoning — LAMAS&amp;SR (2024)</span></span>
-        <span class="line-number">44</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Local Organiser</span> — International Conference on Logic Programming and Nonmonotonic Reasoning — LPNMR (2022)</span></span>
-        <span class="line-number">45</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Local Co-Organiser</span> — Italian Conference on Computational Logic — CILC (2015)</span></span>
-        <span class="line-number">46</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Committee Member</span> — ARIAC Competition, National Institute of Standards and Technology — NIST (2022)</span></span>
-        <span class="line-number">47</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Publicity and Communication Committee Member</span> — Italian Association for Artificial Intelligence Conference — AIxIA (2021)</span></span>
+       <span class="line-number">63</span><span class="code-line"><span class="syntax-title"># Editorial Activities</span></span>
+       <span class="line-number">64</span><span class="code-line"><span class="syntax-list">-</span>PRIMA Proceedings — LNAI (2025)</span></span>
+       <span class="line-number">65</span><span class="code-line"><span class="syntax-list">-</span>AREA Proceedings — CCIS (2025)</span></span>
+       <span class="line-number">66</span><span class="code-line"><span class="syntax-list">-</span>AREA Proceedings — CCIS (2024)</span></span>
+       <span class="line-number">67</span><span class="code-line"><span class="syntax-list">-</span>AREA Special Issue — Annals of Mathematics and Artificial Intelligence (2023)</span></span>
+       <span class="line-number">68</span><span class="code-line"><span class="syntax-list">-</span>AREA Proceedings — EPTCS (2023)</span></span>
+       <span class="line-number">69</span><span class="code-line"><span class="syntax-list">-</span>WOA Special Issue — Intelligenza Artificiale (2022)</span></span>
+       <span class="line-number">70</span><span class="code-line"><span class="syntax-list">-</span>WOA Proceedings — CEUR AIxIA Series (2022)</span></span>
+       <span class="line-number">71</span><span class="code-line"><span class="syntax-list">-</span>AREA Special Issue — Robotics (2022)</span></span>
+       <span class="line-number">72</span><span class="code-line"><span class="syntax-list">-</span>AREA Proceedings — EPTCS (2022)</span></span>
+       <span class="line-number">73</span><span class="code-line"><span class="syntax-list">-</span>AREA Special Issue — Journal of Sensor and Actuator Networks (2020)</span></span>
+       <span class="line-number">74</span><span class="code-line"><span class="syntax-list">-</span>AREA Proceedings — EPTCS (2020)</span></span>
+        
 
-        <span class="line-number">48</span><span class="code-line"></span>
-
-        <span class="line-number">49</span><span class="code-line"><span class="syntax-title"># Editor</span></span>
-        <span class="line-number">50</span><span class="code-line"><span class="syntax-list">-</span>26th International Conference on Principles and Practice of Multi-Agent Systems — PRIMA Proceedings on LNAI (2025)</span></span>
-        <span class="line-number">50</span><span class="code-line"><span class="syntax-list">-</span>5th Workshop on Agents and Robots for reliable Engineered Autonomy — AREA Proceedings on CCIS (2025)</span></span>
-        <span class="line-number">51</span><span class="code-line"><span class="syntax-list">-</span>4th Workshop on Agents and Robots for reliable Engineered Autonomy — AREA Proceedings on CCIS (2024)</span></span>
-        <span class="line-number">52</span><span class="code-line"><span class="syntax-list">-</span>Special Issue of the 3rd Workshop on Agents and Robots for reliable Engineered Autonomy — AREA on Annals of Mathematics and Artificial Intelligence (2023)</span></span>
-        <span class="line-number">53</span><span class="code-line"><span class="syntax-list">-</span>Special Issue of the 23rd Workshop From Objects to Agents — WOA on Intelligenza Artificiale (2022)</span></span>
-        <span class="line-number">54</span><span class="code-line"><span class="syntax-list">-</span>23rd Workshop From Objects to Agents — WOA Proceedings on CEUR AIxIA Series (2022)</span></span>
-        <span class="line-number">55</span><span class="code-line"><span class="syntax-list">-</span>3rd Workshop on Agents and Robots for reliable Engineered Autonomy — AREA Proceedings on EPTCS (2023)</span></span>
-        <span class="line-number">56</span><span class="code-line"><span class="syntax-list">-</span>Special Issue of the 2nd Workshop on Agents and Robots for reliable Engineered Autonomy — AREA on Robotics (2022)</span></span>
-        <span class="line-number">57</span><span class="code-line"><span class="syntax-list">-</span>2nd Workshop on Agents and Robots for reliable Engineered Autonomy — AREA Proceedings on EPTCS (2022)</span></span>
-        <span class="line-number">58</span><span class="code-line"><span class="syntax-list">-</span>Special Issue of the 1st Workshop on Agents and Robots for reliable Engineered Autonomy — AREA on Journal of Sensor and Actuator Networks (2020)</span></span>
-        <span class="line-number">59</span><span class="code-line"><span class="syntax-list">-</span>1st Workshop on Agents and Robots for reliable Engineered Autonomy — AREA Proceedings on EPTCS (2020)</span></span>
-
-        <span class="line-number">60</span><span class="code-line"></span>
-
-        <span class="line-number">61</span><span class="code-line"><span class="syntax-title"># Honors &amp; Awards</span></span>
-        <span class="line-number">62</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">The CRADLE Best Paper in Safety, Verification and Robotic Autonomy for Demanding Environments Award</span> for “Predictive Varanus: Combining CSP Conformance Monitoring with Predictive LTL Runtime Verification” @ Towards Autonomous Robotic Systems — TAROS (2026)</span></span>
-        <span class="line-number">63</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Shortlisted for Best Paper Award</span> for “VEsNA-Pro: Exploiting BDI Agents with Propensities for Emergent Narrative” @ International Conference on Autonomous Agents and Multiagent Systems — AAMAS (2026)</span></span>
-        <span class="line-number">64</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Best Paper Award</span> for “Theory and Practice of Quantitative ATL” @ International Conference on Principles and Practice of Multi-Agent Systems — PRIMA (2024)</span></span>
-        <span class="line-number">65</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Journal-First Track Award</span> for “Bridging the Gap between Single- and Multi-Model Predictive Runtime Verification” @ International Symposium on Formal Methods — FM (2023)</span></span>
-        <span class="line-number">66</span><span class="code-line"><span class="syntax-list">-</span>2nd Place Multi-Agent Programming Contest (2020)</span></span>
-        <span class="line-number">67</span><span class="code-line"><span class="syntax-list">-</span>1st Place Multi-Agent Programming Contest (2019)</span></span>
-        <span class="line-number">68</span><span class="code-line"><span class="syntax-list">-</span><span class="syntax-strong">Best Paper Award</span> for “On Enactability of Agent Interaction Protocols: Towards a Unified Approach” @ International Workshop on Engineering Multi-Agent Systems — EMAS (2019)</span></span>
-        <span class="line-number">69</span><span class="code-line"><span class="syntax-list">-</span>Special Mention for the Master’s Thesis “Trace Expressions for Runtime Verification and Protocol-Driven Behaviour”</span></span>
         
         </div>
       </div>
 
-    </div>
-    </div>
-
-      <!-- STATUS BAR -->
-      <footer class="statusbar">
-        <div class="status-left">
-          <span><i class="bi bi-git"></i> main</span>
-          <span><i class="bi bi-circle-fill"></i> Ready</span>
-        </div>
-        <div class="status-right">
-          <span>UTF-8</span>
-          <span>LF</span>
-          <span>MD</span>
-          <span><i class="bi bi-person-fill"></i> user: angelo</span>
-        </div>
-      </footer>
-
-      <div id="matrix-overlay" class="matrix-overlay"></div>
-      <canvas id="snake-canvas" style="display:none;"></canvas>
-
+      </div>
     </main>
   </div>
+
+  <!-- STATUS BAR -->
+  <footer class="statusbar">
+    <div class="status-left">
+      <span><i class="bi bi-diagram-2"></i> main</span>
+      <span><i class="bi bi-check-circle"></i> Ready</span>
+    </div>
+    <div class="status-right">
+      <span>UTF-8</span>
+      <span>LF</span>
+      <span>Markdown</span>
+    </div>
+  </footer>
+
+  <div id="matrix-overlay" class="matrix-overlay"></div>
+  <canvas id="snake-canvas" style="display:none;"></canvas>
 
   <!-- SCRIPT UNICO: TABS + TERMINALE + ANIMAZIONE INIZIALE -->
 <script>
@@ -447,22 +428,53 @@
 /* ============================================================
    TABS
    ============================================================ */
+const fileNavigation = document.querySelector('.file-navigation');
+const fileMenuToggle = fileNavigation.querySelector('.file-menu-toggle');
+const currentFile = document.getElementById('current-file');
+
+function closeFileMenu(restoreFocus = false) {
+  if (fileMenuToggle.getAttribute('aria-expanded') !== 'true') return;
+  fileMenuToggle.setAttribute('aria-expanded', 'false');
+  if (restoreFocus) fileMenuToggle.focus();
+}
+
+fileMenuToggle.hidden = false;
+fileMenuToggle.addEventListener('click', () => {
+  const wasExpanded = fileMenuToggle.getAttribute('aria-expanded') === 'true';
+  fileMenuToggle.setAttribute('aria-expanded', String(!wasExpanded));
+});
+
+fileNavigation.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeFileMenu(true);
+});
+
+fileNavigation.addEventListener('focusout', event => {
+  if (event.relatedTarget && !fileNavigation.contains(event.relatedTarget)) closeFileMenu();
+});
+
+document.addEventListener('click', event => {
+  if (!fileNavigation.contains(event.target)) closeFileMenu();
+});
+
+window.addEventListener('resize', () => {
+  if (fileMenuToggle.offsetWidth === 0) closeFileMenu();
+});
+
 function openTab(name, tabEl, fromTerminal = false) {
-  const sections = document.querySelectorAll('.content');
-  const tabs = document.querySelectorAll('.tab');
-
-  sections.forEach(s => s.style.display = 'none');
-  tabs.forEach(t => t.classList.remove('active'));
-
   const target = document.getElementById(name);
-  if (target) target.style.display = 'block';
+  if (!target) return;
 
-  if (tabEl) {
-    tabEl.classList.add('active');
-  } else {
-    const t = document.querySelector('.tab[data-target="' + name + '"]');
-    if (t) t.classList.add('active');
-  }
+  document.querySelectorAll('.content').forEach(section => {
+    section.style.display = section === target ? 'block' : 'none';
+  });
+  fileNavigation.querySelectorAll('.tab[data-target]').forEach(tab => {
+    const active = tabEl ? tab === tabEl : tab.dataset.target === name;
+    tab.classList.toggle('active', active);
+    tab.setAttribute('aria-pressed', String(active));
+    if (active) currentFile.textContent = tab.dataset.file;
+  });
+  document.querySelector('.window').scrollTop = 0;
+  closeFileMenu(true);
 
   // SOLO se non arrivo dal terminale scrivo "view ..."
   if (!fromTerminal) {
@@ -518,6 +530,7 @@ function openExternalFromClick(name, label, url) {
   }
 
   appendOutput(`[external] ${name} → ${label}`);
+  closeFileMenu(true);
   window.open(url, "_blank");
   return false;
 }
@@ -612,7 +625,7 @@ async function executeCommand(cmd) {
 }
 
 /* ENTER */
-document.addEventListener("keydown", (e) => {
+terminalInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
     const cmd = terminalInput.textContent.trim();
@@ -642,8 +655,9 @@ let currentAnimLine = null;
 
 function typeInitial() {
   if (initIndex >= initialLines.length) {
-    openTab("about", null, true);
-    terminalInput.focus();
+    if (terminal.offsetHeight && document.activeElement === document.body) {
+      terminalInput.focus();
+    }
     return;
   }
 
@@ -668,17 +682,7 @@ function typeInitial() {
 }
 
 window.addEventListener("load", () => {
-
-  // MOBILE: apri subito about.md
-  if (window.innerWidth <= 768) {
-    openTab("about", null, true);
-    return;
-  }
-
-  // DESKTOP: animazione terminale
-  terminalInput.blur();
-  typeInitial();
-  setTimeout(() => terminalInput.focus(), 3000);
+  if (terminal.offsetHeight) typeInitial();
 });
 
 
